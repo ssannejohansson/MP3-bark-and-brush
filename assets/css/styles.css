@@ -270,3 +270,26 @@ footer {
     min-height: 100%;
     margin-bottom: 50px; 
 }
+
+/* -- GALLERY PAGE -- */ 
+
+#gallery {
+    background-color: var(--pink-background-color);
+    padding-bottom: 70px;
+}
+
+
+
+.gallery-img {
+    padding: 0;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: 0.7s;
+}
+
+.gallery-img:hover {
+transform: scale(1.2);
+z-index: 1;
+}
+
+
