@@ -263,3 +263,10 @@ footer {
     object-fit: cover;
 
 }
+
+/* -- SERVICES PAGE -- */ 
+#services {
+    margin-top: 50px;
+    min-height: 100%;
+    margin-bottom: 50px; 
+}
