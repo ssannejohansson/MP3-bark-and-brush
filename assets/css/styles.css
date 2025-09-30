@@ -25,6 +25,12 @@ h1 {
     color: var(--dark-blue);
 }
 
+h2 {
+        font-family: var(--secondary-font);
+        font-size: 40px; 
+    color: var(--dark-blue);
+}
+
 h4 {
     font-family: var(--secondary-font);
     color: var(--brown);
@@ -55,7 +61,6 @@ h4 {
     background-color: var(--light-blue);
 
 }
-
 
 /* Navbar */
 nav {
@@ -167,3 +172,72 @@ header {
     transform: scale(1.2);
     z-index: 1;
 }
+
+/* Footer */
+footer {
+        background-color: var(--pink-background-color);
+    min-height: 200px;
+}
+
+
+#opening-times p {
+    margin-bottom: 5px; 
+}
+
+.form-label {
+    font-family: var(--secondary-font);
+    font-size: 20px;
+
+}
+#newsletter-input {
+    max-width: 350px;
+    position: relative;
+}
+#newsletter-input input {
+    width: 100%;
+    padding-right: 150px;
+    border-radius: 10px;
+    border: 1px solid var(--light-blue)
+
+}
+
+#newsletter-input button {
+    border-radius: 0px 10px 10px 0px;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#social-icons i {
+    font-size: 40px;
+    color: var(--dark-blue);
+          transition: 0.5s;
+}
+
+#social-icons i:hover {
+    transform: scale(1.1);
+    color: #285a8d;
+}
+
+/* -- CONTACT MODAL -- */ 
+/* Modal */ 
+
+#contact-form label {
+    font-family: var(--primary-font);
+    font-size: 18px;
+    margin-bottom: 0px; 
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 10px; 
+    border: 1px solid var(--light-blue);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border: 2px solid var(--dark-blue);
+    outline: none !important;
+}
+
+
+/* -- ABOUT PAGE -- */

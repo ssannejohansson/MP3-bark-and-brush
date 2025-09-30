@@ -33,142 +33,209 @@
     <header class="container-fluid p-0" id="header">
 
         <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg ">
-      <div class="container-fluid">
-        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="btn-container">
-          <button class="btn custom-btn-nav d-lg-none" type="submit" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</button>
-          <button class="btn custom-btn-nav d-lg-none" type="submit">Book</button>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="btn-container">
+                    <button class="btn custom-btn-nav d-lg-none" type="submit" data-bs-toggle="modal"
+                        data-bs-target="#contact-modal">Contact</button>
+                    <button class="btn custom-btn-nav d-lg-none" type="submit">Book</button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-2">
+                        <button class="btn custom-btn-outline d-none d-lg-block" data-bs-toggle="modal"
+                            data-bs-target="#contact-modal">Contact</button>
+                        <button class="btn custom-btn d-none d-lg-block" type="submit">Book now!</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="col-md-12 d-flex flex-column justify-content-between flex-md-row justify-content-md-between align-items-center hero-index">
+            <div class="col-md-6 col-lg-7 d-flex flex-column align-items-center align-items-lg-center">
+                <h1 class="mb-0 text-center heading-index">bark & brush</h1>
+                <p class="text-center" id="subtext">grooming with love</p>
+                <button class="btn custom-btn-outline mb-3">Book now!</button>
+            </div>
+
+            <div class="col-md-6 col-lg-5 d-flex justify-content-center" id="head-img">
+                <img src="assets/images/homepage-hero.png">
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-          </ul>
-          <div class="d-flex gap-2">
-            <button class="btn custom-btn-outline d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</button>
-            <button class="btn custom-btn d-none d-lg-block" type="submit">Book now!</button>
-          </div>
+    </header>
+
+    <!-- Main content -->
+    <!-- First section -->
+    <section class="container-fluid d-flex flex-column justify-content-center" id="index-info">
+        <div class="container d-flex flex-column flex-lg-row gap-2" id="index-info-img">
+            <img src="assets/images/brush.jpg" class="img-fluid border-rad d-none d-lg-block col-lg-4">
+            <img src="assets/images/paws.jpg" class="img-fluid border-rad col-12 col-lg-2">
+            <div class="flex-column mt-2 mt-lg-0 ms-lg-4 col-lg-6" id="index-info-text">
+                <h3>Welcome to Bark & Brush <h4>where your dog's happiness is our priority.</h4>
+                </h3>
+                <p>We are Lina and Emma, two dedicated dog lovers committed to providing top-notch grooming services in
+                    a caring
+                    and stress-free environment. From soothing baths to stylish trims, we ensure every pup leaves our
+                    salon
+                    looking and feeling their best. Schedule a grooming session today and let us pamper your furry best
+                    friend!
+                </p>
+                <button class="btn custom-btn-outline" type="submit">Book now!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second section -->
+    <section class="container-fluid d-flex flex-column justify-content-center align-items-center gap-4 mt-5 mb-5" id="index-price">
+        <h2>Our Services</h2>
+        <div class="container d-flex flex-row flex-wrap justify-content-center gap-4">
+            <div class="card col-md-6">
+                <img src="assets/images/groom2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Full Groom</h4>
+                    <p>$60 - $100+</p>
+                </div>
+            </div>
+
+            <div class="card col-md-6">
+                <img src="assets/images/wash.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Bath and Tidy</h4>
+                    <p>$35 - $120+</p>
+                </div>
+            </div>
+
+            <div class="card col-md-6">
+                <img src="assets/images/clawclip.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Paws</h4>
+                    <p>$20 - $30+</p>
+                </div>
+            </div>
+
+            <div class="card col-md-6">
+                <img src="assets/images/groom.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">De-Shedding</h4>
+                    <p>$60 - $100+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid d-flex flex-column pt-4 pb-4 justify-content-center" id="footer">
+        <div class="container col-12 d-flex flex-row flex-wrap justify-content-evenly">
+            <div class="col-sm-4 col-lg-3 mb-2" id="contact">
+                <h3>Contact info</h3>
+                <address>
+                    <strong><i class="fa-solid fa-location-dot"></i> Bark & Brush</strong><br>
+                    123 Dog Street <br>
+                    Dog City, 12345
+                </address>
+                <p><i class="fa-solid fa-phone"></i> 012 345<br>
+                    <i class="fa-solid fa-envelope"></i> info@barkbrush.co</p>
+            </div>
+
+            <div class="col-sm-4 col-lg-3" id="opening-times">
+                <h3>Opening times</h3>
+                <p><strong>Mon:</strong> 9:00am - 5:00pm</p>
+                <p><strong>Tue:</strong> 9:00am - 5:00pm</p>
+                <p><strong>Wed:</strong> 9:00am - 7:00pm</p>
+                <p><strong>Thu:</strong> 9:00am - 5:00pm</p>
+                <p><strong>Fri:</strong> 9:00am - 4:00pm</p>
+                <p><strong>Sat & Sun</strong> Closed</p>
+            </div>
+
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-center mt-4" id="socials">
+                <div class="d-flex flex-column align-items-center">
+                    <label for="newsletter" class="form-label"><strong>Sign up for our newsletter</strong></label>
+                    <div class="d-flex flex-row" id="newsletter-input">
+                        <input type="email" class="form-control shadow-none" id="newsletter">
+                        <button class="btn custom-btn" type="submit">Submit</button>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-center gap-5 mt-4" id="social-icons">
+                    <a href="http://www.instagram.com" target="_blank"
+                        aria-label="Visit our Instagram page (opens in a new tab)" rel="noopner">
+                        <i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.facebook.com" target="_blank"
+                        aria-label="Visit our Facebook page (opens in a new tab)" rel="noopner">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="http://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)" rel="noopner">
+                        <i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contact-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close shadow-none close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <section class="d-flex flex-column " id="contact-form">
+            <h2 class="mt-4 mb-4">Reach out to us!</h2>
+            <form id="message-form">
+              <label for="name" class="form-label">Name</label>
+              <input class="form-control shadow-none" id="name" name="name" type="text" required>
+
+              <label for="email" class="form-label">Email</label>
+              <input class="form-control shadow-none" id="email" name="email" type="email" required>
+
+              <label for="phone" class="form-label">Phone number</label>
+              <input class="form-control shadow-none" id="phone" name="phone" type="number" required>
+
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control shadow-none" rows="6" id="message" name="message" required></textarea>
+
+              <button type="button" class="btn custom-btn-outline mt-1 mb-4" id="modal-btn">Send</button>
+            <div id="success-message"></div>
+            </form>
+          </section>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="submit" class="btn custom-btn close" data-bs-dismiss="modal">Close</button>
+          
         </div>
       </div>
-    </nav>
-    <div
-      class="col-md-12 d-flex flex-column justify-content-between flex-md-row justify-content-md-between align-items-center hero-index">
-      <div class="col-md-6 col-lg-7 d-flex flex-column align-items-center align-items-lg-center">
-        <h1 class="mb-0 text-center heading-index">bark & brush</h1>
-        <p class="text-center" id="subtext">grooming with love</p>
-        <button class="btn custom-btn-outline mb-3">Book now!</button>
-
-      </div>
-
-           <div class="col-md-6 col-lg-5 d-flex justify-content-center" id="head-img">
-        <img src="assets/images/homepage-hero.png">
-      </div>
-
     </div>
-     </header>
-
-<!-- Main content -->
-  <!-- First section -->
-   <section class="container-fluid d-flex flex-column justify-content-center" id="index-info">
-    <div class="container d-flex flex-column flex-lg-row gap-2" id="index-info-img">
-      <img src="assets/images/brush.jpg" class="img-fluid border-rad d-none d-lg-block col-lg-4">
-      <img src="assets/images/paws.jpg" class="img-fluid border-rad col-12 col-lg-2">
-      <div class="flex-column mt-2 mt-lg-0 ms-lg-4 col-lg-6" id="index-info-text">
-        <h3>Welcome to Bark & Brush <h4>where your dog's happiness is our priority.</h4>
-        </h3>
-        <p>We are Lina and Emma, two dedicated dog lovers committed to providing top-notch grooming services in a caring
-          and stress-free environment. From soothing baths to stylish trims, we ensure every pup leaves our salon
-          looking and feeling their best. Schedule a grooming session today and let us pamper your furry best friend!
-        </p>
-        <button class="btn custom-btn-outline" type="submit">Book now!</button>
-      </div>
-    </div>
+  </div>
 
 
-  </section>
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-  <!-- Second section -->
-  <section class="container-fluid d-flex flex-column justify-content-center align-items-center gap-4 mt-5 mb-5"
-    id="index-price">
-    <h2>Our Services</h2>
-    <div class="container d-flex flex-row flex-wrap justify-content-center gap-4">
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
 
-      <div class="card col-md-6">
-        <img src="assets/images/groom2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Full Groom</h4>
-          <p>$60 - $100+</p>
-
-        </div>
-      </div>
-
-      <div class="card col-md-6">
-        <img src="assets/images/wash.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Bath and Tidy</h4>
-          <p>$35 - $120+</p>
-
-        </div>
-      </div>
-
-      <div class="card col-md-6">
-        <img src="assets/images/clawclip.jpg" class="card-img-top " alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Paws</h4>
-          <p>$20 - $30+</p>
-
-        </div>
-      </div>
-
-      <div class="card col-md-6">
-        <img src="assets/images/groom.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">De-Shedding</h4>
-          <p>$60 - $100+</p>
-
-        </div>
-      </div>
-
-
-    </div>
-
-  </section>
-
-<!-- Footer -->
-<footer>
-
-</footer>
-
-<!-- Contact modal -->
-
-
-
-<!-- jQuery script -->
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-
-  <!-- Bootstrap script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-  </script>
-
-  <!-- JavaScript script -->
-  <script src="assets/js/script.js"></script>
+    <!-- JavaScript script -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
