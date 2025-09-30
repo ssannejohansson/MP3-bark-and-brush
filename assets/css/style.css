@@ -1,0 +1,21 @@
+ @font-face { font-family: Marige Thin; src: url("/MarigefreeThin-AReam.otf"); } 
+/* CSS Variables */
+:root {
+    --brown: #3a322e;
+    --dark-blue: #3571ad;
+    --light-blue: #a6b8e5;
+    --pink: #f3dee2;
+    --light-blue-background: #d4ddf3;
+    --pink-background-color: #f4edef; 
+    --primary-background-color: #f7f3f4;
+    --primary-font: "Mulish", sans-serif;
+    --secondary-font: "Marige Thin";
+
+}
+
+/* Global styles */
+body {
+    background-color: var(--primary-background-color);
+    font-family: var(--primary-font);
+    color: var(--brown);
+}
