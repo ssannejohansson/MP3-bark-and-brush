@@ -20,6 +20,11 @@ body {
     color: var(--brown);
 }
 
+h1 {
+    font-family: var(--secondary-font);
+    color: var(--dark-blue);
+}
+
 
 
 /* Navbar */
@@ -55,8 +60,39 @@ nav {
     font-weight: 600 !important;
 }
 
-/* HOME PAGE - HEADER */ 
+/* -- HOME PAGE -- */ 
+/* Header */ 
 header {
     background-color: var(--pink-background-color);
+}
 
+.hero-index {
+    max-height: 680px; 
+    background-color: var(--pink-background-color);
+}
+
+.heading-index {
+    margin-top: 30px;
+      font-family: var(--secondary-font);
+    font-size: 90px;
+    color: var(--dark-blue);   
+    line-height: 100%;
+    width: 90%;
+}
+
+#subtext {
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-size: 16px; 
+    color: var(--light-blue);
+    letter-spacing: 5px;
+    width: 100%; 
+}
+
+#head-img {
+    width: 100%;
+}
+
+#head-img img {
+    height: 350px;
 }
