@@ -62,6 +62,24 @@ h4 {
 
 }
 
+.hero-pages {
+    background-color: var(--pink-background-color);
+    min-height: 200px;    
+}
+
+.heading-pages {
+      font-family: var(--secondary-font);
+    font-size:35px;
+    color: var(--dark-blue);   
+    line-height: 100%;
+    width: 80%;
+
+}
+
+.border-rad {
+    border-radius: 10px;
+}
+
 /* Navbar */
 nav {
     background-color: transparent;
@@ -241,3 +259,7 @@ footer {
 
 
 /* -- ABOUT PAGE -- */
+#about-container img {
+    object-fit: cover;
+
+}
