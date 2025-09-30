@@ -25,6 +25,36 @@ h1 {
     color: var(--dark-blue);
 }
 
+h4 {
+    font-family: var(--secondary-font);
+    color: var(--brown);
+}
+
+
+.custom-btn {
+    width: 120px;
+    background-color: var(--light-blue);
+    font-weight: 600;
+    color: var(--brown);
+      transition: 0.5s;
+}
+
+.custom-btn:hover {
+    background-color: #92a4d1;
+}
+
+.custom-btn-outline {
+    width: 120px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    transition: 0.5s;
+}
+
+.custom-btn-outline:hover {
+    background-color: var(--light-blue);
+
+}
 
 
 /* Navbar */
@@ -95,4 +125,19 @@ header {
 
 #head-img img {
     height: 350px;
+}
+
+/* Info */ 
+#index-info {
+    padding-top: 30px;
+    background: url(/assets/images/pawbackground.png);
+    background-size: contain;
+    max-height: 700px; 
+    background-color: var(--light-blue-background);
+    padding-bottom: 30px;
+}
+
+#index-info-img img {
+    max-height: 350px;
+    object-fit: cover;
 }
