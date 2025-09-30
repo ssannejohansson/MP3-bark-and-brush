@@ -19,3 +19,44 @@ body {
     font-family: var(--primary-font);
     color: var(--brown);
 }
+
+
+
+/* Navbar */
+nav {
+    background-color: transparent;
+}
+
+.custom-btn-nav {
+    width: fit-content;
+    font-weight: 500;
+    border: 1px solid #d1c9cc;
+    color: #565558;
+    font-weight: 700;
+      transition: 0.5s;
+}
+
+.nav-item {
+    font-family: var(--primary-font);
+}
+
+.nav-link {
+    font-size: 20px;
+    color: var(--brown);
+          transition: 0.4s;
+}
+
+.nav-link:hover {
+    font-weight: 600;
+}
+
+.active {
+    color: var(--brown) !important;
+    font-weight: 600 !important;
+}
+
+/* HOME PAGE - HEADER */ 
+header {
+    background-color: var(--pink-background-color);
+
+}
