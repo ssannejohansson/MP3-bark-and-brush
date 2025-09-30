@@ -293,3 +293,10 @@ z-index: 1;
 }
 
 
+/* -- 404 PAGE -- */ 
+/* 404 */
+#error-btn {
+    width: fit-content;
+}
+
+
