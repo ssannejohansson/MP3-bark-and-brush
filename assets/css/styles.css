@@ -364,3 +364,61 @@ z-index: 1;
 }
 }
 
+
+/* Media query: laptop and larger (992px and up) */
+@media screen and (min-width: 992px) {
+    /* Global styles */
+    .heading-pages {
+      font-family: var(--secondary-font);
+    font-size: 110px;
+    color: var(--dark-blue);   
+    line-height: 100%;
+    width: 80%;
+}
+
+.hero-pages {
+    height: 500px;
+}
+
+/* Heading */
+
+.heading-index {
+    font-size: 110px;
+    width: 100%;
+}
+
+#subtext {
+    font-size: 20px; 
+    width: 70%; 
+}
+
+#head-img {
+    padding-right: 80px;
+    width: 40%;
+}
+
+#head-img img {
+    height: 500px;
+}
+
+
+#index-info {
+    min-height: 550px; 
+
+}
+
+/* Booking */ 
+#booking-form {
+    width: 60%;
+}
+}
+
+
+
+/* Media query: desktop and larger (1200px and up) */
+@media screen and (min-width: 1200px) {
+#subtext {
+
+    font-size: 30px; 
+}
+}
