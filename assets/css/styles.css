@@ -36,7 +36,6 @@ h4 {
     color: var(--brown);
 }
 
-
 .custom-btn {
     width: 120px;
     background-color: var(--light-blue);
@@ -294,9 +293,74 @@ z-index: 1;
 
 
 /* -- 404 PAGE -- */ 
-/* 404 */
 #error-btn {
     width: fit-content;
 }
 
+
+
+/* Media query: tablet and larger (768px and up) */
+@media screen and (min-width: 768px) {
+/* Global styles */
+    .heading-pages {
+    font-family: var(--secondary-font);
+    font-size: 60px;
+    color: var(--dark-blue);   
+    line-height: 100%;
+    width: 80%;
+}
+
+.hero-pages {
+    height: 300px;
+}
+
+/* HOMEPAGE - Header */
+
+.hero-index {
+    min-height: 400px;
+}
+
+.heading-index {
+    padding-left: 20px;
+    font-size: 80px;
+    width: 70%;
+}
+
+#subtext {
+    font-size: 16px; 
+    width: 80%; 
+}
+
+#head-img {
+    width: 50%;
+}
+
+#head-img img {
+    height: 400px;
+}
+
+#index-service { 
+    min-height: 350px;
+    padding: 0;
+}
+
+#index-info {
+    min-height: 650px; 
+
+}
+
+/* HOMEPAGE - info */ 
+.index-service-img img {
+    border-radius: 10px;
+    max-height: 210px;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+/* GALLERY PAGE  */
+#hero-gallery {
+
+    min-height: 400px;
+}
+}
 
