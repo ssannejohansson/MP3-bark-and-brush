@@ -141,3 +141,29 @@ header {
     max-height: 350px;
     object-fit: cover;
 }
+
+/* Price list */ 
+
+#index-price {
+    min-height: 100%;
+    padding-bottom: 20px; 
+}
+
+.card {
+    max-width: 300px; 
+        transition: 0.7s;
+        cursor: pointer;
+}
+
+.card h4 {
+    font-family: var(--primary-font);
+}
+.card p {
+    margin-bottom: 0;
+    font-family: var(--secondary-font);
+}
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
