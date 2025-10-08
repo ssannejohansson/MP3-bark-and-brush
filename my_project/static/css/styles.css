@@ -1,7 +1,8 @@
  @font-face {
      font-family: "Marige Thin";
-     src: url("/MarigefreeThin-AReam.otf");
- }
+  src: local('MarigefreeThin-AReam'),
+       url(../fonts/MarigefreeThin-AReam.otf) format("opentype");
+}
 
  /* CSS Variables */
  :root {
