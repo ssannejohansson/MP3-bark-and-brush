@@ -154,7 +154,7 @@
  /* Info */
  #index-info {
      padding-top: 30px;
-     background: url(/assets/images/pawbackground.png);
+     background: url(../images/pawbackground.png);
      background-size: contain;
      max-height: 700px;
      background-color: var(--light-blue-background);
