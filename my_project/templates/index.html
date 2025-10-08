@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,17 +27,17 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>404 - Page not found</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Bark & Brush | Homepage</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Header -->
-    <header id="header" class="container-fluid p-0 ">
+    <header class="container-fluid p-0" id="header">
 
         <!-- Navigation -->
-               <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -51,7 +53,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About us</a>
@@ -72,17 +74,84 @@
                 </div>
             </div>
         </nav>
+
+        <div
+            class="col-md-12 d-flex flex-column justify-content-between flex-md-row justify-content-md-between align-items-center hero-index">
+            <div class="col-md-6 col-lg-7 d-flex flex-column align-items-center align-items-lg-center">
+                <h1 class="mb-0 text-center heading-index">bark & brush</h1>
+                <p class="text-center" id="subtext">grooming with love</p>
+                <button class="btn custom-btn-outline mb-3">Book now!</button>
+            </div>
+
+            <div class="col-md-6 col-lg-5 d-flex justify-content-center" id="head-img">
+
+                <img src="{% static 'images/homepage-hero.png' %}" alt="Logo">
+      
+            </div>
+        </div>
     </header>
 
     <!-- Main content -->
-    <section id="error-page">
-        <div class="container-fluid d-flex flex-column justify-content-center align-items-center hero-pages">
-            <h1 class="container mb-0 text-center heading-pages">Oops! Something went wrong</h1>
-            <a href="index.html" class="btn custom-btn mt-3" id="error-btn">Go back to homepage</a>
+    <!-- First section -->
+    <section class="container-fluid d-flex flex-column justify-content-center" id="index-info">
+        <div class="container d-flex flex-column flex-lg-row gap-2" id="index-info-img">
+            <img src="assets/images/brush.jpg" class="img-fluid border-rad d-none d-lg-block col-lg-4">
+            <img src="assets/images/paws.jpg" class="img-fluid border-rad col-12 col-lg-2">
+            <div class="flex-column mt-2 mt-lg-0 ms-lg-4 col-lg-6" id="index-info-text">
+                <h3>Welcome to Bark & Brush <h4>where your dog's happiness is our priority.</h4>
+                </h3>
+                <p>We are Lina and Emma, two dedicated dog lovers committed to providing top-notch grooming services in
+                    a caring
+                    and stress-free environment. From soothing baths to stylish trims, we ensure every pup leaves our
+                    salon
+                    looking and feeling their best. Schedule a grooming session today and let us pamper your furry best
+                    friend!
+                </p>
+                <button class="btn custom-btn-outline" type="submit">Book now!</button>
+            </div>
         </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Second section -->
+    <section class="container-fluid d-flex flex-column justify-content-center align-items-center gap-4 mt-5 mb-5"
+        id="index-price">
+        <h2>Our Services</h2>
+        <div class="container d-flex flex-row flex-wrap justify-content-center gap-4">
+            <div class="card col-md-6">
+                <img src="assets/images/groom2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Full Groom</h4>
+                    <p>$60 - $100+</p>
+                </div>
+            </div>
+
+            <div class="card col-md-6">
+                <img src="assets/images/wash.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Bath and Tidy</h4>
+                    <p>$35 - $120+</p>
+                </div>
+            </div>
+
+            <div class="card col-md-6">
+                <img src="assets/images/clawclip.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Paws</h4>
+                    <p>$20 - $30+</p>
+                </div>
+            </div>
+
+            <div class="card col-md-6">
+                <img src="assets/images/groom.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">De-Shedding</h4>
+                    <p>$60 - $100+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="container-fluid d-flex flex-column pt-4 pb-4 justify-content-center" id="footer">
         <div class="container col-12 d-flex flex-row flex-wrap justify-content-evenly">
             <div class="col-sm-4 col-lg-3 mb-2" id="contact">
@@ -131,8 +200,7 @@
         </div>
     </footer>
 
-
-    <!-- Contact Modal -->
+    <!-- Contact modal -->
     <div class="modal fade" id="contact-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -164,11 +232,11 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn custom-btn" data-bs-dismiss="modal" id="close-btn">Close</button>
+
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Subscription modal -->
      <div class="modal fade" id="sub-modal" tabindex="-1">
@@ -189,6 +257,7 @@
   </div>
 </div>
 
+
     <!-- jQuery script -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -199,7 +268,7 @@
     </script>
 
     <!-- JavaScript script -->
-    <script src="assets/js/script.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>

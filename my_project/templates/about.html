@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,13 +28,13 @@
 
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Bark & Brush | Services</title>
+    <title>Bark & Brush | About</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Header -->
-    <header id="header" class="container-fluid p-0 ">
+    <header class="container-fluid p-0" id="header">
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg ">
@@ -54,10 +56,10 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About us</a>
+                            <a class="nav-link active" aria-current="page" href="about.html">About us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="services.html">Services</a>
+                            <a class="nav-link" href="services.html">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gallery.html">Gallery</a>
@@ -73,67 +75,71 @@
             </div>
         </nav>
 
-        <div class="col-12 d-flex justify-content-center align-items-center hero-pages">
-            <h1 class="mb-0 text-center heading-pages">see what services we can offer your pup </h1>
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center hero-pages">
+            <h1 class="mb-0 text-center heading-pages">read about our story and our philosophy</h1>
         </div>
     </header>
 
     <!-- Main content -->
-    <section class="container-fluid d-flex flex-column justify-content-center" id="services">
-        <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="assets/images/groom2.jpg" class="col-12 col-lg-6 border-rad mt-3" alt="">
-            <div class="col-12 col-lg-6">
-                <h3>Full Groom</h3>
-                <h4>Bath, blow-dry, full-body haircut, nail trimming and ear cleaning</h4>
-                <p><strong>Small dogs (under 20 lbs): </strong> ~ $60 - $80</p>
-                <p><strong>Medium dogs (20-50 lbs):</strong> ~ $70 - $100</p>
-                <p><strong>Large dogs (50-80 lbs):</strong> ~ $85 - $150</p>
-                <p><strong>Giant breeds (over 80 lbs):</strong> ~ $100+</p>
+    <section class="container d-flex flex-column mt-5" id="about-container">
+        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-4" id="our-story">
+
+            <img src="assets/images/about1.jpg" class="img-fluid border-rad mb-2 mb-lg-4 col-lg-6 me-lg-2" alt="">
+            <div class="col-lg-5 d-flex flex-column">
+                <h3>Our Story</h3>
+                <h4>A Passion for compassion</h4>
+                <p>The inspiration for Bark & Brush came from my own rescue dog, Max. After a terrible experience at a
+                    busy,
+                    impersonal grooming chain, I saw how stressed and anxious he was. I knew there had to be a better
+                    way
+                    — a place where a dog's emotional well-being was as important as their physical appearance.</p>
+                <p>My goal was to build a space where every dog, no matter their temperament or breed, could feel safe
+                    and
+                    comfortable while getting the high-quality care they deserve. This vision of a calm, compassionate
+                    grooming
+                    experience is what led me to open Bark & Brush.</p>
             </div>
         </div>
 
-        <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="assets/images/wash.jpg" class="col-12 col-lg-6 border-rad mt-3" alt="">
-            <div class="col-12 col-lg-6">
-                <h3>Bath and Tidy</h3>
-                <h4>Bath, blow-dry, a light trim, nail trimming and ear cleaning</h4>
-                <p><strong>Small dogs (under 20 lbs): </strong> ~ $35 - $60</p>
-                <p><strong>Medium dogs (20-50 lbs):</strong> ~ $50 - $80</p>
-                <p><strong>Large dogs (50-80 lbs):</strong> ~ $65 - $100+</p>
-                <p><strong>Giant breeds (over 80 lbs):</strong> ~ $120+</p>
+        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-3 mb-lg-5" id="our-phil">
+            <div class="col-lg-5 d-flex flex-column">
+                <h3>Our Philosophy</h3>
+                <h4>Compassionate Care, Beautiful Results</h4>
+                <p>At Bark & Brush, our mission is to provide the highest quality grooming in a safe, stress-free,
+                    and loving environment. We believe that grooming is more than just a haircut—it's an essential part
+                    of a dog's health and happiness.</p>
+                <p>We use only high-quality, all-natural shampoos and conditioners, and we take our time with each dog,
+                    ensuring a calm and positive experience. Our goal is to build trust with your pet, so they genuinely
+                    look forward to their spa day with us.
+                </p>
             </div>
+            <img src="assets/images/about2.jpg" class="img-fluid border-rad mb-2 col-lg-6 ms-lg-2" alt="">
         </div>
 
-        <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="assets/images/clawclip.jpg" class="col-12 col-lg-6 border-rad mt-3" alt="">
-            <div class="col-12 col-lg-6">
-                <h3>The Paw Package</h3>
-                <h4>Simple nail and paw trimming</h4>
-                <p><strong>Small dogs (under 20 lbs): </strong> ~ $20</p>
-                <p><strong>Medium dogs (20-50 lbs):</strong> ~ $25</p>
-                <p><strong>Large dogs (50-80 lbs):</strong> ~ $30</p>
-                <p><strong>Giant breeds (over 80 lbs):</strong> ~ $30+</p>
+        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-5" id="our-team">
+            <img src="assets/images/grooming.jpg" class="img-fluid border-rad mb-2 order-1 order-lg-0 col-lg-6 me-lg-2"
+                alt="">
+            <div class="col-lg-5 d-flex flex-column order-0 order-lg-1">
+                <h3>Our Team</h3>
+                <p class="mb-0"><strong>Lina - Founder & Lead Groomer</strong></p>
+                <p>From a young age, I've had a special connection with animals. My journey into professional grooming
+                    began
+                    eight years ago when I saw a need for a more compassionate approach to dog care. I am a Certified
+                    Master Groomer
+                    and have dedicated my career to understanding canine behavior and creating beautiful, breed-standard
+                    cuts.</p>
+                <p class="mb-0"><strong>Emma - Professional Dog Stylist</strong></p>
+                <p>Emma joined our team three years ago and quickly became an integral part of our family. She has a
+                    natural talent
+                    for styling and a patient, gentle demeanor that puts even the most nervous dogs at ease. Emma
+                    specializes in
+                    hand scissoring and is committed to continuing education to stay on top of the latest grooming
+                    techniques.</p>
             </div>
         </div>
-
-        <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="assets/images/blowdry.jpg" class="col-12 col-lg-6 border-rad mt-3" alt="">
-            <div class="col-12 col-lg-6">
-                <h3>The De-Shedding Package</h3>
-                <h4>Special de-shedding shampoo, blow-dry to blast out loose fur, an extensive brush-out, nail trimming
-                    and ear cleaning</h4>
-                <p><strong>Small dogs (under 20 lbs): </strong> ~ $45 - $70</p>
-                <p><strong>Medium dogs (20-50 lbs):</strong> ~ $60 - $90</p>
-                <p><strong>Large dogs (50-80 lbs):</strong> ~ $80 - $120+</p>
-                <p><strong>Giant breeds (over 80 lbs):</strong> ~ $100+</p>
-            </div>
-        </div>
-
-        <h5 class="text-center mt-5">Note that all our packages are flexible. Don't hesitate to ask and we'll make it
-            happen!</h5>
     </section>
 
-    <!-- Footer -->
+      <!-- Footer -->
     <footer class="container-fluid d-flex flex-column pt-4 pb-4 justify-content-center" id="footer">
         <div class="container col-12 d-flex flex-row flex-wrap justify-content-evenly">
             <div class="col-sm-4 col-lg-3 mb-2" id="contact">
@@ -181,7 +187,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- Contact Modal -->
     <div class="modal fade" id="contact-modal" tabindex="-1">
@@ -241,7 +246,6 @@
   </div>
 </div>
 
-    
     <!-- jQuery script -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
