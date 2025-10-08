@@ -82,7 +82,7 @@
 
  /* Navbar */
  nav {
-     background-color: transparent;
+     background-color: var(--pink-background-color);
  }
 
  .custom-btn-nav {
