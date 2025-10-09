@@ -14,12 +14,12 @@ SERVICE_CHOICES = (
 
 # Variable of times available for booking
 TIME_CHOICES = (
-    ("9:00 AM", "9:00 AM")
-    ("10:30 AM", "10:30 AM")
-    ("1:00 PM", "1:00 PM")
-    ("2:30 PM", "2:30 PM")
-    ("4:00 PM", "4:00 PM")
-    ("5:30 PM", "5:30 PM")
+    ("9:00 AM", "9:00 AM"),
+    ("10:30 AM", "10:30 AM"),
+    ("1:00 PM", "1:00 PM"),
+    ("2:30 PM", "2:30 PM"),
+    ("4:00 PM", "4:00 PM"),
+    ("5:30 PM", "5:30 PM"),
 )
 
 

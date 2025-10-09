@@ -18,6 +18,79 @@ def book_appointment(request):
     # only show the days that are not fully booked
     validateWeekdays = isWeekdayValid(weekdays)
 
+    """
+    If the user submits the form correctly, it grabs the service and day value 
+    from the submitted data. If no service is selected, the user gets a 
+    message and is sent back to the booking page.
+    """
+    if request.method == 'POST':
+        service = request.POST.get('service')
+        day = request.POST.get('day')
+        if service == None:
+            messages.success(request, "Please select a service")
+            return redirect('booking')
+        
+        # store day and service in django session
+        request.session['day'] = day
+        request.session['service'] = service
+
+        return redirect('bookingSubmit')
+    
+    return render(request, 'booking.html', {
+        'weekdays': weekdays,
+        'validateWeekdays': validateWeekdays,
+    })
+
+def bookingSubmit(request):
+    user = request.user
+    times = ["9:00 AM", "10:30 AM", "1:00 PM", "2:30 PM", "4:00 PM", "5:30 PM"]
+    today = datetime.now()
+    minDate = today.strftime('%Y-%m-%d')
+    deltatime = today + timedelta(days=31)
+    strdeltatime = deltatime.strftime('%Y-%m-%d')
+    maxDate = strdeltatime
+
+    # get stored data from django session in book_appointment
+    day = request.session.get('day')
+    service = request.session.get('service')
+
+    # only show the time of the day that has not been selected before (?)
+    hour = checkTime(times, day)
+    if request.method == 'POST':
+        time = request.POST.get("time")
+        date = dayToWeekday(day)
+
+# --- comment to self: remove some of the if statements?
+        if service != None:
+            if day <= maxDate and day <= minDate:
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
+                    if Appointment.objects.filter(day=day).count() < 7:
+                        if Appointment.objects.filter(day=day, time=time).count() < 1:
+                            AppointmentForm = Appointment.object.get_or_create(
+                                user=user,
+                                service=service,
+                                day=day,
+                                time=time,
+                            )
+                            messages.success(request, "Appointment Saved!")
+                            return redirect('booking')
+                    else:
+                        messages.success(request,
+                                         "The selected time is unavailable")
+                else:
+                    messages.success(request,
+                                     "The selected day is full")
+            else:
+                messages.success(request,
+                                 "The selected date isn't the "
+                                 "in the correct time period")
+        else: 
+            messages.success(request, 
+                             "Please select a service")
+    
+    return render(request, 'booking.html', {
+        'times': hour,
+    })
 
 
 def validWeekday(days):
