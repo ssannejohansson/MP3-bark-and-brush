@@ -4,6 +4,13 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
+
+
+
+
+
+"""
 # Variable for the choices of service the user can book
 SERVICE_CHOICES = (
     ("Full Groom", "Full Groom"),
@@ -24,7 +31,7 @@ TIME_CHOICES = (
 
 
 class Appointment(models.Model):
-    """
+  
     ``user``
     When a user delete its account, all its appointments will be
     deleted. Null and blank set to false ensures that every booking
@@ -43,7 +50,7 @@ class Appointment(models.Model):
     ``booked_on```
     Keeps track of then the appointment was booked. Blank set to
     false to ensure the field is not left blank.
-    """
+   
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False,
                              blank=False)
     service = models.CharField(max_length=30, choices=SERVICE_CHOICES,
@@ -55,3 +62,4 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"{self.user.username} | day: {self.day} | time: {self.time}"
+"""

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- sign-up.html content starts here -->
+ <!-- Just for testing purposes, will change later -->
+
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Log In</button>
+</form>
+    <!-- sign-up.html content ends here -->
+     {% endblock %}
+
+
