@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'booking',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -138,6 +139,6 @@ STATICFILES_DIRS = [BASE_DIR / 'my_project/static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "sign_up"
+LOGIN_REDIRECT_URL = "booking"
 
 LOGOUT_REDIRECT_URL = "/"
