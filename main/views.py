@@ -19,4 +19,4 @@ def gallery(request):
 
 
 def booking(request):
-    return render(request, 'booking.html')
+    return render(request, 'book-now.html')

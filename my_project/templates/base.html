@@ -4,7 +4,8 @@
 {% url 'about' as about_url %}
 {% url 'services' as services_url %}
 {% url 'gallery' as gallery_url %}
-{% url 'booking' as booking_url %}
+{% url 'booking' as booking_url%}
+
 
 
 <!DOCTYPE html>
@@ -53,7 +54,7 @@
                     <!-- d-lg none to hide button on large screens -->
                     <button class="btn custom-btn-nav d-lg-none" type="submit" data-bs-toggle="modal"
                         data-bs-target="#contact-modal">Contact</button>
-                    <button class="btn custom-btn-nav d-lg-none" type="submit">Book</button>
+                    <a href="{% url 'booking' %}" class="btn custom-btn-nav d-lg-none">Book</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-3">
@@ -74,7 +75,7 @@
                         <!-- d-none to hide buttons on small screens, d-lg-block to make them visible on large screens -->
                         <button class="btn custom-btn-outline d-none d-lg-block" data-bs-toggle="modal"
                             data-bs-target="#contact-modal">Contact</button>
-                        <a href="{% url 'booking' %}" class="btn custom-btn d-none d-lg-block" type="submit">Book now!</a>
+                        <a href="{% url 'booking' %}" class="btn custom-btn d-none d-lg-block">Book now!</a>
                     </div>
                 </div>
             </div>
