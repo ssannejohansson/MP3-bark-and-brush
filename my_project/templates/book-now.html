@@ -7,20 +7,22 @@
 
 
 
-    <!-- booking.html content starts here -->
+    <!-- book-now.html content starts here -->
     <!-- Header -->
     
-   <!--<header id="header" class="container-fluid p-0 ">
-<div class="col-12 d-flex flex-column justify-content-center align-items-center hero-pages">
-            <h1 class="mb-0 text-center heading-pages">ready to book?<br>
-                let's get started!</h1>
+   <header id="header" class="container-fluid p-0 ">
+<div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+            <h1 class="mb-0 text-center heading-pages">book your appointment</h1>
           </div>
-    </header> -->
+    </header> 
 
     <!-- Main content -->
-
+         <section class="container-fluid d-flex flex-column justify-content-center align-items-center booking-index">
 {% if user.is_authenticated %}
-Hi {{ user.username }}!
+
+
+
+
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
   <button type="submit">Log Out</button>
@@ -30,8 +32,13 @@ Hi {{ user.username }}!
 <a href="{% url 'login' %}">Log In</a>
 {% endif %}
 
+         </section>
+
+{% endblock %}
+
+
+
 
 
     <!-- booking.html content ends here -->
      
-{% endblock %}

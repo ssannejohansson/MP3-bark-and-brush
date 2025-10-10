@@ -6,15 +6,21 @@
 {% block title %}Login{% endblock %}
 {% block content %}
 
+   <header id="header" class="container-fluid p-0 ">
+<div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+            <h1 class="mb-0 text-center heading-pages">let's get you logged in</h1>
+          </div>
+    </header> 
+
 <!-- sign-up.html content starts here -->
  <!-- Just for testing purposes, will change later -->
-
-<h2>Log In</h2>
+ <section class="container-fluid d-flex flex-column justify-content-center align-items-center booking-index">
 <form method="post">
   {% csrf_token %}
   {{ form }}
   <button type="submit">Log In</button>
 </form>
+</section>
     <!-- sign-up.html content ends here -->
      {% endblock %}
 

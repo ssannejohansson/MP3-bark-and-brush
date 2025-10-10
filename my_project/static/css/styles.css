@@ -192,8 +192,27 @@
      transform: scale(1.2);
      z-index: 1;
  }
+ 
+/* -- BOOKING PAGE --*/ 
+.custom-btn-booking {
+    width: fit-content;
+     background-color: var(--light-blue);
+     font-weight: 600;
+     color: var(--brown);
+     transition: 0.5s;
+ }
 
- /* Footer */
+ .custom-btn-booking:hover {
+     background-color: #92a4d1;
+ }
+
+ .booking-header {
+    height: 150px; 
+
+ }
+
+ 
+ /* -- FOOTER -- */
  footer {
      background-color: var(--pink-background-color);
      min-height: 200px;
@@ -289,7 +308,7 @@
      z-index: 1;
  }
 
- /* -- 404 PAGE -- */
+/* -- 404 PAGE -- */
  #error-btn {
      width: fit-content;
  }
@@ -355,6 +374,11 @@
      #hero-gallery {
          min-height: 400px;
      }
+
+     /* BOOKING PAGE */ 
+    .booking-header {
+    height: 200px; 
+ }
  }
 
  /* Media query: laptop and larger (992px and up) */
@@ -400,6 +424,15 @@
      #booking-form {
          width: 60%;
      }
+
+          /* BOOKING PAGE */ 
+    .booking-header {
+    height: 300px; 
+ }
+
+ .booking-index {
+    min-height: 400px; 
+ }
  }
 
  /* Media query: desktop and larger (1200px and up) */

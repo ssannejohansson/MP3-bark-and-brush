@@ -20,3 +20,7 @@ def gallery(request):
 
 def booking(request):
     return render(request, 'book-now.html')
+
+
+def book_login(request):
+    return render(request, 'registration/login.html')

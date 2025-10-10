@@ -35,7 +35,7 @@
 
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Bark & Brush | Homepage</title>
+    <title>Bark & Brush | Booking</title>
 </head>
 
 <body>
@@ -44,16 +44,17 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a href="{% url 'home' %}" class="nav-link"><i class="fa-solid fa-chevron-left"></i> Return to website </a>
+            <a href="{% url 'home' %}" class="btn custom-btn-booking"><i class="fa-solid fa-arrow-left"></i> Return home</a>
 
             <div class="d-flex gap-2">
                 {% if user.is_authenticated %}
+                <p>You are logged in as: {{ user.username }}</p>
                 <form action="{% url 'logout' %}" method="post">
                     {% csrf_token %}
-                    <button type="submit">Log Out</button>
+                    <button class="btn custom-btn-outline" type="submit">Log Out</button>
                 </form>
                 {% else %}
-                <a href="{% url 'login' %}">Log in</a>
+                <a href="{% url 'login' %}" class="btn custom-btn-outline">Log in</a>
                 {% endif %}
             </div>
         </div>
