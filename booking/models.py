@@ -56,4 +56,6 @@ class Appointment(models.Model):
     def __str__(self):
         return f"{self.user.username} | day: {self.day} | time: {self.time}"
 
-
+# prevents double booking
+class Meta:
+    unique_together = ('day', 'time')
