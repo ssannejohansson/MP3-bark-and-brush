@@ -36,3 +36,31 @@ if (alertTrigger) {
     appendAlert('Message successfully sent!', 'success')
   })
 }
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const dayInput = document.getElementById('id_day');
+    const timeSelect = document.getElementById('id_time');
+
+    dayInput.addEventListener('change', function () {
+      const selectedDay = this.value;
+
+      if (!selectedDay) return;
+
+      fetch(`/appointments/available-times/?day=${selectedDay}`)
+        .then(response => response.json())
+        .then(data => {
+          // Clear existing options
+          timeSelect.innerHTML = '<option value="">Select a time</option>';
+
+          if (data.available_times) {
+            data.available_times.forEach(time => {
+              const option = document.createElement('option');
+              option.value = time;
+              option.textContent = time;
+              timeSelect.appendChild(option);
+            });
+          }
+        });
+    });
+  });

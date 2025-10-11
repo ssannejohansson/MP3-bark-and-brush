@@ -1,10 +1,35 @@
 {% extends "book-now-base.html" %}
 
+{% load static %}
+
 {% block content %}
-  <h2>Book an Appointment</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Book</button>
-  </form>
+<h2>Book an Appointment</h2>
+
+<form method="post" id="booking-form">
+  {% csrf_token %}
+  
+  <label for="id_service">Service:</label>
+  {{ form.service }}
+
+  <label for="id_day">Day:</label>
+  {{ form.day }}
+
+  <label for="id_time">Time:</label>
+  <select id="id_time" name="time">
+    <option value="">Select a time</option>
+    {% for value, label in form.fields.time.choices %}
+      <option value="{{ value }}">{{ label }}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit">Book</button>
+</form>
+
+{% if messages %}
+  <ul>
+    {% for message in messages %}
+      <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
 {% endblock %}
