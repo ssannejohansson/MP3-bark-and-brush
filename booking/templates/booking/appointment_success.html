@@ -1,0 +1,25 @@
+{% extends "book-now-base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+  <h2>Appointment Booked!</h2>
+  <p>Your appointment has been successfully scheduled.</p>
+
+  {% if appointment %}
+    <hr>
+    <h3>Your Appointment:</h3>
+    <ul>
+      <li><strong>Service:</strong> {{ appointment.service }}</li>
+      <li><strong>Date:</strong> {{ appointment.day }}</li>
+      <li><strong>Time:</strong> {{ appointment.time }}</li>
+    </ul>
+
+    <p>
+      <a href="{% url 'update_appointment' appointment.pk %}">Update</a> |
+    </p>
+  {% endif %}
+
+  <p><a href="{% url 'book_appointment' %}">Book another appointment</a></p>
+{% endblock %}

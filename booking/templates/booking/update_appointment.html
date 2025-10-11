@@ -1,0 +1,22 @@
+{% extends "book-now-base.html" %}
+{% load static %}
+
+
+{% block content %}
+<section id="update-booking">
+  <h2>Manage Your Appointment</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="update">💾 Save Changes</button>
+  </form>
+
+  <hr>
+
+  <form method="post" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
+    {% csrf_token %}
+    <button type="submit" name="delete" class="danger-button">Cancel Appointment</button>
+  </form>
+</section>
+{% endblock %}

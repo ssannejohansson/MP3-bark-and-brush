@@ -210,6 +210,22 @@
     height: 150px; 
 
  }
+#booking-form select option:disabled {
+  color: #aaa;
+  background-color: #f8f8f8;
+}
+
+#update-booking .danger-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.danger-button:hover {
+  background-color: #c0392b;
+}
 
  
  /* -- FOOTER -- */

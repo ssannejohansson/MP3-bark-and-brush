@@ -8,6 +8,8 @@ from .forms import AppointmentForm
 from django.utils.dateparse import parse_date
 from . import models
 from django.contrib import messages
+import datetime
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
@@ -48,3 +50,60 @@ def get_available_times(request):
     available_times = [t for t in all_times if t not in booked_times]
 
     return JsonResponse({'available_times': available_times})
+
+
+def get_fully_booked_dates(request):
+    today = datetime.date.today()
+    next_30_days = [today + datetime.timedelta(days=i) for i in range(30)]
+    fully_booked = []
+
+    for day in next_30_days:
+        booked_times = Appointment.objects.filter(day=day).values_list('time', flat=True)
+        if len(booked_times) >= len(TIME_CHOICES):
+            fully_booked.append(day.isoformat())
+
+    return JsonResponse({'fully_booked_dates': fully_booked})
+
+
+@login_required
+def appointment_success(request):
+    latest_appointment = (
+        Appointment.objects.filter(user=request.user)
+        .order_by('-booked_on')
+        .first()
+    )
+    return render(request, 'booking/appointment_success.html', {
+        'appointment': latest_appointment
+    })
+
+
+
+@login_required
+def update_appointment(request, pk):
+    appointment = get_object_or_404(Appointment, pk=pk, user=request.user)
+
+    if request.method == 'POST':
+        if 'delete' in request.POST:
+            appointment.delete()
+            messages.success(request, "Appointment canceled.")
+            return redirect('book_appointment')
+
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Appointment updated.")
+            return redirect('appointment_success')
+    else:
+        form = AppointmentForm(instance=appointment)
+
+    return render(request, 'booking/update_appointment.html', {
+        'form': form,
+        'appointment': appointment
+    })
+
+@login_required
+def my_appointments(request):
+    appointments = Appointment.objects.filter(user=request.user).order_by('day', 'time')
+    return render(request, 'booking/my_appointments.html', {
+        'appointments': appointments
+    })

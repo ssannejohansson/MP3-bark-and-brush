@@ -41,6 +41,24 @@ if (alertTrigger) {
     const dayInput = document.getElementById('id_day');
     const timeSelect = document.getElementById('id_time');
 
+    // 1. Get fully booked dates from backend
+    fetch('/fully-booked-dates/')
+      .then(res => res.json())
+      .then(data => {
+        flatpickr("#id_day", {
+          minDate: "today",
+          dateFormat: "Y-m-d",
+          disable: [
+            data.fully_booked_dates, // Disable fully booked
+                function (date) {
+      // return true to disable
+      return (date.getDay() === 0 || date.getDay() === 6);  // Sunday = 0, Saturday = 6
+    }
+  ]
+        });
+      });
+
+    // 2. Fetch available times when date is selected
     dayInput.addEventListener('change', function () {
       const selectedDate = this.value;
 
@@ -49,29 +67,22 @@ if (alertTrigger) {
       fetch(`/available-times/?day=${selectedDate}`)
         .then(response => response.json())
         .then(data => {
-          // Clear existing options
+          const availableTimes = data.available_times || [];
+          const allTimes = ["9:00 AM", "10:30 AM", "1:00 PM", "2:30 PM", "4:00 PM", "5:30 PM"];
           timeSelect.innerHTML = '';
 
-          // Add placeholder
-          const placeholder = document.createElement('option');
-          placeholder.value = '';
-          placeholder.textContent = 'Select a time';
-          timeSelect.appendChild(placeholder);
-
-          // Add available time options
-          if (data.available_times && data.available_times.length > 0) {
-            data.available_times.forEach(time => {
-              const option = document.createElement('option');
-              option.value = time;
-              option.textContent = time;
-              timeSelect.appendChild(option);
-            });
-          } else {
+          allTimes.forEach(time => {
             const option = document.createElement('option');
-            option.textContent = 'No available times';
-            option.disabled = true;
+            option.value = time;
+            option.textContent = time;
+
+            if (!availableTimes.includes(time)) {
+              option.disabled = true;
+              option.style.color = '#aaa';  // gray out text
+            }
+
             timeSelect.appendChild(option);
-          }
+          });
         });
     });
   });

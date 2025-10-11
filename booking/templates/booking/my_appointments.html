@@ -1,0 +1,23 @@
+{% extends "book-now-base.html" %}
+
+{% block content %}
+  <h2>My Appointments</h2>
+
+  {% if appointments %}
+    <ul>
+      {% for appointment in appointments %}
+        <li>
+          <strong>{{ appointment.day }} at {{ appointment.time }}</strong> — {{ appointment.service }}<br>
+          <a href="{% url 'update_appointment' appointment.pk %}">Edit</a> |
+          <form action="{% url 'update_appointment' appointment.pk %}" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
+            {% csrf_token %}
+            <button type="submit" name="delete" class="danger-button"> Cancel</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You have no appointments yet.</p>
+    <p><a href="{% url 'book_appointment' %}">Book your first appointment</a></p>
+  {% endif %}
+{% endblock %}
