@@ -3,7 +3,7 @@ from .forms import AppointmentForm
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import now
 from django.http import JsonResponse
-from .models import Appointment
+from .models import Appointment, TIME_CHOICES
 from .forms import AppointmentForm
 from django.utils.dateparse import parse_date
 from . import models
@@ -18,11 +18,11 @@ def book_appointment(request):
         if form.is_valid():
             appointment = form.save(commit=False)
             appointment.user = request.user
-            
-            # Check for double booking
-            exists = Appointment.objects.filter(day=appointment.day, time=appointment.time).exists()
-            if exists:
-                messages.error(request, "This time slot is already booked. Please choose another.")
+            appointment.booked_on = now()
+
+            # Prevent double-booking as backup
+            if Appointment.objects.filter(day=appointment.day, time=appointment.time).exists():
+                messages.error(request, "That time slot is already booked. Please choose another.")
             else:
                 appointment.save()
                 messages.success(request, "Appointment booked successfully!")
@@ -39,8 +39,12 @@ def get_available_times(request):
         return JsonResponse({'error': 'No date provided'}, status=400)
 
     selected_date = parse_date(selected_date)
-    all_times = dict(models.TIME_CHOICES).keys()
+    all_times = [t[0] for t in TIME_CHOICES]
+
+    # Get already-booked times for that day
     booked_times = Appointment.objects.filter(day=selected_date).values_list('time', flat=True)
+
+    # Filter out booked times
     available_times = [t for t in all_times if t not in booked_times]
 
     return JsonResponse({'available_times': available_times})

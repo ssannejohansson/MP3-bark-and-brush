@@ -37,29 +37,40 @@ if (alertTrigger) {
   })
 }
 
-
   document.addEventListener('DOMContentLoaded', function () {
     const dayInput = document.getElementById('id_day');
     const timeSelect = document.getElementById('id_time');
 
     dayInput.addEventListener('change', function () {
-      const selectedDay = this.value;
+      const selectedDate = this.value;
 
-      if (!selectedDay) return;
+      if (!selectedDate) return;
 
-      fetch(`/appointments/available-times/?day=${selectedDay}`)
+      fetch(`/available-times/?day=${selectedDate}`)
         .then(response => response.json())
         .then(data => {
           // Clear existing options
-          timeSelect.innerHTML = '<option value="">Select a time</option>';
+          timeSelect.innerHTML = '';
 
-          if (data.available_times) {
+          // Add placeholder
+          const placeholder = document.createElement('option');
+          placeholder.value = '';
+          placeholder.textContent = 'Select a time';
+          timeSelect.appendChild(placeholder);
+
+          // Add available time options
+          if (data.available_times && data.available_times.length > 0) {
             data.available_times.forEach(time => {
               const option = document.createElement('option');
               option.value = time;
               option.textContent = time;
               timeSelect.appendChild(option);
             });
+          } else {
+            const option = document.createElement('option');
+            option.textContent = 'No available times';
+            option.disabled = true;
+            timeSelect.appendChild(option);
           }
         });
     });
