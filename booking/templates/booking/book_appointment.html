@@ -20,25 +20,52 @@
 
 <!-- Main content -->
 <section class="container-fluid d-flex flex-column justify-content-center align-items-center">
+    <div class="d-flex flex-column align-items-center justify-content-center booking-form-container">
 <form method="post" id="booking-form">
   {% csrf_token %}
-  
-  <label for="id_service">Service:</label>
-  {{ form.service }}
+  <div class="d-flex flex-md-row">
+  <div class="col-md-6 form-group">
+    {{ form.name.label_tag }} {{ form.name }}
+  </div>
+  <div class="col-md-6 form-group">
+    {{ form.email.label_tag }} {{ form.email }}
+  </div>
+    </div>
+      <div class="d-flex flex-md-row">
+  <div class="col-md-6 form-group">
+    {{ form.dog_name.label_tag }} {{ form.dog_name }}
+  </div>
+  <div class="col-md 6 form-group">
+    {{ form.dog_breed.label_tag }} {{ form.dog_breed }}
+  </div>
 
-  <label for="id_day">Day:</label>
-  {{ form.day }}
+  </div>
+ 
+    <div class="col-md-12 form-group">
+    {{ form.service.label_tag }} {{ form.service }}
+  </div>
 
-  <label for="id_time">Time:</label>
+    <div class="d-flex flex-md-row">
+  <div class="col-md-6 form-group">
+    {{ form.day.label_tag }} {{ form.day }}
+  </div>
+
+  <div class="col-md-6 form-group">
+  {{ form.time.label_tag }}
+  {{ form.time }}
+</div>
+  <!--<label for="id_time">Time:</label>
   <select id="id_time" name="time">
     <option value="">Select a time</option>
     {% for value, label in form.fields.time.choices %}
       <option value="{{ value }}">{{ label }}</option>
     {% endfor %}
-  </select>
+  </select> -->
+  </div>
 
   <button type="submit">Book</button>
 </form>
+</div>
 </section>
 
 {% if messages %}

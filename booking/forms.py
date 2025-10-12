@@ -5,7 +5,7 @@ from .models import Appointment
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ['service', 'day', 'time']
+        fields = ['name', 'email', 'dog_name', 'dog_breed', 'service', 'day', 'time']
         widgets = {
             'day': forms.DateInput(attrs={'type': 'date'}),
         }

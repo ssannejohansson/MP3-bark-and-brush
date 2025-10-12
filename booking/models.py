@@ -30,6 +30,20 @@ class Appointment(models.Model):
     deleted. Null and blank set to false ensures that every booking
     needs to be associated with a user.
 
+    ``name``
+    Charfield with max_length set to 50 to tell the database how much space
+    to reserve for the field.
+
+    ``email``
+    Emailfield with null and blank set to false, to make this fields
+    required to fill in.
+
+    ``dog_name and dog_breed``
+    Charfield with max_length set to 50 tell the database how much space
+    to reserve for the field. Dog_name with blank set to True to tell the
+    database that this field can be left blank. Dog_breed with null and blank
+    set to false to ensure the field is not left blank.
+
     ``service``
     Charfield with max_length set to tell the database how much space
     to reserve for the field even though specified choices are given.
@@ -46,6 +60,10 @@ class Appointment(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False,
                              blank=False)
+    name = models.CharField(max_length=50, blank=True)
+    email = models.EmailField(null=False, blank=False)
+    dog_name = models.CharField(max_length=50, blank=True)
+    dog_breed = models.CharField(max_length=50, null=False, blank=False)
     service = models.CharField(max_length=30, choices=SERVICE_CHOICES,
                                default="Full Groom")
     day = models.DateField(default=datetime.now)
@@ -54,7 +72,8 @@ class Appointment(models.Model):
     booked_on = models.DateTimeField(default=datetime.now, blank=False)
 
     def __str__(self):
-        return f"{self.user.username} | day: {self.day} | time: {self.time}"
+        return f"{self.name} | day: {self.day} | time: {self.time}"
+
 
 # prevents double booking
 class Meta:

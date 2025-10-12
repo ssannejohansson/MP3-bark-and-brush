@@ -208,8 +208,25 @@
 
  .booking-header {
     height: 150px; 
+ }
+
+ .booking-form-container {
+    width: 80%;
+    height: 600px;
 
  }
+#booking-form label {
+    font-family: var(--primary-font);
+     font-size: 18px;
+     margin-bottom: 0px;
+}
+
+#booking-form input {
+    width: 200px;
+    border-radius: 10px; 
+}
+
+
 #booking-form select option:disabled {
   color: #aaa;
   background-color: #f8f8f8;
