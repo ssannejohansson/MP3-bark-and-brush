@@ -2,8 +2,8 @@
 {% load static %}
 
 
-
-{% block title %}Login{% endblock %}
+<!-- Changes title on the page (in the tab) -->
+{% block title %} Login {% endblock %}
 {% block content %}
 
    <header id="header" class="container-fluid p-0 ">
@@ -20,6 +20,13 @@
   {{ form }}
   <button type="submit">Log In</button>
 </form>
+</section>
+
+<section>
+    <p class="mt-3">
+  Don't have an account?
+  <a href="{% url 'signup' %}">Register here</a>
+</p>
 </section>
     <!-- sign-up.html content ends here -->
      {% endblock %}

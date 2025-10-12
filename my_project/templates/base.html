@@ -36,7 +36,7 @@
 
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Bark & Brush | Homepage</title>
+    <title>Bark & Brush | {% block title %}{% endblock %}</title> <!-- Block title to dynamically change title on pages -->
 </head>
 
 <body>
