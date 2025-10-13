@@ -279,6 +279,19 @@
     border-radius: 10px; 
 }
 
+select option[value=""] {
+  color: #6c757d; /* muted grey */
+}
+
+select:invalid {
+  color: #6c757d;
+}
+
+/* Once a user selects a real option, make it black */
+select option:not([value=""]) {
+  color: #000;
+}
+
 
 #booking-form select option:disabled {
   color: #aaa;

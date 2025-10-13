@@ -72,13 +72,10 @@ class Appointment(models.Model):
     email = models.EmailField(null=False, blank=False)
     dog_name = models.CharField(max_length=50, blank=False)
     dog_breed = models.CharField(max_length=50, null=False, blank=False)
-    service = models.CharField(max_length=30, choices=SERVICE_CHOICES,
-                               default="Full Groom")
-    size = models.CharField(max_length=30, choices=SIZE_CHOICES,
-                            default="Small (under 20 lbs)") 
-    day = models.DateField(default=datetime.now)
-    time = models.CharField(max_length=10, choices=TIME_CHOICES,
-                            default="9:00 AM")
+    service = models.CharField(max_length=30, choices=SERVICE_CHOICES)
+    size = models.CharField(max_length=30, choices=SIZE_CHOICES)
+    day = models.DateField(default=datetime.now, blank=False)
+    time = models.CharField(max_length=10, choices=TIME_CHOICES, blank="False")
     booked_on = models.DateTimeField(default=datetime.now, blank=False)
 
     def __str__(self):

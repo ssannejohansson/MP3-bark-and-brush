@@ -13,9 +13,38 @@ class AppointmentForm(forms.ModelForm):
             'day': forms.DateInput(attrs={'type': 'date'}),
         }
 
+        error_messages = {
+            'email': {'required': "We need your email to confirm your appointment."},
+            'dog_name': {'required': "Please tell us your dog's name."},
+            'dog_breed': {'required': "Let us know your dog's breed."},
+            'service': {'required': "Please select a service."},
+            'size': {'required': "Please choose your dog's size."},
+            'day': {'required': "Pick a preferred date for your appointment."},
+            'time': {'required': "Select a suitable time slot."},
+        }
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        # Add disabled placeholder option to dropdowns
+        for field_name, placeholder in {
+            'service': 'Select a service...',
+            'size': "Select your dog’s size...",
+            'day': "Select a day...",
+            'time': "Select a time...",
+        }.items():
+            field = self.fields.get(field_name)
+    
+        if field and hasattr(field, 'choices') and field.choices:
+            choices = list(field.choices)
+            # Prepend the placeholder as the first choice
+            field.choices = [('', placeholder)] + choices
+            # Make the placeholder selected by default
+            field.initial = ''
+            # Keep required validation
+            field.widget.attrs.update({'required': 'required'})
+
+#crispy form setup
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'booking-form'
@@ -44,7 +73,7 @@ class AppointmentForm(forms.ModelForm):
                 Column('day', css_class='col-md-6'),
                 Column('time', css_class='col-md-6'),
             ),
-            StrictButton('Book Appointment', 'Book Appointment', css_class='custom-btn-booking')
+            StrictButton('Book Appointment', 'Book Appointment', type="submit", css_class='custom-btn-booking')
         )
 
 
