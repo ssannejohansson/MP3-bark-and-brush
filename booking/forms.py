@@ -1,5 +1,7 @@
 from django import forms
 from .models import Appointment
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Row, Column, Submit
 
 
 class AppointmentForm(forms.ModelForm):
@@ -9,6 +11,30 @@ class AppointmentForm(forms.ModelForm):
         widgets = {
             'day': forms.DateInput(attrs={'type': 'date'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.form_id = 'booking-form'
+
+        self.helper.layout = Layout(
+            Row(
+                Column('name'),
+                Column('email'),
+            ),
+            Row(
+                Column('dog_name'),
+                Column('dog_breed'),
+            ),
+            'service',
+            Row(
+                Column('day', css_class='col-md-6'),
+                Column('time', css_class='col-md-6'),
+            ),
+            Submit('submit', 'Book Appointment')
+        )
 
 
 class AdminAppointmentForm(forms.ModelForm):

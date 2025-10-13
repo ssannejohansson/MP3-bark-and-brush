@@ -32,7 +32,7 @@ def book_appointment(request):
     else:
         form = AppointmentForm()
 
-    return render(request, 'booking/book_appointment.html', {'form': form})
+    return render(request, 'booking/book_appointment.html', {'appointment_form': form})
 
 
 def get_available_times(request):
