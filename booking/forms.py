@@ -1,7 +1,7 @@
 from django import forms
 from .models import Appointment
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Row, Column, Submit
+from crispy_forms.layout import Layout, Row, Column, HTML, Submit
 
 
 class AppointmentForm(forms.ModelForm):
@@ -21,22 +21,29 @@ class AppointmentForm(forms.ModelForm):
 
         self.helper.layout = Layout(
             Row(
-                Column('name'),
-                Column('email'),
+                Column('name', css_class="col-md-6"),
+                Column('email', css_class="col-md-6"),
             ),
             Row(
-                Column('dog_name'),
-                Column('dog_breed'),
+                Column('dog_name', css_class="col-md-6"),
+                Column('dog_breed', css_class="col-md-6"),
             ),
             Row(
-                Column('service'),
-                Column('size'),
+                Column('service', css_class="col-md-6"),
+                Column('size', css_class="col-md-6"),
+            ),
+            HTML(
+                '<div class="text-start mb-3">'
+                '  <a href="{% url "services" %}" target="_blank" class="small text-muted">'
+                '    Need to refresh your memory? See our services here!'
+                '  </a>'
+                '</div>'
             ),
             Row(
                 Column('day', css_class='col-md-6'),
                 Column('time', css_class='col-md-6'),
             ),
-            Submit('submit', 'Book Appointment')
+            Submit('submit', 'Book Appointment', css_class='btn custom-btn-booking')
         )
 
 

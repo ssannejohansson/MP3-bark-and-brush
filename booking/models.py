@@ -70,7 +70,7 @@ class Appointment(models.Model):
                              blank=False)
     name = models.CharField(max_length=50, blank=True)
     email = models.EmailField(null=False, blank=False)
-    dog_name = models.CharField(max_length=50, blank=True)
+    dog_name = models.CharField(max_length=50, blank=False)
     dog_breed = models.CharField(max_length=50, null=False, blank=False)
     service = models.CharField(max_length=30, choices=SERVICE_CHOICES,
                                default="Full Groom")

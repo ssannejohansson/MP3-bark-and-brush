@@ -101,6 +101,7 @@ def update_appointment(request, pk):
         'appointment': appointment
     })
 
+
 @login_required
 def my_appointments(request):
     appointments = Appointment.objects.filter(user=request.user).order_by('day', 'time')

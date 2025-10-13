@@ -207,6 +207,7 @@
      font-weight: 600;
      background-color: transparent;
      border: 1px solid var(--dark-blue);
+     color: var(--brown);
      transition: 0.5s;
  }
 
@@ -219,35 +220,52 @@
  }
 
  .booking-header {
-    height: 150px; 
+    height: 120px; 
  }
 
  .booking-index {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px; 
     height: 100%;
  }
 
-.booking-index a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--dark-blue);
-}
+ .booking-index p {
+    font-size: 18px;
+ }
 
-.booing-index ul, li {
+ .booking-index a {
+    color: var(--brown);
+ }
+
+
+
+.booking-index ul, li {
     list-style-type: none;
+    
 }
 
- .booking-index, .form-label { 
-    font-family: var(--primary-font);
+ .booking-index .form-label {
+     font-family: var(--primary-font);
      font-size: 18px;
      margin-bottom: 0px;
-}
+ }
+
+ .booking-index input.form-control,
+ .booking-index input.textarea {
+     margin-bottom: 10px;
+     border: 1px solid var(--light-blue);
+ }
+
+ .booking-index input:focus,
+ .booking-index textarea:focus {
+     border: 2px solid var(--dark-blue);
+     outline: none !important;
+     box-shadow: none;
+ }
 
 
-.booking-index a:hover {
-    color: #2a5989;
-}
 #booking-form input {
     width: 200px;
     border-radius: 10px; 
@@ -265,14 +283,28 @@
 }
 
 #appointment-container {
-    border: 2px solid var(--brown);
-    border-radius: 10px;;
+    border-bottom: 1px solid var(--brown);
+
 }
 
 #appointment-container a {
     color: var(--brown);
 }
  
+
+.book-link:hover {
+    color: #2a5b8b;
+}
+
+#success-booking li {
+    font-size: 18px;
+
+}
+
+/* Overrides the default crispy-forms setting for an asterisk next to required field label */
+.asteriskField {
+  display: none !important;
+}
  /* -- FOOTER -- */
  footer {
      background-color: var(--pink-background-color);

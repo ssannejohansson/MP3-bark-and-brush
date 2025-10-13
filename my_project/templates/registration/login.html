@@ -23,10 +23,11 @@
   <button type="submit" class="btn custom-btn">Log In</button>
 </form>    
 
-<p class="mt-5 text-center">
-  Don't have an account?<br>
-  <a href="{% url 'signup' %}">Register with us now!</a>
-</p>
+<div class="text-center">
+<h4 class="mt-5">
+  Don't have an account?</h4>
+  <a href="{% url 'signup' %}" class="btn custom-btn-booking-outline">Register with us now!</a>
+</div>
 </section>
     <!-- sign-up.html content ends here -->
      {% endblock %}

@@ -9,7 +9,7 @@
 
 <!-- Header -->
   <header id="header" class="container-fluid p-0 ">
-<div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header">
 
                 <h1 class="mb-0 text-center heading-pages">let's manage your appointments</h1>
             
@@ -19,11 +19,14 @@
 <section class="booking-index">
  
   {% if appointments %}
-    <ul>
+    <ul class="ps-0">
       {% for appointment in appointments %}
            <li>
             <div class="mt-2 p-3" id="appointment-container">
-          <strong>{{ appointment.day }} at {{ appointment.time }}</strong> — {{ appointment.service }}<br>
+              <div class="mb-3" id="appointment-info">
+          <h4>{{ appointment.dog_name }}</h4>
+          <p><strong>{{ appointment.day }} at {{ appointment.time }}</strong> — {{ appointment.service }}</p>
+        </div>
           <a href="{% url 'update_appointment' appointment.pk %}" class="btn custom-btn-booking">Edit <i class="fa-solid fa-pencil ms-1"></i></a> 
           <form action="{% url 'update_appointment' appointment.pk %}" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
             {% csrf_token %}
@@ -34,12 +37,15 @@
      
       {% endfor %}
     </ul>
-   
-       <p><a href="{% url 'book_appointment' %}">Book another appointment</a></p>
+   <div class="text-center">
+       <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking">Book another appointment</a>
+       </div>
   {% else %}
-    <p>You have no appointments yet.</p>
-    <p><a href="{% url 'book_appointment' %}">Book your first appointment</a></p>
+  <div class="text-center">
+    <h4>You have no appointments yet.</h4>
+    <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking">Book your first appointment</a>
   {% endif %}
+</div>
 
   </section>
 {% endblock %}

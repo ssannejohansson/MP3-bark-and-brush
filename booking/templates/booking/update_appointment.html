@@ -7,19 +7,30 @@
 {% block title %} Appointments {% endblock %}
 {% block content %}
 
+  <header id="header" class="container-fluid p-0 ">
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header">
+
+                <h1 class="mb-0 text-center heading-pages">let's update your appointment</h1>
+            
+          </div>
+    </header> 
+
+
 <section class="booking-index">
-<section id="update-booking">
-  <h2>Manage Your Appointment</h2>
+
 
   <form method="post" class="booking-form">
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit" name="update" class="btn custom-btn-booking"> Save Changes</button>
+    
+ 
+      <button type="submit" name="update" class="btn custom-btn-booking"> Save Changes</button>
   </form>
   <form method="post" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
     {% csrf_token %}
     <button type="submit" name="delete" class="btn custom-btn-booking-outline danger-button">Cancel Appointment <i class="fa-solid fa-trash ms-1"></i></button>
-  </form>
+</form>
+
 
 
 
