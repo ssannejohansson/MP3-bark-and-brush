@@ -16,18 +16,17 @@
 
 <!-- sign-up.html content starts here -->
  <!-- Just for testing purposes, will change later -->
- <section class="container-fluid d-flex flex-column justify-content-center align-items-center booking-index">
+
 <form method="post">
   {% csrf_token %}
       {{ form|crispy }}
-  <button type="submit">Log In</button>
+  <button type="submit" class="btn custom-btn">Log In</button>
 </form>    
 
-<p class="mt-3">
-  Don't have an account?
-  <a href="{% url 'signup' %}">Register here</a>
+<p class="mt-5 text-center">
+  Don't have an account?<br>
+  <a href="{% url 'signup' %}">Register with us now!</a>
 </p>
-</section>
 
     <!-- sign-up.html content ends here -->
      {% endblock %}

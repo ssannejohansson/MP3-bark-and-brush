@@ -20,23 +20,21 @@
     </header> 
 
 <!-- Main content -->
-<section class="container-fluid d-flex justify-content-center align-items-center">
-    <div class="d-flex align-items-center justify-content-center booking-form-container">
+
+<section class="booking-index">
 <form method="post">
     {% csrf_token %}
     {{ appointment_form|crispy }}
+      <button type="submit" class="btn custom-btn">Book Appointment</button>
 </form>
 
 
-
-</div>
-</section>
 
 {% if messages %}
   <ul class="messages">
     {% for message in messages %}
       <li class="{{ message.tags }}">{{ message }}</li>
     {% endfor %}
-  </ul>
+  </ul></section>
 {% endif %}
 {% endblock %}

@@ -210,8 +210,11 @@
     height: 150px; 
  }
 
- .booking-form-container {
-    height: 600px;
+ .booking-index {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 100%;
+
 
  }
 
@@ -221,6 +224,15 @@
      margin-bottom: 0px;
 }
 
+.booking-index a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.booking-index a:hover {
+    color: #2a5989;
+}
 #booking-form input {
     width: 200px;
     border-radius: 10px; 

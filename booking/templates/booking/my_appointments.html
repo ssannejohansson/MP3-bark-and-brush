@@ -2,7 +2,13 @@
 
 <!-- Changes title on the page (in the tab) -->
 {% block title %} Appointments {% endblock %}
+
+
+
 {% block content %}
+
+<section class="booking-index">
+
   <h2>My Appointments</h2>
 
   {% if appointments %}
@@ -15,11 +21,16 @@
             {% csrf_token %}
             <button type="submit" name="delete" class="danger-button"> Cancel</button>
           </form>
-        </li>
+          
+        </li>  
+     
       {% endfor %}
     </ul>
+       <p><a href="{% url 'book_appointment' %}">Book another appointment</a></p>
   {% else %}
     <p>You have no appointments yet.</p>
     <p><a href="{% url 'book_appointment' %}">Book your first appointment</a></p>
   {% endif %}
+
+  </section>
 {% endblock %}

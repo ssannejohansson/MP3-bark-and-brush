@@ -7,6 +7,7 @@
 
 
 {% block content %}
+<section class="d-flex flex-column justify-content-center booking-index">
   <h2>Appointment Booked!</h2>
   <p>Your appointment has been successfully scheduled.</p>
 
@@ -25,4 +26,5 @@
   {% endif %}
 
   <p><a href="{% url 'book_appointment' %}">Book another appointment</a></p>
+</section>
 {% endblock %}
