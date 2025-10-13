@@ -1,7 +1,8 @@
 from django import forms
 from .models import Appointment
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Row, Column, HTML, Submit
+from crispy_forms.layout import Layout, Row, Column, HTML
+from crispy_forms.bootstrap import StrictButton
 
 
 class AppointmentForm(forms.ModelForm):
@@ -43,7 +44,7 @@ class AppointmentForm(forms.ModelForm):
                 Column('day', css_class='col-md-6'),
                 Column('time', css_class='col-md-6'),
             ),
-            Submit('submit', 'Book Appointment', css_class='btn custom-btn-booking')
+            StrictButton('Book Appointment', 'Book Appointment', css_class='custom-btn-booking')
         )
 
 

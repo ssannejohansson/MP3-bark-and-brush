@@ -202,6 +202,17 @@
      transition: 0.5s;
  }
 
+.custom-btn-booking:focus,
+.custom-btn-booking:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+ .custom-btn-booking:hover {
+     background-color: #92a4d1;
+ }
+
  .custom-btn-booking-outline {
      width: fit-content;
      font-weight: 600;
@@ -215,9 +226,6 @@
      background-color: #92a4d1;
  }
 
- .custom-btn-booking:hover {
-     background-color: #92a4d1;
- }
 
  .booking-header {
     height: 120px; 
