@@ -13,7 +13,7 @@ admin.site.register(User, UserAdmin)
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
     form = AdminAppointmentForm
-    list_display = ('user', 'service', 'day', 'time', 'booked_on')
+    list_display = ('user', 'service', 'size', 'day', 'time', 'booked_on')
     list_filter = ('day', 'time', 'service')
     search_fields = ('user__username', 'service', 'user_email')
     ordering = ('day', 'time')

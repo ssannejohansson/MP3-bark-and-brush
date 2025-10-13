@@ -7,7 +7,7 @@ from crispy_forms.layout import Layout, Row, Column, Submit
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ['name', 'email', 'dog_name', 'dog_breed', 'service', 'day', 'time']
+        fields = ['name', 'email', 'dog_name', 'dog_breed', 'service', 'size', 'day', 'time']
         widgets = {
             'day': forms.DateInput(attrs={'type': 'date'}),
         }
@@ -28,7 +28,10 @@ class AppointmentForm(forms.ModelForm):
                 Column('dog_name'),
                 Column('dog_breed'),
             ),
-            'service',
+            Row(
+                Column('service'),
+                Column('size'),
+            ),
             Row(
                 Column('day', css_class='col-md-6'),
                 Column('time', css_class='col-md-6'),

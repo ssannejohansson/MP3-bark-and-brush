@@ -7,25 +7,34 @@
 
 {% block content %}
 
+<!-- Header -->
+  <header id="header" class="container-fluid p-0 ">
+<div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+
+                <h1 class="mb-0 text-center heading-pages">let's manage your appointments</h1>
+            
+          </div>
+    </header> 
+
 <section class="booking-index">
-
-  <h2>My Appointments</h2>
-
+ 
   {% if appointments %}
     <ul>
       {% for appointment in appointments %}
-        <li>
+           <li>
+            <div class="mt-2 p-3" id="appointment-container">
           <strong>{{ appointment.day }} at {{ appointment.time }}</strong> — {{ appointment.service }}<br>
-          <a href="{% url 'update_appointment' appointment.pk %}">Edit</a> |
+          <a href="{% url 'update_appointment' appointment.pk %}" class="btn custom-btn-booking">Edit <i class="fa-solid fa-pencil ms-1"></i></a> 
           <form action="{% url 'update_appointment' appointment.pk %}" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
             {% csrf_token %}
-            <button type="submit" name="delete" class="danger-button"> Cancel</button>
+            <button type="submit" name="delete" class="btn custom-btn-booking-outline danger-button">Cancel <i class="fa-solid fa-trash ms-1"></i></button>
           </form>
-          
+            </div>
         </li>  
      
       {% endfor %}
     </ul>
+   
        <p><a href="{% url 'book_appointment' %}">Book another appointment</a></p>
   {% else %}
     <p>You have no appointments yet.</p>

@@ -22,10 +22,13 @@
 <!-- Main content -->
 
 <section class="booking-index">
+    <p> Need to refresh your memory about our services? </p>
+    <p><a href="{% url 'services' %}" target="_blank">Click here!</a></p>
+    
 <form method="post">
     {% csrf_token %}
     {{ appointment_form|crispy }}
-      <button type="submit" class="btn custom-btn">Book Appointment</button>
+      <button type="submit" class="btn custom-btn-booking">Book Appointment</button>
 </form>
 
 

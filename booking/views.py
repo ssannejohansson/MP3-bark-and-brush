@@ -86,7 +86,7 @@ def update_appointment(request, pk):
         if 'delete' in request.POST:
             appointment.delete()
             messages.success(request, "Appointment canceled.")
-            return redirect('book_appointment')
+            return redirect('my_appointments')
 
         form = AppointmentForm(request.POST, instance=appointment)
         if form.is_valid():

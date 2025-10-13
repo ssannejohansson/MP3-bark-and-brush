@@ -202,6 +202,18 @@
      transition: 0.5s;
  }
 
+ .custom-btn-booking-outline {
+     width: fit-content;
+     font-weight: 600;
+     background-color: transparent;
+     border: 1px solid var(--dark-blue);
+     transition: 0.5s;
+ }
+
+  .custom-btn-booking-outline:hover {
+     background-color: #92a4d1;
+ }
+
  .custom-btn-booking:hover {
      background-color: #92a4d1;
  }
@@ -214,9 +226,17 @@
     padding-top: 100px;
     padding-bottom: 100px;
     height: 100%;
-
-
  }
+
+.booking-index a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.booing-index ul, li {
+    list-style-type: none;
+}
 
  .booking-index, .form-label { 
     font-family: var(--primary-font);
@@ -224,11 +244,6 @@
      margin-bottom: 0px;
 }
 
-.booking-index a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--dark-blue);
-}
 
 .booking-index a:hover {
     color: #2a5989;
@@ -244,18 +259,19 @@
   background-color: #f8f8f8;
 }
 
-#update-booking .danger-button {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-}
 
 .danger-button:hover {
   background-color: #c0392b;
 }
 
+#appointment-container {
+    border: 2px solid var(--brown);
+    border-radius: 10px;;
+}
+
+#appointment-container a {
+    color: var(--brown);
+}
  
  /* -- FOOTER -- */
  footer {

@@ -10,12 +10,12 @@
 
    <header id="header" class="container-fluid p-0 ">
 <div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
-            <h1 class="mb-0 text-center heading-pages">let's get you logged in</h1>
+            <h1 class="mb-0 text-center heading-pages">let's get you logged in!</h1>
           </div>
     </header> 
 
 <!-- sign-up.html content starts here -->
- <!-- Just for testing purposes, will change later -->
+<section class="booking-index">
 
 <form method="post">
   {% csrf_token %}
@@ -27,7 +27,7 @@
   Don't have an account?<br>
   <a href="{% url 'signup' %}">Register with us now!</a>
 </p>
-
+</section>
     <!-- sign-up.html content ends here -->
      {% endblock %}
 
