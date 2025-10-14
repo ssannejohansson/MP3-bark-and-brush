@@ -68,6 +68,12 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = ["bootstrap5"]
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+AUTHENTICATION_BACKENDS = [
+    'accounts.backends.EmailBackend',                # our custom backend
+    'django.contrib.auth.backends.ModelBackend',     # keep default for admin site
+]
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

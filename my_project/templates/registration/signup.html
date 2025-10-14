@@ -21,5 +21,11 @@
   {{ form|crispy }}
   <button type="submit" class="btn custom-btn">Sign Up</button>
 </form>
+
+<div class="text-center">
+<h4 class="mt-5">
+  Already have an account?</h4>
+  <a href="{% url 'login' %}" class="btn custom-btn-booking-outline">Log in instead!</a>
+</div>
 </section>
 {% endblock %}
