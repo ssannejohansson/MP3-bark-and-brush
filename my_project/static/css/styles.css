@@ -194,6 +194,12 @@
  }
  
 /* -- BOOKING PAGES --*/ 
+
+.dropdown-item:active {
+    background-color: var(--light-blue-background);
+    color: var(--brown);
+}
+
 .custom-btn-booking {
     width: fit-content;
      background-color: var(--light-blue);
@@ -208,11 +214,6 @@
   box-shadow: none !important;
 }
 
-
- .custom-btn-booking:hover {
-     background-color: #92a4d1;
- }
-
  .custom-btn-booking-outline {
      width: fit-content;
      font-weight: 600;
@@ -222,7 +223,19 @@
      transition: 0.5s;
  }
 
-  .custom-btn-booking-outline:hover {
+
+  .custom-btn-dropdown {
+     width: 160px;;
+     font-weight: 600;
+     background-color: transparent;
+     border: 1px solid var(--dark-blue);
+     color: var(--brown);
+     transition: 0.5s;
+ }
+
+ .custom-btn-booking:hover, 
+ .custom-btn-booking-outline:hover, 
+  .custom-btn-dropdown:hover {
      background-color: #92a4d1;
  }
 
