@@ -24,8 +24,14 @@ class AppointmentForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)  # catch the user from the view
         super().__init__(*args, **kwargs)
 
+        if user and user.is_authenticated:
+            # Auto-fill based on logged-in user's info
+            self.fields['name'].initial = f"{user.first_name}".strip()
+            self.fields['email'].initial = user.email
+        
         # Add disabled placeholder option to dropdowns
         for field_name, placeholder in {
             'service': 'Select a service...',
@@ -35,14 +41,14 @@ class AppointmentForm(forms.ModelForm):
         }.items():
             field = self.fields.get(field_name)
     
-        if field and hasattr(field, 'choices') and field.choices:
-            choices = list(field.choices)
-            # Prepend the placeholder as the first choice
-            field.choices = [('', placeholder)] + choices
-            # Make the placeholder selected by default
-            field.initial = ''
-            # Keep required validation
-            field.widget.attrs.update({'required': 'required'})
+            if field and hasattr(field, 'choices') and field.choices:
+                choices = list(field.choices)
+                # Prepend the placeholder as the first choice
+                field.choices = [('', placeholder)] + choices
+                # Make the placeholder selected by default
+                field.initial = ''
+                # Keep required validation
+                field.widget.attrs.update({'required': 'required'})
 
 #crispy form setup
         self.helper = FormHelper()

@@ -16,7 +16,7 @@ from django.shortcuts import get_object_or_404
 @login_required
 def book_appointment(request):
     if request.method == 'POST':
-        form = AppointmentForm(request.POST)
+        form = AppointmentForm(request.POST,  user=request.user)
         if form.is_valid():
             appointment = form.save(commit=False)
             appointment.user = request.user
@@ -30,7 +30,7 @@ def book_appointment(request):
                 messages.success(request, "Appointment booked successfully!")
                 return redirect('appointment_success')
     else:
-        form = AppointmentForm()
+        form = AppointmentForm(user=request.user)
 
     return render(request, 'booking/book_appointment.html', {'appointment_form': form})
 
@@ -75,7 +75,6 @@ def appointment_success(request):
     return render(request, 'booking/appointment_success.html', {
         'appointment': latest_appointment
     })
-
 
 
 @login_required

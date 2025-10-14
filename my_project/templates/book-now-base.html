@@ -57,7 +57,7 @@
                
                   <li class="nav-item dropdown">
     <button class="btn custom-btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    My account
+    {{ user.first_name }}
   </button>
     <ul class="dropdown-menu dropdown-menu-lg-end">
       <li><a class="dropdown-item" href="{% url 'my_account' %}">Profile</a></li>
