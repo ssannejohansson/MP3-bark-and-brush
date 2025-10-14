@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import SignUpForm, EmailLoginForm, UserUpdateForm
 from django.contrib.auth.views import LoginView
-from django.contrib import messages
+
 
 
 # Create your views here.
@@ -14,7 +14,7 @@ def signup(request):
             return redirect('login')  # Redirect to login page after signup
     else:
         form = SignUpForm()
-    return render(request, 'registration/signup.html', {'form': form})
+    return render(request, 'registration/signup.html', {'signup_form': form})
 
 
 class EmailLoginView(LoginView):
@@ -32,4 +32,4 @@ def my_account(request):
     else:
         form = UserUpdateForm(instance=request.user)
 
-    return render(request, 'registration/account.html', {'form': form})
+    return render(request, 'registration/account.html', {'user_form': form})

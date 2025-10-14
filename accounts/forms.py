@@ -2,6 +2,9 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Row, Column
+from crispy_forms.bootstrap import StrictButton
 
 
 class SignUpForm(forms.ModelForm):
@@ -12,6 +15,25 @@ class SignUpForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email', 'password']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Crispy Forms helper
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.form_id = 'signup-form'
+
+        # Crispy layout
+        self.helper.layout = Layout(
+            Row(
+                Column('first_name', css_class='col-md-6'),
+                Column('last_name', css_class='col-md-6'),
+            ),
+            Row(Column('email', css_class='col-md-12')),
+            Row(Column('password', css_class='col-md-12')),
+            StrictButton('Sign Up', 'Sign Up', type="submit", css_class='custom-btn-booking')
+        )
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
@@ -55,10 +77,29 @@ class EmailLoginForm(AuthenticationForm):
 class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email']
+        fields = ['first_name', 'last_name', 'email']
         widgets = {
-            'username': forms.TextInput(attrs={'class': 'form-control'}),
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Initialize Crispy Form helper
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.form_id = 'user-update-form'
+
+        # Define layout
+        self.helper.layout = Layout(
+            Row(
+                Column('first_name', css_class='col-md-6'),
+                Column('last_name', css_class='col-md-6'),
+            ),
+            Row(
+                Column('email', css_class='col-md-12'),
+            ),
+            StrictButton('Save Changes', 'Save Changes', type="submit", css_class='custom-btn-booking')
+        )
