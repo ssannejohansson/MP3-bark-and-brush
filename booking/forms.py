@@ -35,7 +35,7 @@ class AppointmentForm(forms.ModelForm):
         # Add disabled placeholder option to dropdowns
         for field_name, placeholder in {
             'service': 'Select a service...',
-            'size': "Select your dog’s size...",
+            'size': "Select your dog's size...",
             'day': "Select a day...",
             'time': "Select a time...",
         }.items():

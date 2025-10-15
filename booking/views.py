@@ -96,7 +96,7 @@ def update_appointment(request, pk):
         form = AppointmentForm(instance=appointment)
 
     return render(request, 'booking/update_appointment.html', {
-        'form': form,
+        'appointment_form': form,
         'appointment': appointment
     })
 

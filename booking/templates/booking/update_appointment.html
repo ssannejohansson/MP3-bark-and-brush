@@ -18,20 +18,18 @@
 
 <section class="booking-index">
 
-
+<div>
   <form method="post" class="booking-form">
     {% csrf_token %}
-    {{ form|crispy }}
+     {% crispy appointment_form %}
     
- 
-      <button type="submit" name="update" class="btn custom-btn-booking"> Save Changes</button>
   </form>
   <form method="post" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
     {% csrf_token %}
     <button type="submit" name="delete" class="btn custom-btn-booking-outline danger-button">Cancel Appointment <i class="fa-solid fa-trash ms-1"></i></button>
 </form>
 
-
+</div>
 
 
 </section>

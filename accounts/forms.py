@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column
 from crispy_forms.bootstrap import StrictButton
+from django.contrib.auth.forms import PasswordResetForm
 
 
 class SignUpForm(forms.ModelForm):
@@ -74,7 +75,43 @@ class EmailLoginForm(AuthenticationForm):
         return super().clean()
 
 
+class CustomPasswordResetForm(PasswordResetForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.form_id = 'password-reset-form'
+
+        self.helper.layout = Layout(
+            Row(Column('email', css_class='col-md-12')),
+            StrictButton('Reset Password', type='submit', css_class='custom-btn-booking w-100')
+        )
+
+        # Customize widget styling
+        self.fields['email'].widget.attrs.update({
+            'class': 'form-control',
+            'placeholder': 'Enter your account email'
+        })
+
+
 class UserUpdateForm(forms.ModelForm):
+    current_password = forms.CharField(
+        label='Current password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        required=False
+    )
+    new_password = forms.CharField(
+        label='New password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        required=False
+    )
+    confirm_password = forms.CharField(
+        label='Confirm new password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        required=False
+    )
+
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email']

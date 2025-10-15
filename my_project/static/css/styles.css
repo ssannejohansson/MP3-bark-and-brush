@@ -554,7 +554,11 @@ select option:not([value=""]) {
 
           /* BOOKING PAGE */ 
     .booking-header {
-    height: 300px; 
+    height:200px; 
+ }
+
+ .booking-header .heading-pages {
+    font-size: 80px;
  }
 
  .booking-index {
