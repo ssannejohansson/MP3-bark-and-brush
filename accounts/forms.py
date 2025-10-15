@@ -138,5 +138,5 @@ class UserUpdateForm(forms.ModelForm):
             Row(
                 Column('email', css_class='col-md-12'),
             ),
-            StrictButton('<i class="fa-solid fa-floppy-disk me-2"></i> Save Changes', 'Save Changes', type="submit", css_class='custom-btn-booking')
+            StrictButton('Save Changes<i class="fa-solid fa-floppy-disk ms-2"></i>', 'Save Changes', type="submit", css_class='custom-btn-booking')
         )

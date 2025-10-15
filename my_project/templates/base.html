@@ -75,7 +75,12 @@
                         <!-- d-none to hide buttons on small screens, d-lg-block to make them visible on large screens -->
                         <button class="btn custom-btn-outline d-none d-lg-block" data-bs-toggle="modal"
                             data-bs-target="#contact-modal">Contact</button>
-                        <a href="{% url 'login' %}" class="btn custom-btn d-none d-lg-block">Book now!</a>
+                            <!-- If user is logged in, the "book now" btn will lead to booking. If user is not logged in, the btn will lead to login -->
+                        {% if user.is_authenticated %}
+                    <a href="{% url 'book_appointment' %}" class="btn custom-btn d-none d-lg-block">Book now!</a>
+                    {% else %}
+                    <a href="{% url 'login' %}?next={% url 'book_appointment' %}" class="btn custom-btn d-none d-lg-block">Book now!</a>
+                    {% endif %}
                     </div>
                 </div>
             </div>
