@@ -1,13 +1,20 @@
-
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% url 'home' as home_url %}
-{% url 'about' as about_url %}
-{% url 'services' as services_url %}
-{% url 'gallery' as gallery_url %}
-{% url 'booking' as booking_url %}
+<!--------------------------------------------------------------
+   Book now Base Template
+   ------------------------------------------------------------
+   - Serves as the main layout for all pages after clicking
+   "Book Now" button
+   - Includes:
+       • Global <head> content (meta tags, CSS, fonts, favicon)
+       • Navigation and footer
+       • Global modals
+       • Script imports
+-------------------------------------------------------------->
 
+<!-- URL shortcut for navigation -->
+{% url 'home' as home_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,48 +44,53 @@
 
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Bark & Brush | {% block title %}{% endblock %}</title> <!-- Block title to dynamically change title on pages -->
 
-     <!-- Flatpickr CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Block title to dynamically change title on pages -->
+    <title>Bark & Brush | {% block title %}{% endblock %}</title>
 
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<!-- Bootstrap classes to push down footer to bottom of page -->
 
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a href="{% url 'home' %}" class="btn custom-btn-booking"><i class="fa-solid fa-arrow-left me-2"></i> Home</a>
+            <a href="{% url 'home' %}" class="btn custom-btn-booking"><i class="fa-solid fa-arrow-left me-2"></i>
+                Home</a>
 
             <div class="d-flex gap-2">
                 {% if user.is_authenticated %}
-               
-                  <li class="nav-item dropdown">
-    <button class="btn custom-btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-user me-2"></i>
-     {{ user.first_name }}
-  </button>
-    <ul class="dropdown-menu dropdown-menu-lg-end">
-      <li><a class="dropdown-item" href="{% url 'my_account' %}"><i class="fa-solid fa-gear me-2"></i>Profile</a></li>
-      <li><a class="dropdown-item" href="{% url 'my_appointments' %}"><i class="fa-solid fa-calendar-days me-2"></i>Appointments</a></li>
-      <li><hr class="dropdown-divider"></li>
- <li class="dropdown-item">
-  <form action="{% url 'logout' %}" method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn custom-btn">Log Out</button>
-  </form>
-</li>
-    </ul>
-  </li>
+                <!-- If user is logged in, the account dropdown shows -->
+                <li class="nav-item dropdown">
+                    <button class="btn custom-btn-dropdown" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"> <i class="fa-solid fa-user me-2"></i>
+                        <!-- Button text = logged in users first name -->
+                        {{ user.first_name }}
+                    </button>
 
-            
-            <!--  <a href="{% url 'my_appointments' %}" class="btn custom-btn-booking-outline">My Appointments</a>
-                <form action="{% url 'logout' %}" method="post">
-                    {% csrf_token %}
-                    <button class="btn custom-btn" type="submit">Log Out</button>
-                </form>-->  
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="{% url 'my_account' %}"><i
+                                    class="fa-solid fa-gear me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'my_appointments' %}"><i
+                                    class="fa-solid fa-calendar-days me-2"></i>Appointments</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="dropdown-item">
+                            <form action="{% url 'logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn custom-btn">Log Out</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
                 {% else %}
+                <!-- If user is not logged in, a Log in button shows -->
                 <a href="{% url 'login' %}" class="btn custom-btn-outline">Log in</a>
                 {% endif %}
             </div>
@@ -86,14 +98,12 @@
     </nav>
 
     <main>
-         <section class="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
+        <section class="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
+            {% block content %}
+            <!-- Content from all pages that extents this template goes here -->
+            {% endblock content %}
         </section>
     </main>
-
-
 
     <!-- Footer -->
     <footer class="container-fluid d-flex flex-column pt-4 pb-4 justify-content-center mt-auto" id="footer">
@@ -144,46 +154,6 @@
         </div>
     </footer>
 
-    <!-- Contact modal -->
-    <div class="modal fade" id="contact-modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <section class="d-flex flex-column " id="contact-form">
-                        <h2 class="mt-4 mb-4">Reach out to us!</h2>
-                        <form id="message-form" novalidate>
-                            <label for="name" class="form-label">Name</label>
-                            <input class="form-control shadow-none" id="name" name="name" type="text" required>
-
-                            <label for="email" class="form-label">Email</label>
-                            <input class="form-control shadow-none" id="email" name="email" type="email" required>
-
-                            <label for="phone" class="form-label">Phone number</label>
-                            <input class="form-control shadow-none" id="phone" name="phone" type="number" required>
-
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control shadow-none" rows="6" id="message" name="message"
-                                required></textarea>
-
-                            <div id="liveAlertPlaceholder"></div>
-                            <button type="button" class="btn custom-btn-outline mt-1 mb-4"
-                                id="liveAlertBtn">Send</button>
-
-                        </form>
-                    </section>
-                </div>
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn custom-btn" data-bs-dismiss="modal" id="close-btn">Close</button>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Subscription modal -->
     <div class="modal fade" id="sub-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -209,8 +179,7 @@
     </script>
 
     <!-- Flatpickr JS -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- JavaScript script -->
     <script src="{% static 'js/script.js' %}"></script>

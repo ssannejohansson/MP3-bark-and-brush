@@ -260,6 +260,10 @@
     color: var(--brown);
  }
 
+ .booking-index a:hover {
+    font-weight: bold; 
+ }
+
 
 
 .booking-index ul, li {
