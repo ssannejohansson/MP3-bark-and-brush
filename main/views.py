@@ -43,29 +43,31 @@ class ContactView(FormView):
     template_name = "base.html"
 
     def form_valid(self, form):
+        name = form.cleaned_data.get("name")
         email = form.cleaned_data.get("email")
+        phone = form.cleaned_data.get("phone")
         subject = form.cleaned_data.get("subject")
         message = form.cleaned_data.get("message")
 
         full_message = f"""
-            Received message below from {email}, {subject}
+            From: {name}
+            {email}
+            {phone}
             ________________________
-
-
             {message}
             """
         send_mail(
-            subject="Received contact form submission",
+            subject=f"{subject}",
             message=full_message,
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[settings.NOTIFY_EMAIL],
         )
-        
+
         if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
             return JsonResponse({"success": True, "message": "Your message has been sent successfully! 🐾"})
 
         # Fallback (if user has JS disabled)
-        messages.success(self.request, "Your message has been sent successfully! 🐾")
+        messages.success(self.request, "Your message has been sent successfully!")
         return super().form_valid(form)
 
     def get_success_url(self):

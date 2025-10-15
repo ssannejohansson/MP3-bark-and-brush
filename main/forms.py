@@ -31,6 +31,12 @@ class ContactForm(forms.Form):
             "required": "required"
         })
     )
+    subject = forms.CharField(
+        label="Subject",
+        widget=forms.TextInput(attrs={
+            "class": "form-control shadow-none",
+            "placeholder": "Subject"}),
+    )
     message = forms.CharField(
         label="Message",
         widget=forms.Textarea(attrs={
@@ -54,6 +60,7 @@ class ContactForm(forms.Form):
             Row(Column('name', css_class='col-md-12')),
             Row(Column('email', css_class='col-md-12')),
             Row(Column('phone', css_class='col-md-12')),
+            Row(Column('subject', css_class='col-md-12')),
             Row(Column('message', css_class='col-md-12')),
             StrictButton(
                 'Send Message',
