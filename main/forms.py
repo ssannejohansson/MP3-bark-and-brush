@@ -5,6 +5,9 @@ from crispy_forms.bootstrap import StrictButton
 
 
 class ContactForm(forms.Form):
+    """
+    Contact form
+    """
     name = forms.CharField(
         label="Name",
         max_length=100,
@@ -48,9 +51,10 @@ class ContactForm(forms.Form):
     )
 
     def __init__(self, *args, **kwargs):
+        """
+        Initialize Crispy Form Helper
+        """
         super().__init__(*args, **kwargs)
-
-        # Crispy Form helper setup
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'contact-form'

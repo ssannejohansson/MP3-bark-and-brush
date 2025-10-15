@@ -1,12 +1,11 @@
-from django.shortcuts import render
 from django.conf import settings
+from django.contrib import messages
 from django.core.mail import send_mail
-from django.shortcuts import reverse
+from django.http import JsonResponse
+from django.shortcuts import render
+from django.urls import reverse
 from django.views.generic import TemplateView, FormView
 from .forms import ContactForm
-from django.urls import reverse
-from django.contrib import messages
-from django.http import JsonResponse
 
 
 # Create your views here.
@@ -35,20 +34,30 @@ def book_login(request):
 
 
 class SuccessView(TemplateView):
+    """
+    Redirects to base.html after successful form submission
+    """
     template_name = "base.html"
 
 
 class ContactView(FormView):
+    """
+    Displays and processes the contact form
+    """
     form_class = ContactForm
     template_name = "base.html"
 
     def form_valid(self, form):
+        """
+        Triggered when form is valid and sends an email with submitted form data
+        """
         name = form.cleaned_data.get("name")
         email = form.cleaned_data.get("email")
         phone = form.cleaned_data.get("phone")
         subject = form.cleaned_data.get("subject")
         message = form.cleaned_data.get("message")
 
+        # Email layout 
         full_message = f"""
             From: {name}
             {email}
@@ -71,4 +80,7 @@ class ContactView(FormView):
         return super().form_valid(form)
 
     def get_success_url(self):
+        """
+        Defines where to redirect after successful form submission
+        """
         return reverse("home")
