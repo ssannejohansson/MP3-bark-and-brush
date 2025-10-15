@@ -1,14 +1,21 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static %}'
+
+{# ------------------------------------------------------------
+   Services Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+------------------------------------------------------------ #}
 
 <!-- Changes title on the page (in the tab) -->
 {% block title %} Services {% endblock %}
+
+<!-- Services content starts here -->
 {% block content %}
 
-<!-- services.html content starts here -->
-
     <!-- Header -->
-    
     <header id="header" class="container-fluid p-0 ">
         <div class="col-12 d-flex justify-content-center align-items-center hero-pages">
             <h1 class="mb-0 text-center heading-pages">see what services we can offer your pup </h1>
@@ -18,7 +25,7 @@
     <!-- Main content -->
     <section class="container-fluid d-flex flex-column justify-content-center" id="services">
         <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="{% static 'images/groom2.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="">
+            <img src="{% static 'images/groom2.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="A dog getting its ears trimmed">
             <div class="col-12 col-lg-6">
                 <h3>Full Groom</h3>
                 <h4>Bath, blow-dry, full-body haircut, nail trimming and ear cleaning</h4>
@@ -30,7 +37,7 @@
         </div>
 
         <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="{% static 'images/wash.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="">
+            <img src="{% static 'images/wash.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="A dog getting a bath">
             <div class="col-12 col-lg-6">
                 <h3>Bath and Tidy</h3>
                 <h4>Bath, blow-dry, a light trim, nail trimming and ear cleaning</h4>
@@ -42,7 +49,7 @@
         </div>
 
         <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="{% static 'images/clawclip.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="">
+            <img src="{% static 'images/clawclip.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="A paw getting its nails trimmed">
             <div class="col-12 col-lg-6">
                 <h3>The Paw Package</h3>
                 <h4>Simple nail and paw trimming</h4>
@@ -54,7 +61,7 @@
         </div>
 
         <div class="container d-flex flex-column flex-lg-row justify-content-evenly align-items-center gap-4">
-            <img src="{% static 'images/blowdry.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="">
+            <img src="{% static 'images/blowdry.jpg' %}" class="col-12 col-lg-6 border-rad mt-3" alt="A dog getting prepared for a bath">
             <div class="col-12 col-lg-6">
                 <h3>The De-Shedding Package</h3>
                 <h4>Special de-shedding shampoo, blow-dry to blast out loose fur, an extensive brush-out, nail trimming
@@ -69,6 +76,4 @@
         <h5 class="text-center mt-5">Note that all our packages are flexible. Don't hesitate to ask and we'll make it
             happen!</h5>
     </section>
-
-    <!-- services.html content ends here -->
 {% endblock %}

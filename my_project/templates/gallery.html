@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
 
+{# ------------------------------------------------------------
+   Gallery Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+------------------------------------------------------------ #}
+
 <!-- Changes title on the page (in the tab) -->
 {% block title %} Gallery {% endblock %}
+
+<!-- Gallery content starts here -->
 {% block content %}
 
-
-    <!-- gallery.html content starts here -->
     <!-- Header -->
-    
     <header id="header" class="container-fluid p-0 ">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center hero-pages">
             <h1 class="container mb-0 text-center heading-pages">take a look at some of our customers</h1>
@@ -20,26 +27,24 @@
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
             <div class="container row justify-content-center gap-2">
                 <img src="{% static 'images/gallery/gal1.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with yellow background">
                 <img src="{% static 'images/gallery/gal2.jpg' %}"
-                    class="gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with pink background">
                 <img src="{% static 'images/gallery/gal9.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with green background">
                 <img src="{% static 'images/gallery/gal4.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with green background">
                 <img src="{% static 'images/gallery/gal5.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with light blue background">
                 <img src="{% static 'images/gallery/gal6.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with dark pink background">
                 <img src="{% static 'images/gallery/gal7.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with grey background">
                 <img src="{% static 'images/gallery/gal8.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with dark pink background">
                 <img src="{% static 'images/gallery/gal3.jpg' %}"
-                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="...">
+                    class="img-fluid gallery-img col-10 col-sm-5 col-lg-3" alt="Dog with blue background">
             </div>
         </div>
     </section>
-
-    <!-- gallery.html content ends here -->
 {% endblock %}
