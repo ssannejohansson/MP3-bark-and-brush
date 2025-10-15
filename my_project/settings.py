@@ -61,19 +61,22 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'my_project.urls'
 
-LOGIN_REDIRECT_URL = "/book/"
 
+# Redirects users after login/logout
+LOGIN_REDIRECT_URL = "/book/"
 LOGOUT_REDIRECT_URL = "home"
 
+# Crispy Forms Configuration
 CRISPY_ALLOWED_TEMPLATE_PACKS = ["bootstrap5"]
-
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+# Custom email backend to allow users login with email instead of username
 AUTHENTICATION_BACKENDS = [
-    'accounts.backends.EmailBackend',                # our custom backend
-    'django.contrib.auth.backends.ModelBackend',     # keep default for admin site
+    'accounts.backends.EmailBackend',      
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
+# Email configuration. Loaded from environment variables for security.
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS') == 'True'
 EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
@@ -109,7 +112,6 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 
 # -- Commented out and not removed since this was told but never
 #  explained in the lessons -- #
-
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
@@ -165,4 +167,3 @@ STATICFILES_DIRS = [BASE_DIR / 'my_project/static']
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-

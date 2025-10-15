@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 
+{# ------------------------------------------------------------
+   About Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+------------------------------------------------------------ #}
+
 <!-- Changes title on the page (in the tab) -->
 {% block title %} About {% endblock %}
+
+<!-- About content starts here -->
 {% block content %}
 
-    <!-- about.html content starts here -->
     <!-- Header -->
     <header id="header" class="container-fluid p-0 ">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center hero-pages">
@@ -13,12 +22,12 @@
           </div>
     </header>
 
-
-<!-- Main content -->
+    <!-- Main content -->
     <section class="container d-flex flex-column mt-5" id="about-container">
-        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-4" id="our-story">
 
-            <img src="{% static 'images/about1.jpg' %}" class="img-fluid border-rad mb-2 mb-lg-4 col-lg-6 me-lg-2" alt="">
+        <!-- Our story-->
+        <section class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-4" id="our-story">
+            <img src="{% static 'images/about1.jpg' %}" class="img-fluid border-rad mb-2 mb-lg-4 col-lg-6 me-lg-2" alt="Groomer grooming a small dog">
             <div class="col-lg-5 d-flex flex-column">
                 <h3>Our Story</h3>
                 <h4>A Passion for compassion</h4>
@@ -33,9 +42,10 @@
                     grooming
                     experience is what led me to open Bark & Brush.</p>
             </div>
-        </div>
-
-        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-3 mb-lg-5" id="our-phil">
+        </section>
+        
+        <!-- Our Philosophy -->
+        <section class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-3 mb-lg-5" id="our-phil">
             <div class="col-lg-5 d-flex flex-column">
                 <h3>Our Philosophy</h3>
                 <h4>Compassionate Care, Beautiful Results</h4>
@@ -47,12 +57,13 @@
                     look forward to their spa day with us.
                 </p>
             </div>
-            <img src="{% static 'images/about2.jpg' %}" class="img-fluid border-rad mb-2 col-lg-6 ms-lg-2" alt="">
-        </div>
+            <img src="{% static 'images/about2.jpg' %}" class="img-fluid border-rad mb-2 col-lg-6 ms-lg-2" alt="Groomer giving a small dog a bath">
+        </section>
 
-        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-5" id="our-team">
+        <!-- Our Team -->
+        <section class="d-flex flex-column flex-lg-row justify-content-lg-evenly mb-5" id="our-team">
             <img src="{% static 'images/grooming.jpg' %}" class="img-fluid border-rad mb-2 order-1 order-lg-0 col-lg-6 me-lg-2"
-                alt="">
+                alt="A dog that is getting a trim">
             <div class="col-lg-5 d-flex flex-column order-0 order-lg-1">
                 <h3>Our Team</h3>
                 <p class="mb-0"><strong>Lina - Founder & Lead Groomer</strong></p>
@@ -70,8 +81,6 @@
                     hand scissoring and is committed to continuing education to stay on top of the latest grooming
                     techniques.</p>
             </div>
-        </div>
+        </section>
     </section>
-
-    <!-- about.html content ends here -->
 {% endblock %}
