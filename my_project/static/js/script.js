@@ -1,3 +1,13 @@
+
+    document.addEventListener('DOMContentLoaded', function () {
+  var subModal = document.getElementById('sub-modal');
+  subModal.addEventListener('hidden.bs.modal', function () {
+    var el = document.getElementById('newsletter');
+    if (el) el.value = '';
+  });
+});
+
+
 (() => {
   'use strict'
 
@@ -17,12 +27,6 @@
   })
 })()
 
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    appendAlert('Message successfully sent!', 'success')
-  })
-}
 
   document.addEventListener('DOMContentLoaded', function () {
     const dayInput = document.getElementById('id_day');
