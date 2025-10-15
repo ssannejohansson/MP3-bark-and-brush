@@ -1,8 +1,12 @@
 from django.urls import path
 from . import views
-from .views import get_available_times, book_appointment
-from .views import get_fully_booked_dates, update_appointment
-from .views import my_appointments
+from .views import (
+    get_available_times,
+    book_appointment,
+    get_fully_booked_dates,
+    update_appointment,
+    my_appointments,
+)
 
 
 urlpatterns = [

@@ -1,11 +1,15 @@
+from datetime import date
 from django import forms
-from .models import Appointment
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column, HTML
 from crispy_forms.bootstrap import StrictButton
+from .models import Appointment
 
 
 class AppointmentForm(forms.ModelForm):
+    """
+    Form for booking appointments
+    """
     class Meta:
         model = Appointment
         fields = ['name', 'email', 'dog_name', 'dog_breed', 'service', 'size', 'day', 'time']
@@ -24,11 +28,15 @@ class AppointmentForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        user = kwargs.pop('user', None)  # catch the user from the view
+        # Catch the user from the view
+        user = kwargs.pop('user', None) 
         super().__init__(*args, **kwargs)
 
+        # Prevent selecting past dates
+        self.fields['day'].widget.attrs['min'] = date.today().isoformat()
+
+        # Auto-fills name and email based on the users information
         if user and user.is_authenticated:
-            # Auto-fill based on logged-in user's info
             self.fields['name'].initial = f"{user.first_name}".strip()
             self.fields['email'].initial = user.email
         
@@ -50,11 +58,12 @@ class AppointmentForm(forms.ModelForm):
                 # Keep required validation
                 field.widget.attrs.update({'required': 'required'})
 
-#crispy form setup
+        # Crispy form setup
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'booking-form'
 
+        # Crispy layout
         self.helper.layout = Layout(
             Row(
                 Column('name', css_class="col-md-6"),

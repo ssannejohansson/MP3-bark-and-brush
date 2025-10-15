@@ -1,6 +1,6 @@
+from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import datetime
 
 
 # Create your models here.
@@ -66,8 +66,11 @@ class Appointment(models.Model):
     Keeps track of then the appointment was booked. Blank set to
     false to ensure the field is not left blank.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False,
-                             blank=False)
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        null=False,
+        blank=False)
     name = models.CharField(max_length=50, blank=True)
     email = models.EmailField(null=False, blank=False)
     dog_name = models.CharField(max_length=50, blank=False)
@@ -75,13 +78,13 @@ class Appointment(models.Model):
     service = models.CharField(max_length=30, choices=SERVICE_CHOICES)
     size = models.CharField(max_length=30, choices=SIZE_CHOICES)
     day = models.DateField(default=datetime.now, blank=False)
-    time = models.CharField(max_length=10, choices=TIME_CHOICES, blank="False")
+    time = models.CharField(max_length=10, choices=TIME_CHOICES, blank=False)
     booked_on = models.DateTimeField(default=datetime.now, blank=False)
+    
+    # Prevents double booking
+    class Meta:
+        unique_together = ('day', 'time')
 
     def __str__(self):
         return f"{self.name} | day: {self.day} | time: {self.time}"
-
-
-# prevents double booking
-class Meta:
-    unique_together = ('day', 'time')
+ 
