@@ -79,7 +79,7 @@ class AppointmentForm(forms.ModelForm):
                 Column('day', css_class='col-md-6'),
                 Column('time', css_class='col-md-6'),
             ),
-            StrictButton('Book Appointment', 'Book Appointment', type="submit", css_class='custom-btn-booking')
+            StrictButton('Book Appointment<i class="fa-solid fa-calendar ms-2"></i>', 'Book Appointment', type="submit", css_class='custom-btn-booking')
         )
 
 

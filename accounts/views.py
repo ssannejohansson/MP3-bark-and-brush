@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import SignUpForm, EmailLoginForm, UserUpdateForm
 from django.contrib.auth.views import LoginView
-
+from django.contrib import messages
 
 
 # Create your views here.
@@ -28,6 +28,7 @@ def my_account(request):
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your profile has been updated successfully!')
             return redirect('my_account')
     else:
         form = UserUpdateForm(instance=request.user)

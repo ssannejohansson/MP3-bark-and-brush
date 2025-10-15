@@ -38,12 +38,12 @@
       {% endfor %}
     </ul>
    <div class="text-center">
-       <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking">Book another appointment</a>
+       <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking">Book another appointment<i class="fa-solid fa-calendar-plus ms-2"></i></a>
        </div>
   {% else %}
   <div class="text-center">
     <h4>You have no appointments yet.</h4>
-    <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking">Book your first appointment</a>
+    <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking">Book your first appointment<i class="fa-solid fa-calendar ms-2"></i></a>
   {% endif %}
 </div>
 

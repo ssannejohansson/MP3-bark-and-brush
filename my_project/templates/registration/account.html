@@ -15,12 +15,17 @@
 <!-- account.html content starts here -->
 <section class="booking-index">
 
+
+    {% if messages %}
+  {% for message in messages %}
+    <p class="success-message">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
   <form method="post">
     {% csrf_token %}
     {% crispy user_form %}
 
-
-    
   </form>  
 
 

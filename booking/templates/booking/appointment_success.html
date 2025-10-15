@@ -29,11 +29,11 @@
     </ul>
 </div>
  <div>
-      <a href="{% url 'update_appointment' appointment.pk %}" class="btn custom-btn">Update</a>
+      <a href="{% url 'update_appointment' appointment.pk %}" class="btn custom-btn">Update<i class="fa-solid fa-gears ms-2"></i></a>
    
   {% endif %}
 
-  <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking-outline">Book another appointment</a>
+  <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking-outline">Book another appointment<i class="fa-solid fa-calendar ms-2"></i></a>
 </div>
 </section>
 {% endblock %}
