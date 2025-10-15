@@ -15,6 +15,13 @@
     </header> 
 <!-- Main content -->
 <section class="booking-index">
+  
+    {% if messages %}
+  {% for message in messages %}
+    <p class="success-message">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+  
   <div>
 <form method="post">
   {% csrf_token %}

@@ -1,14 +1,17 @@
 from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
+from django.contrib.auth.models import User
+
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column
 from crispy_forms.bootstrap import StrictButton
-from django.contrib.auth.forms import PasswordResetForm
 
 
 class SignUpForm(forms.ModelForm):
+    """
+    Form for creating a new user account
+    """
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
     password = forms.CharField(widget=forms.PasswordInput)
@@ -18,9 +21,8 @@ class SignUpForm(forms.ModelForm):
         fields = ['first_name', 'last_name', 'email', 'password']
 
     def __init__(self, *args, **kwargs):
+        # Initializes the form and set up Crispy Forms Helper
         super().__init__(*args, **kwargs)
-
-        # Crispy Forms helper
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'signup-form'
@@ -37,18 +39,28 @@ class SignUpForm(forms.ModelForm):
         )
 
     def clean_email(self):
+        # Prevents duplicate email registration
         email = self.cleaned_data.get('email')
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("Email already exists")
         return email
 
     def save(self, commit=True):
+        # Creates a new user
         email = self.cleaned_data.get('email')
         password = self.cleaned_data.get('password')
         first_name = self.cleaned_data.get('first_name')
         last_name = self.cleaned_data.get('last_name')
 
-        username = email.split('@')[0]  # auto-generate username
+        # Base username from email prefix
+        base_username = email.split('@')[0]
+        username = base_username
+        counter = 1
+
+        # Ensures username is unique
+        while User.objects.filter(username=username).exists():
+            username = f"{base_username}{counter}"
+            counter += 1
 
         user = User(
             username=username,
@@ -63,9 +75,13 @@ class SignUpForm(forms.ModelForm):
 
 
 class EmailLoginForm(AuthenticationForm):
+    """
+    Login form that authenticates users using email instead of username
+    """
     username = forms.EmailField(label='Email')
 
     def clean(self):
+        # Validates email and password combination
         email = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
         if email and password:
@@ -76,42 +92,33 @@ class EmailLoginForm(AuthenticationForm):
 
 
 class CustomPasswordResetForm(PasswordResetForm):
+    """
+    Password reset form
+    """
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'password-reset-form'
 
+        # Crispy layout
         self.helper.layout = Layout(
             Row(Column('email', css_class='col-md-12')),
-            StrictButton('Reset Password', type='submit', css_class='custom-btn-booking w-100')
+            StrictButton('Reset Password', type='submit', css_class='custom-btn-booking')
         )
 
         # Customize widget styling
         self.fields['email'].widget.attrs.update({
-            'class': 'form-control',
+            'class': 'form-control shadow-none',
             'placeholder': 'Enter your account email'
         })
+        self.fields['email'].label = ''
 
 
 class UserUpdateForm(forms.ModelForm):
-    current_password = forms.CharField(
-        label='Current password',
-        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
-        required=False
-    )
-    new_password = forms.CharField(
-        label='New password',
-        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
-        required=False
-    )
-    confirm_password = forms.CharField(
-        label='Confirm new password',
-        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
-        required=False
-    )
-
+    """
+    Form for updating user details
+    """
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email']
@@ -123,13 +130,11 @@ class UserUpdateForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
-        # Initialize Crispy Form helper
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'user-update-form'
 
-        # Define layout
+        # Crispy layout
         self.helper.layout = Layout(
             Row(
                 Column('first_name', css_class='col-md-6'),
