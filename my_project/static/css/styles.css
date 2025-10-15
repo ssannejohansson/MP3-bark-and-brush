@@ -387,20 +387,20 @@ select option:not([value=""]) {
 
  /* -- CONTACT MODAL -- */
  /* Modal */
- #contact-form label {
+ #message-form label {
      font-family: var(--primary-font);
      font-size: 18px;
      margin-bottom: 0px;
  }
 
- #contact-form input,
- #contact-form textarea {
+ #message-form input,
+ #message-form textarea {
      margin-bottom: 10px;
      border: 1px solid var(--light-blue);
  }
 
- #contact-form input:focus,
- #contact-form textarea:focus {
+ #message-form input:focus,
+ #message-form textarea:focus {
      border: 2px solid var(--dark-blue);
      outline: none !important;
  }

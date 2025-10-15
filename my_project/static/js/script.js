@@ -17,19 +17,6 @@
   })
 })()
 
-// Alert when successful contact input (change this later)
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-const appendAlert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,,
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
-}
-
 const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
@@ -86,3 +73,35 @@ if (alertTrigger) {
         });
     });
   });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contact-form");
+  const responseDiv = document.getElementById("contact-response");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent page reload
+
+    const formData = new FormData(contactForm);
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          responseDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+          contactForm.reset(); // clear form if desired
+        } else {
+          responseDiv.innerHTML = `<div class="alert alert-danger">Something went wrong. Please try again.</div>`;
+        }
+      })
+      .catch(() => {
+        responseDiv.innerHTML = `<div class="alert alert-danger">Error sending message.</div>`;
+      });
+  });
+});
