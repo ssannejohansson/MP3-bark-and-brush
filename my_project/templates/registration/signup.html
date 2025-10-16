@@ -1,38 +1,52 @@
 {% extends "book-now.html" %}
 
+{% load static %}
 {% load crispy_forms_tags %}
 
-<!-- Changes title on the page (in the tab) -->
-{% block title %} Sign Up {% endblock %}
+<!--------------------------------------------------------------
+   Sign Up Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+-------------------------------------------------------------->
 
+<!-- Changes title on the page (in the tab) -->
+{% block title %} Bark & Brush | Sign Up {% endblock %}
+
+<!-- Sign up content starts here -->
 {% block content %}
 
 <!-- Header -->
-   <header id="header" class="container-fluid p-0 ">
-<div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
-            <h1 class="mb-0 text-center heading-pages">let's get you registered!</h1>
-          </div>
-    </header> 
+<header id="header" class="container-fluid p-0 ">
+  <div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+    <h1 class="mb-0 text-center heading-pages">let's get you registered!</h1>
+  </div>
+</header>
+
 <!-- Main content -->
 <section class="booking-index">
-  
-    {% if messages %}
-  {% for message in messages %}
-    <p class="success-message">{{ message }}</p>
-  {% endfor %}
-{% endif %}
-  
-  <div>
-<form method="post">
-  {% csrf_token %}
-  {% crispy signup_form %}
 
-</form>
-</div>
-<div class="text-center">
-<h4 class="mt-5">
-  Already have an account?</h4>
-  <a href="{% url 'login' %}" class="btn custom-btn-booking-outline">Log in instead!</a>
-</div>
+  <!-- If messages is triggered, they will show here -->
+  {% if messages %}
+  {% for message in messages %}
+  <p class="success-message">{{ message }}</p>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Sign Up Form -->
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      {% crispy signup_form %}
+    </form>
+  </div>
+
+  <!-- Already have an account? -->
+  <div class="text-center">
+    <h4 class="mt-5">
+      Already have an account?</h4>
+    <a href="{% url 'login' %}" class="btn custom-btn-booking-outline">Log in instead!</a>
+  </div>
 </section>
 {% endblock %}

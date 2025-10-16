@@ -1,40 +1,44 @@
-{% extends "book-now-base.html" %}
+{% extends 'book-now-base.html' %}
 
 {% load static %}
 
+<!--------------------------------------------------------------
+   Book Now Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+-------------------------------------------------------------->
+
 <!-- Changes title on the page (in the tab) -->
 {% block title %} Booking {% endblock %}
+
+<!-- Book now content starts here -->
 {% block content %}
 
+<!-- Header -->
+<header id="header" class="container-fluid p-0 ">
+  <div class="d-flex flex-column justify-content-center align-items-center booking-header">
+    <h1 class="mb-0 text-center heading-pages">book your appointment</h1>
+  </div>
+</header>
 
+<!-- Main content -->
+<section class="container-fluid d-flex flex-column justify-content-center align-items-center booking-index">
 
+  <!-- If user is logged in, log out button will show -->
+  {% if user.is_authenticated %}
 
-    <!-- book-now.html content starts here -->
-    <!-- Header -->
-    
-   <header id="header" class="container-fluid p-0 ">
-<div class="d-flex flex-column justify-content-center align-items-center booking-header">
-            <h1 class="mb-0 text-center heading-pages">book your appointment</h1>
-          </div>
-    </header> 
+  <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Log Out</button>
+  </form>
+  {% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+  {% endif %}
 
-    <!-- Main content -->
-         <section class="container-fluid d-flex flex-column justify-content-center align-items-center booking-index">
-{% if user.is_authenticated %}
-
-
-
-
-<form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
-</form>
-{% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a>
-{% endif %}
-
-         </section>
+</section>
 
 {% endblock %}
 
@@ -42,5 +46,4 @@
 
 
 
-    <!-- booking.html content ends here -->
-     
+<!-- booking.html content ends here -->

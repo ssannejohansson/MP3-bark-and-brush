@@ -12,28 +12,30 @@
 -------------------------------------------------------------->
 
 <!-- Changes title on the page (in the tab) -->
-{% block title %} Account {% endblock %}
+{% block title %} Bark & Brush | Account {% endblock %}
 
 <!-- Account content goes here -->
 {% block content %}
-    <header id="header" class="container-fluid p-0 ">
-        <div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
-            <h1 class="mb-0 text-center heading-pages">let's manage your account</h1>
-        </div>
-    </header>
+<!-- Header -->
+<header id="header" class="container-fluid p-0 ">
+    <div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+        <h1 class="mb-0 text-center heading-pages">let's manage your account</h1>
+    </div>
+</header>
 
-    <section class="booking-index">
-        <!-- Success messages-->
-        {% if messages %}
-        {% for message in messages %}
-        <p class="success-message">{{ message }}</p>
-        {% endfor %}
-        {% endif %}
+<!-- Main content -->
+<section class="booking-index">
+    <!-- Success messages-->
+    {% if messages %}
+    {% for message in messages %}
+    <p class="success-message">{{ message }}</p>
+    {% endfor %}
+    {% endif %}
 
-        <!-- User update form -->
-        <form method="post">
-            {% csrf_token %}
-            {% crispy user_form %}
-        </form>
-    </section>
+    <!-- User update form -->
+    <form method="post">
+        {% csrf_token %}
+        {% crispy user_form %}
+    </form>
+</section>
 {% endblock %}

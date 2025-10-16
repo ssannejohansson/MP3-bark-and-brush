@@ -12,33 +12,33 @@
 -------------------------------------------------------------->
 
 <!-- Changes title on the page (in the tab) -->
-{% block title %} Login {% endblock %}
+{% block title %} Bark & Brush | Login {% endblock %}
 
 <!-- Log in content starts here -->
 {% block content %}
-  <header id="header" class="container-fluid p-0 ">
-    <div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
-      <h1 class="mb-0 text-center heading-pages">let's get you logged in!</h1>
-    </div>
-  </header>
+<!-- Header -->
+<header id="header" class="container-fluid p-0 ">
+  <div class="col-12 d-flex flex-column justify-content-center align-items-center booking-header">
+    <h1 class="mb-0 text-center heading-pages">let's get you logged in!</h1>
+  </div>
+</header>
 
+<!-- Main content-->
 <section class="booking-index">
 
   <!-- Log in form -->
   <form method="post">
     {% csrf_token %}
-    {{ form|crispy }} 
-    
+    {{ form|crispy }}
+
     <!-- Forgot password -->
-  <div class="text-start mb-3">
-    <a href="{% url 'password_reset' %}" class="small text-muted">Forgot your password? Click here!</a>
-</div>
+    <div class="text-start mb-3">
+      <a href="{% url 'password_reset' %}" class="small text-muted">Forgot your password? Click here!</a>
+    </div>
     <button type="submit" class="btn custom-btn">Log In</button>
   </form>
 
- 
-
-<!-- Link to registration -->
+  <!-- Link to registration -->
   <div class="text-center">
     <h4 class="mt-5">
       Don't have an account?</h4>
