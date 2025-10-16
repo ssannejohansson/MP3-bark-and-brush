@@ -7,21 +7,15 @@ Developer: Sanne Johansson ([ssannejohansson](https://www.github.com/ssannejohan
 [![GitHub repo size](https://img.shields.io/github/repo-size/ssannejohansson/MP3-bark-and-brush)](https://www.github.com/ssannejohansson/MP3-bark-and-brush)
 [![badge](https://img.shields.io/badge/deployment-Heroku-purple)](https://bark-and-brush-dba8d291cd80.herokuapp.com)
 
-⚠️ PROJECT INTRODUCTION AND RATIONALE⚠️
 
-In this section, include a few paragraphs providing an overview of your project. Essentially, this part is your "sales pitch". Describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience. Also, assessors lately have been asking that students explain "why" they opted to do a project about this particular topic/subject, so be sure to explain what made you choose this particular theme/concept/subject/idea. This is the project "rationale".
+## Project Goals / Rationale 
 
-⚠️ --- END --- ⚠️
+As a dog owner whose pet dislikes grooming, I understand the importance of groomers who prioritize the comfort and well-being of the animals in their care. This inspired me to create a fictional grooming business centered on compassionate care — catering to dogs with special needs as well as those who are more easygoing.
+
+The goal of this project was to design a visually appealing yet clean and intuitive website that fulfills user needs without unnecessary clutter.
 
 🛑 README NOTES 🛑
 
-Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
-
-Don't add screenshots for the README/TESTING into your `assets` or `static` folders. Create a new folder at the root-level called `documentation`. Consider creating sub-directories within `documentation` to handle things like `wireframes`, `features`, `validation`, `responsiveness`, etc.
-
-Learn about Markdown Alerts (aka Callouts), a fairly new feature for GitHub Markdown files.
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
-Note: these are not visible within your README Previewer, and are only visible once you push the code to GitHub.
 
 **Site Mockups**
 *([amiresponsive](https://ui.dev/amiresponsive?url=https://bark-and-brush-dba8d291cd80.herokuapp.com), [techsini](https://techsini.com/multi-mockup), etc.)*
@@ -44,8 +38,6 @@ source: [MP3-bark-and-brush amiresponsive](https://ui.dev/amiresponsive?url=http
 ## UX
 
 ### The 5 Planes of UX
-
-⚠️ NOTE: make sure to update the text below to match your own project! ⚠️
 
 #### 1. Strategy
 
@@ -79,11 +71,11 @@ source: [MP3-bark-and-brush amiresponsive](https://ui.dev/amiresponsive?url=http
   - Links to Home, About, Services, Gallery and Booking. Admin (for business owners).
 
 **User Flow**
-1. Guest users browse blog content → read posts and see commenter names.
-2. Guest users register for an account → log in to leave comments.
-3. Registered users leave comments → receive a pending approval notification.
-4. Blog owners create, update, and manage posts → moderate comments.
-5. Blog owners approve or reject comments → manage user interactions.
+1. Guest users browse website → read information and decides to book an appointment.
+2. Guest users register for an account → log in to book an appointment.
+3. Registered users book an appointment → are able to see their booking and edit/delete it.
+4. Business owners can create, update, and manage appointments → moderate bookings.
+
 
 #### 4. Skeleton
 
@@ -96,35 +88,19 @@ source: [MP3-bark-and-brush amiresponsive](https://ui.dev/amiresponsive?url=http
 - **[Typography](#typography)** (see below)
 
 ### Colour Scheme
-
-⚠️INSTRUCTIONS ⚠️
-
-Explain your colors and color scheme. Consider adding a link and screenshot for your color scheme using [coolors](https://coolors.co/generate).
-
-When you add a color to the palette, the URL is dynamically updated, making it easier for you to return back to your color palette later if needed. See example below:
-
-⚠️ --- END --- ⚠️
+For the colour scheme, I browsed Instagram for inspiration, found one I liked, and modified it to suit a website.
 
 I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
-
-- `#000000` primary text.
-- `#3772FF` primary highlights.
-- `#DF2935` secondary text.
-- `#FDCA40` secondary highlights.
 
 ![screenshot](documentation/coolors.png)
 
 ### Typography
 
-⚠️ INSTRUCTIONS ⚠️
 
-Explain any fonts and icon libraries used, like **Google Fonts**, **Font Awesome**, etc. Consider adding a link to each font used, the Font Awesome site (if used), or similar icon library.
 
-⚠️ --- END --- ⚠️
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Marige Thin Font](https://www.fontspace.com/marige-thin-font-f148657)was used for the primary headers and titles.
+- [Mulish](https://fonts.google.com/specimen/Mulish?query=mulisht) was used for all other secondary text.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer and icons in buttons on booking pages.
 
 ## Wireframes
 
@@ -149,34 +125,20 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## User Stories
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, list all of your possible user stories for the project. Samples have been provided below using the example walkthrough project for your inspiration. Make sure to adjust to match your own project features!
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a blog owner | I would like to create new blog posts with a title, featured image, and content | so that I can share my experiences with my audience. |
-| As a blog owner | I would like to update existing blog posts | so that I can correct or add new information to my previous stories. |
-| As a blog owner | I would like to delete blog posts | so that I can remove outdated or irrelevant content from my blog. |
-| As a blog owner | I would like to retrieve a list of all my published blog posts | so that I can manage them from a central dashboard. |
-| As a blog owner | I would like to preview a post as draft before publishing it | so that I can ensure formatting and content appear correctly. |
-| As a blog owner | I would like to review comments before they are published | so that I can filter out spam or inappropriate content. |
-| As a blog owner | I would like to approve or reject comments from users | so that I can maintain control over the discussion on my posts. |
-| As a blog owner | I would like to view a list of all comments (both approved and pending) | so that I can manage user engagement effectively. |
-| As a blog owner | I would like to edit or delete user comments | so that I can clean up or remove inappropriate responses after they've been posted. |
-| As a registered user | I would like to log in to the site | so that I can leave comments on blog posts. |
-| As a registered user | I would like to register for an account | so that I can become part of the community and engage with the blog. |
-| As a registered user | I would like to leave a comment on a blog post | so that I can share my thoughts or ask questions about the owner's experiences. |
-| As a registered user | I would like my comment to show my name and the timestamp | so that others can see who I am and when I left the comment. |
-| As a registered user | I would like to receive a notification or message saying my comment is pending approval | so that I understand it hasn't been posted immediately. |
-| As a registered user | I would like to edit or delete my own comments | so that I can fix mistakes or retract my statement. |
-| As a guest user | I would like to read blog posts without registering | so that I can enjoy the content without needing to log in. |
-| As a guest user | I would like to browse past posts | so that I can explore the blog's full content history. |
-| As a guest user | I would like to register for an account | so that I can participate in the community by leaving comments on posts. |
-| As a guest user | I would like to see the names of other commenters on posts | so that I can get a sense of community interaction before registering. |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
+| As a first time visitor | I would like to find a groomer | so that I can groom my dog |
+| As first time visitor | I would like to know more about the groomers | so that I know if they will go along with my dog |
+| As a first time visitor | I would like to know what services the groomers provide | so that I know if they will meet my requirements |
+| As a first time visitor | I would like to look at images of previous customers | so that I can decide if I like their services |
+| As a first time visitor | I would like to book an appointment | so that I can get my dog groomed |
+| As a first time visitor | I would like to know the opening times | so that I can know if they suit me |
+| As a returning customer | I would like to book an appointment | so that I can get my dog groomed |
+| As a returning customer | I would like to get in touch with the groomers | so that I can ask potential questions |
+| As a returning customer | I would like to sign up for a newsletter | so that I can get all the news from the business |
+| As a frequent customer | I would like to book an appointment | so that I can get my dog groomed |
+| As a business owner | I would like to have an admin site | so that I can manage bookings and users |
+| As a business owner| I would like a responsive site with clear navigation that clearly communicates our services. | so that our customers will stay on our site |
 
 ## Features
 
