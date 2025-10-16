@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /**
+ * -- BOOKING PAGES -- 
  * Apply Bootstrap custom validation styles to forms
  */
 (() => {
