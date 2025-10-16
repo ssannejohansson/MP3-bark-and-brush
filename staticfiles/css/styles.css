@@ -1,0 +1,581 @@
+ @font-face {
+     font-family: "Marige Thin";
+  src: local('MarigefreeThin-AReam'),
+       url(../fonts/MarigefreeThin-AReam.otf) format("opentype");
+}
+
+ /* CSS Variables */
+ :root {
+     --brown: #3a322e;
+     --dark-blue: #3571ad;
+     --light-blue: #a6b8e5;
+     --pink: #f3dee2;
+     --light-blue-background: #d4ddf3;
+     --pink-background-color: #f4edef;
+     --primary-background-color: #f7f3f4;
+     --primary-font: "Mulish", sans-serif;
+     --secondary-font: "Marige Thin";
+ }
+
+
+
+ /* Global styles */
+ body {
+     background-color: var(--primary-background-color);
+     font-family: var(--primary-font);
+     color: var(--brown);
+ }
+
+ h1 {
+     font-family: var(--secondary-font);
+     color: var(--dark-blue);
+ }
+
+ h2 {
+     font-family: var(--secondary-font);
+     font-size: 40px;
+     color: var(--dark-blue);
+ }
+
+ h4 {
+     font-family: var(--secondary-font);
+     color: var(--brown);
+ }
+
+ .custom-btn {
+     width: 120px;
+     background-color: var(--light-blue);
+     font-weight: 600;
+     color: var(--brown);
+     transition: 0.5s;
+ }
+
+ .custom-btn:hover {
+     background-color: #92a4d1;
+ }
+
+ .custom-btn-outline {
+     width: 120px;
+     font-weight: 600;
+     background-color: transparent;
+     border: 1px solid var(--dark-blue);
+     transition: 0.5s;
+ }
+
+ .custom-btn-outline:hover {
+     background-color: var(--light-blue);
+ }
+
+ .hero-pages {
+     background-color: var(--pink-background-color);
+     min-height: 200px;
+ }
+
+ .heading-pages {
+     font-family: var(--secondary-font);
+     font-size: 35px;
+     color: var(--dark-blue);
+     line-height: 100%;
+     width: 80%;
+ }
+
+ .border-rad {
+     border-radius: 10px;
+ }
+
+ /* Navbar */
+ nav {
+     background-color: var(--pink-background-color);
+ }
+
+ .custom-btn-nav {
+     width: fit-content;
+     font-weight: 500;
+     border: 1px solid #d1c9cc;
+     color: #565558;
+     font-weight: 700;
+     transition: 0.5s;
+ }
+
+ .nav-item {
+     font-family: var(--primary-font);
+ }
+
+ .nav-link {
+     font-size: 20px;
+     color: var(--brown);
+     transition: 0.4s;
+ }
+
+ .nav-link:hover {
+     font-weight: 600;
+ }
+
+ .active {
+     color: var(--brown) !important;
+     font-weight: 600 !important;
+ }
+
+ /* -- HOME PAGE -- */
+ /* Header */
+ header {
+     background-color: var(--pink-background-color);
+ }
+
+ .hero-index {
+     max-height: 680px;
+     background-color: var(--pink-background-color);
+ }
+
+ .heading-index {
+     margin-top: 30px;
+     font-family: var(--secondary-font);
+     font-size: 90px;
+     color: var(--dark-blue);
+     line-height: 100%;
+     width: 90%;
+ }
+
+ #subtext {
+     font-family: var(--primary-font);
+     text-transform: uppercase;
+     font-size: 16px;
+     color: var(--light-blue);
+     letter-spacing: 5px;
+     width: 100%;
+ }
+
+ #head-img {
+     width: 100%;
+ }
+
+ #head-img img {
+     height: 350px;
+ }
+
+ /* Info */
+ #index-info {
+     padding-top: 30px;
+     background: url(../images/pawbackground.png);
+     background-size: contain;
+     max-height: 700px;
+     background-color: var(--light-blue-background);
+     padding-bottom: 30px;
+ }
+
+ #index-info-img img {
+     max-height: 350px;
+     object-fit: cover;
+ }
+
+ /* Price list */
+
+ #index-price {
+     min-height: 100%;
+     padding-bottom: 20px;
+ }
+
+ .card {
+     max-width: 300px;
+     transition: 0.7s;
+     cursor: pointer;
+ }
+
+ .card h4 {
+     font-family: var(--primary-font);
+ }
+
+ .card p {
+     margin-bottom: 0;
+     font-family: var(--secondary-font);
+ }
+
+ .card:hover {
+     transform: scale(1.2);
+     z-index: 1;
+ }
+ 
+/* -- BOOKING PAGES --*/ 
+
+.dropdown-item:active {
+    background-color: var(--light-blue-background);
+    color: var(--brown);
+}
+
+.custom-btn-booking {
+    width: fit-content;
+     background-color: var(--light-blue);
+     font-weight: 600;
+     color: var(--brown);
+     transition: 0.5s;
+ }
+
+.custom-btn-booking:focus,
+.custom-btn-booking:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+ .custom-btn-booking-outline {
+     width: fit-content;
+     font-weight: 600;
+     background-color: transparent;
+     border: 1px solid var(--dark-blue);
+     color: var(--brown);
+     transition: 0.5s;
+ }
+
+
+  .custom-btn-dropdown {
+     width: 160px;;
+     font-weight: 600;
+     background-color: transparent;
+     border: 1px solid var(--dark-blue);
+     color: var(--brown);
+     transition: 0.5s;
+ }
+
+ .custom-btn-booking:hover, 
+ .custom-btn-booking-outline:hover, 
+  .custom-btn-dropdown:hover {
+     background-color: #92a4d1;
+ }
+
+
+ .booking-header {
+    height: 120px; 
+ }
+
+ .booking-index {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    height: 100%;
+ }
+
+ .booking-index p {
+    font-size: 18px;
+ }
+
+ .booking-index a {
+    color: var(--brown);
+ }
+
+ .booking-index a:hover {
+    font-weight: bold; 
+ }
+
+
+
+.booking-index ul, li {
+    list-style-type: none;
+    
+}
+
+ .booking-index .form-label {
+     font-family: var(--primary-font);
+     font-size: 18px;
+     margin-bottom: 0px;
+ }
+
+ .booking-index input.form-control,
+ .booking-index input.textarea {
+     margin-bottom: 10px;
+     border: 1px solid var(--light-blue);
+ }
+
+ .booking-index input:focus,
+ .booking-index textarea:focus {
+     border: 2px solid var(--dark-blue);
+     outline: none !important;
+     box-shadow: none;
+ }
+
+
+#booking-form input {
+    width: 200px;
+    border-radius: 10px; 
+}
+
+select option[value=""] {
+  color: #6c757d; /* muted grey */
+}
+
+select:invalid {
+  color: #6c757d;
+}
+
+/* Once a user selects a real option, make it black */
+select option:not([value=""]) {
+  color: #000;
+}
+
+
+#booking-form select option:disabled {
+  color: #aaa;
+  background-color: #f8f8f8;
+}
+
+
+.danger-button:hover {
+  background-color: #c0392b;
+}
+
+#appointment-container {
+    border-bottom: 1px solid var(--brown);
+
+}
+
+#appointment-container a {
+    color: var(--brown);
+}
+ 
+
+.book-link:hover {
+    color: #2a5b8b;
+}
+
+#success-booking li {
+    font-size: 18px;
+
+}
+
+/* Overrides the default crispy-forms setting for an asterisk next to required field label */
+.asteriskField {
+  display: none !important;
+}
+ /* -- FOOTER -- */
+ footer {
+     background-color: var(--pink-background-color);
+     min-height: 200px;
+ }
+
+ #opening-times p {
+     margin-bottom: 5px;
+ }
+
+ .form-label {
+     font-family: var(--secondary-font);
+     font-size: 20px;
+ }
+
+ #newsletter-input {
+     max-width: 350px;
+     position: relative;
+ }
+
+ #newsletter-input input {
+     width: 100%;
+     padding-right: 150px;
+     border-radius: 10px;
+     border: 1px solid var(--light-blue)
+ }
+
+ #newsletter-input button {
+     border-radius: 0px 10px 10px 0px;
+     width: 90px;
+     position: absolute;
+     top: 0;
+     right: 0;
+ }
+
+ #social-icons i {
+     font-size: 40px;
+     color: var(--dark-blue);
+     transition: 0.5s;
+ }
+
+ #social-icons i:hover {
+     transform: scale(1.1);
+     color: #285a8d;
+ }
+
+ /* -- CONTACT MODAL -- */
+ /* Modal */
+ #message-form label {
+     font-family: var(--primary-font);
+     font-size: 18px;
+     margin-bottom: 0px;
+ }
+
+ #message-form input,
+ #message-form textarea {
+     margin-bottom: 10px;
+     border: 1px solid var(--light-blue);
+ }
+
+ #message-form input:focus,
+ #message-form textarea:focus {
+     border: 2px solid var(--dark-blue);
+     outline: none !important;
+ }
+
+ /* -- ABOUT PAGE -- */
+ #about-container img {
+     object-fit: cover;
+ }
+
+ /* -- SERVICES PAGE -- */
+ #services {
+     margin-top: 50px;
+     min-height: 100%;
+     margin-bottom: 50px;
+ }
+
+ /* -- GALLERY PAGE -- */
+ #gallery {
+     background-color: var(--pink-background-color);
+     padding-bottom: 70px;
+ }
+
+ .gallery-img {
+     padding: 0;
+     border-radius: 10px;
+     object-fit: contain;
+     transition: 0.7s;
+ }
+
+ .gallery-img:hover {
+     transform: scale(1.2);
+     z-index: 1;
+ }
+
+/* -- 404 PAGE -- */
+ #error-btn {
+     width: fit-content;
+ }
+
+ /* Media query: tablet and larger (768px and up) */
+ @media screen and (min-width: 768px) {
+     /* Global styles */
+     .heading-pages {
+         font-family: var(--secondary-font);
+         font-size: 60px;
+         color: var(--dark-blue);
+         line-height: 100%;
+         width: 80%;
+     }
+
+     .hero-pages {
+         height: 300px;
+     }
+
+     /* HOMEPAGE - Header */
+
+     .hero-index {
+         min-height: 400px;
+     }
+
+     .heading-index {
+         padding-left: 20px;
+         font-size: 80px;
+         width: 70%;
+     }
+
+     #subtext {
+         font-size: 16px;
+         width: 80%;
+     }
+
+     #head-img {
+         width: 50%;
+     }
+
+     #head-img img {
+         height: 400px;
+     }
+
+     #index-service {
+         min-height: 350px;
+         padding: 0;
+     }
+
+     #index-info {
+         min-height: 650px;
+     }
+
+     /* HOMEPAGE - info */
+     .index-service-img img {
+         border-radius: 10px;
+         max-height: 210px;
+         max-width: 300px;
+         object-fit: cover;
+     }
+
+     /* GALLERY PAGE  */
+     #hero-gallery {
+         min-height: 400px;
+     }
+
+     /* BOOKING PAGE */ 
+    .booking-header {
+    height: 200px; 
+ }
+ }
+
+ /* Media query: laptop and larger (992px and up) */
+ @media screen and (min-width: 992px) {
+     /* Global styles */
+     .heading-pages {
+         font-family: var(--secondary-font);
+         font-size: 110px;
+         color: var(--dark-blue);
+         line-height: 100%;
+         width: 80%;
+     }
+
+     .hero-pages {
+         height: 500px;
+     }
+
+     /* HOMEPAGE - Heading */
+     .heading-index {
+         font-size: 110px;
+         width: 100%;
+     }
+
+     #subtext {
+         font-size: 20px;
+         width: 70%;
+     }
+
+     #head-img {
+         padding-right: 80px;
+         width: 40%;
+     }
+
+     #head-img img {
+         height: 500px;
+     }
+
+     #index-info {
+         min-height: 550px;
+     }
+
+     /* BOOKING PAGE */
+     #booking-form {
+         width: 60%;
+     }
+
+          /* BOOKING PAGE */ 
+    .booking-header {
+    height:200px; 
+ }
+
+ .booking-header .heading-pages {
+    font-size: 80px;
+ }
+
+ .booking-index {
+    min-height: 400px; 
+ }
+ }
+
+ /* Media query: desktop and larger (1200px and up) */
+ @media screen and (min-width: 1200px) {
+     /* HOMEPAGE - heading */
+     #subtext {
+         font-size: 30px;
+     }
+ }

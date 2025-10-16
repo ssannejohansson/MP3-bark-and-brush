@@ -66,9 +66,5 @@ class ContactForm(forms.Form):
             Row(Column('phone', css_class='col-md-12')),
             Row(Column('subject', css_class='col-md-12')),
             Row(Column('message', css_class='col-md-12')),
-            StrictButton(
-                'Send Message',
-                type='submit',
-                css_class='custom-btn-booking'
-            )
+            StrictButton('Send Message', type='submit', css_class='custom-btn-booking')
         )
