@@ -192,51 +192,23 @@ In this section, you should go over the different parts of your project, and des
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Register | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
-| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
-| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
-| Blog List | The homepage displays basic information about blog posts, including image, title, author, date, and a brief excerpt. | ![screenshot](documentation/features/blog-list.png) |
-| View Post | Users can view the full blog post details, including any comments. | ![screenshot](documentation/features/view-post.png) |
-| Pagination | Blog posts are displayed in pages, with six posts per page. This provides better navigation for users through the post list. | ![screenshot](documentation/features/pagination.png) |
-| Add Comments | Authenticated visitors can comment on blog posts; comments require approval before being published. | ![screenshot](documentation/features/add-comment.png) |
-| Edit Comments | Authenticated visitors can edit their own comments. | ![screenshot](documentation/features/edit-comment.png) |
-| Delete Comments | Authenticated visitors can delete their own comments. | ![screenshot](documentation/features/delete-comment.png) |
-| Comment Approvals | Admins can approve or disapprove comments submitted by users before they are visible on the blog post. | ![screenshot](documentation/features/comment-approval.png) |
-| Create Post | Site owners can create/publish blog posts, including setting a featured image using Cloudinary, all from the Django admin dashboard. | ![screenshot](documentation/features/create-post.png) |
-| Update Post | Site owners can update/manage blog posts from the Django admin dashboard. | ![screenshot](documentation/features/update-post.png) |
-| Delete Post | Site owners can delete blog posts from the Django admin dashboard. | ![screenshot](documentation/features/delete-post.png) |
-| About Page | The About page displays the latest information about the site author, along with the option for visitors to send collaboration requests. | ![screenshot](documentation/features/about.png) |
-| Collaboration Requests | Visitors can submit collaboration requests from the *About* page, which are later reviewed by the admin. | ![screenshot](documentation/features/collaboration.png) |
-| User Feedback | Clear and obvious Django messages are used to provide feedback to user actions. | ![screenshot](documentation/features/messages.png) |
+| Register | Authentication is handled by authenticate, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
+| Login | Authentication is handled by authenticate, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
+| Logout | Authentication is handled by authenticate, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
+| Password Reset | Authentication is handled by authenticate and PasswordResetForm allowing users to reset their password.| ![screenshot](documentation/features/blog-list.png) |
+| Booking | Users can book an appointment | ![screenshot](documentation/features/view-post.png) |
+| Update Appointment | Users can update and cancel their appointment | ![screenshot](documentation/features/pagination.png) |
+| Account | Users can manage their account details | ![screenshot](documentation/features/add-comment.png) |
+| Contact Form | Users can contact the business using the contact form | ![screenshot](documentation/features/edit-comment.png) |
+
+| About Page | The About page displays information about the business | ![screenshot](documentation/features/about.png) |
+| Services page | The Services page displays information about the business services | ![screenshot](documentation/features/collaboration.png) |
+| Gallery Page | The Gallery page displays a gallery of images of the business customers | ![screenshot](documentation/features/messages.png) |
 | Heroku Deployment | The site is fully deployed to Heroku, making it accessible online and easy to manage. | ![screenshot](documentation/features/heroku.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
 ### Future Features
-
-⚠️ INSTRUCTIONS ⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
-
-⚠️ --- END ---⚠️
-
-- **Post Categories/Tags**: Allow users to categorize and tag blog posts, making it easier for visitors to filter content based on their interests.
-- **Post Search Functionality**: Add a search bar for users to quickly find posts by keywords or phrases.
-- **Post Likes/Dislikes or Upvotes**: Implement a "like" or "upvote" system for blog posts to encourage user engagement and give feedback to the author.
-- **User Profiles**: Create personalized user profiles where authenticated users can view their comments, liked posts, and account information.
-- **Comment Replies & Threads**: Enable users to reply to comments, creating nested comment threads for better discussions.
-- **Post Sharing**: Add social media sharing buttons (e.g., Twitter, Facebook, LinkedIn) for users to share blog posts.
-- **Notifications**: Implement a notification system that alerts users when their comments are approved, when new comments are made on a post they've commented on, or when new posts are published.
-- **Email Subscriptions**: Allow users to subscribe to receive email notifications for new posts, updates, or newsletters.
-- **Post Analytics**: Provide post authors with analytics such as views, time spent reading, and engagement rates.
-- **Multilingual Support**: Add the ability to write and view blog posts in multiple languages, broadening the audience.
-- **Related Posts Recommendations**: Show related posts at the bottom of a blog post to encourage further reading and keep users engaged.
-- **Content Flagging/Reporting**: Allow users to flag or report inappropriate content (comments or posts) for moderation.
-- **SEO Optimization**: Implement features for SEO, such as meta tags, custom URLs, and keywords for better search engine ranking.
-- **User Dashboard**: Provide users with a dashboard to track their activity, such as comments made, likes received, and blog posts they’ve interacted with.
-- **Admin Dashboard Analytics**: Provide site admins with an analytics dashboard showing user activity, popular posts, most commented articles, etc.
-- **Custom Themes for Users**: Allow users to customize the visual theme of the site (colors, fonts, etc.) to suit their preferences.
+- A review section on the Home page (skriv mer)
 
 ## Tools & Technologies
 
@@ -257,7 +229,19 @@ A few examples are listed below to align with possible ways to improve on the sa
 | [![badge](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) | Icons. |
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
-| [![badge](https://img.shields.io/badge/Gemini-grey?logo=googlegemini&logoColor=#8E75B2)](https://gemini.google.com) | Help debug, troubleshoot, and explain things. |
+| [![badge](https://img.shields.io/badge/Gemini-grey?logo=googlegemini&logoColor=#8E75B2)](https://gemini.google.com) | Create hero image for Home page. |
+| [Photoshop](https://photoshop.adobe.com/) | For editing images/logos and remove backgrounds. |
+| [Namelix](https://namelix.com) | For business name. |
+| [Instagram](https://www.instagram.com/) | For color scheme inspiration. |
+| [Vecteezy](https://www.vecteezy.com/) | For favicon-logo. |
+| [Favicon.io](Favicon.io ) | To generate favicon. |
+| [Google Fonts](https://fonts.google.com/) | For fonts. |
+| [Fontspace](https://www.fontspace.com/) | For fonts. |
+| [Unsplash](https://unsplash.com/) | For images |
+| [Pexels](https://pexels.com/) | For images |
+|[Autoprefixer](https://autoprefixer.github.io/) | To make sure the code is working across browsers. |
+| [Am I Responsive?](https://ui.dev/amiresponsive) | To show the website on all devices. |
+
 
 ⚠️ NOTE ⚠️
 
@@ -595,15 +579,22 @@ Eventually you'll want to learn how to use Git branches. Here's a helpful tutori
 | Source | Notes |
 | --- | --- |
 | [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
+| [Geeks for Geeks](https://www.geeksforgeeks.org/python/setup-sending-email-in-django-project/) | "Setup sending email in Django project" |
+| [Geeks for Geeks](https://www.geeksforgeeks.org/html/how-to-add-button-inside-an-input-field-in-html/) | "How to add button inside an input field in HTML" |
+| [LearnDjango](https://learndjango.com/tutorials/template-structure ) | "Template Structure" |
+| [LearnDjango](https://learndjango.com/tutorials/django-login-and-logout-tutorial ) | "Django login and logout tutorial" |
+| [LearnDjango](https://learndjango.com/tutorials/django-email-contact-form-tutorial) | "Email contact form tutorial" |
+| [Dev.to](https://dev.to/donesrom/how-to-set-up-django-built-in-registration-in-2023-41hg) | "How to set up Django built in registration in 2023" |
+| [Medium.com](https://medium.com/@azzouzhamza13/django-crispy-forms-bootstrap5-00a1eb3ec3c7) | "Django Crispy Forms Bootstrap 5" |
+| [John Abdsho Khosrowabadi](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78) | "How to create a booking system for a health clinic" |
 | [I Think Therefore I Blog](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
 | [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
-| [Cloudinary API](https://cloudinary.com) | Cloud storage for static/media files |
+| [FlatPickr](https://flatpickr.js.org/) | FlatPickr for clean booking UI |
 | [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 
-### Media
+### Media and content
 
 ⚠️ INSTRUCTIONS ⚠️
 
@@ -611,42 +602,19 @@ Use this space to provide attribution links to any media files borrowed from els
 
 Looking for some media files? Here are some popular sites to use. The list of examples below is by no means exhaustive.
 
-- Images
-    - [Pexels](https://www.pexels.com)
-    - [Unsplash](https://unsplash.com)
-    - [Pixabay](https://pixabay.com)
-    - [Lorem Picsum](https://picsum.photos) (placeholder images)
-    - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
-    - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-- Audio
-    - [Audio Micro](https://www.audiomicro.com/free-sound-effects)
-    - [Button Clicks](https://www.zapsplat.com/sound-effect-category/button-clicks)
-    - [Lasers & Weapons](https://www.zapsplat.com/sound-effect-category/lasers-and-weapons/page/5)
-    - [Puzzle Music](https://soundimage.org/puzzle-music)
-    - [Camtasia Audio](https://library.techsmith.com/camtasia/assets/Audio)
-- Video
-    - [Videvo](https://www.videvo.net)
-- Image Compression
-    - [TinyPNG](https://tinypng.com) (for images <5MB)
-    - [CompressPNG](https://compresspng.com) (for images >5MB)
-
-A few examples have been provided below to give you some ideas on how to do your own Media credits.
 
 ⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
 | [favicon.io](https://favicon.io) | Generating the favicon |
-| [I Think Therefore I Blog](https://codeinstitute.net) | Sample images provided from the walkthrough projects |
+| [Vecteezy](https://www.vecteezy.com/) | For favicon-logo. |
 | [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
-| [Pexels](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg) | Hero image |
-| [Wallhere](https://c.wallhere.com/images/9c/c8/da4b4009f070c8e1dfee43d25f99-2318808.jpg!d) | Background wallpaper |
-| [Pixabay](https://cdn.pixabay.com/photo/2017/09/04/16/58/passport-2714675_1280.jpg) | Background wallpaper |
-| [DALL-E 3](https://openai.com/index/dall-e-3) | AI generated artwork |
-| [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
-| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
-| [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
+| [Gemini](https://gemini.google.com/app?hl=sv) | Hero image |
+| [Pexels](https://www.pexels.com/sv-se/@goochie-poochie/) | All content images except Gallery images are from Goochie Poochie Grooming |
+| [Unsplash](unsplash.com) | All Gallery images |
 
+All writen content are generated by chatGPT.
 ### Acknowledgements
 
 ⚠️ INSTRUCTIONS ⚠️
