@@ -36,14 +36,17 @@
     fetch('/fully-booked-dates/')
       .then(res => res.json())
       .then(data => {
+        const disabledDates = data.fully_booked_dates || [];
+
+        // Initialize Flatpickr with disabled (fully booked) + weekends
         flatpickr("#id_day", {
           minDate: "today",
           dateFormat: "Y-m-d",
           disable: [
-            data.fully_booked_dates, // Disable fully booked
-                function (date) {
-      // return true to disable
-      return (date.getDay() === 0 || date.getDay() === 6);  // Sunday = 0, Saturday = 6
+               ...disabledDates, // spread fully booked dates into the disable list
+          function (date) {
+            // Disable weekends: Sunday (0) and Saturday (6)
+            return (date.getDay() === 0 || date.getDay() === 6);
     }
   ]
         });
