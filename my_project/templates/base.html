@@ -69,7 +69,7 @@
                 <a href="{% url 'login' %}" class="btn custom-btn-nav d-lg-none">Book</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-3">
+                <ul class="navbar-nav me-auto mb-1 mb-lg-0 d-flex gap-1">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
@@ -91,7 +91,7 @@
                     {% if user.is_authenticated %}
                     <a href="{% url 'book_appointment' %}" class="btn custom-btn d-none d-lg-block">Book now!</a>
                     {% else %}
-                    <a href="{% url 'login' %}?next={% url 'book_appointment' %}"
+                    <a href="{% url 'login' %}"
                         class="btn custom-btn d-none d-lg-block">Book now!</a>
                     {% endif %}
                 </div>
@@ -121,11 +121,11 @@
 
             <div class="col-sm-4 col-lg-3" id="opening-times">
                 <h3>Opening times</h3>
-                <p><strong>Mon:</strong> 9:00am - 5:00pm</p>
-                <p><strong>Tue:</strong> 9:00am - 5:00pm</p>
-                <p><strong>Wed:</strong> 9:00am - 7:00pm</p>
-                <p><strong>Thu:</strong> 9:00am - 5:00pm</p>
-                <p><strong>Fri:</strong> 9:00am - 4:00pm</p>
+                <p><strong>Mon:</strong> 9:00am - 5:30pm</p>
+                <p><strong>Tue:</strong> 9:00am - 5:30pm</p>
+                <p><strong>Wed:</strong> 9:00am - 5:30pm</p>
+                <p><strong>Thu:</strong> 9:00am - 5:30pm</p>
+                <p><strong>Fri:</strong> 9:00am - 5:30pm</p>
                 <p><strong>Sat & Sun</strong> Closed</p>
             </div>
 

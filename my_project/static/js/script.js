@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(data => {
         const availableTimes = data.available_times || [];
-        const allTimes = ["9:00 AM", "10:30 AM", "1:00 PM", "2:30 PM", "4:00 PM", "5:30 PM"];
+        const allTimes = ["9:00 AM", "10:30 AM", "1:00 PM", "2:30 PM", "4:00 PM"];
         timeSelect.innerHTML = '';
 
         // Sets dropdown to show available and unavailable times
