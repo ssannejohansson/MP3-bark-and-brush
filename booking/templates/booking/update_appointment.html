@@ -1,43 +1,53 @@
 {% extends "book-now-base.html" %}
-{% load static %}
 
+{% load static %}
 {% load crispy_forms_tags %}
 
+
+<!--------------------------------------------------------------
+   Update Appointment Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+-------------------------------------------------------------->
+
+
 <!-- Changes title on the page (in the tab) -->
-{% block title %} Appointments {% endblock %}
+{% block title %} Bark & Brush | Update Appointment {% endblock %}
+
+<!-- Update Appointment content starts here -->
 {% block content %}
 
-  <header id="header" class="container-fluid p-0 ">
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header">
-
-                <h1 class="mb-0 text-center heading-pages">let's update your appointment</h1>
-            
-          </div>
-    </header> 
-
+<header id="header" class="container-fluid p-0 ">
+  <div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header">
+    <h1 class="mb-0 text-center heading-pages">let's update your appointment</h1>
+  </div>
+</header>
 
 <section class="booking-index">
-
-<div>
-
+  <!-- If messages is triggered, they will show here -->
+  <div>
     {% if messages %}
-  {% for message in messages %}
+    {% for message in messages %}
     <p class="success-message">{{ message }}</p>
-  {% endfor %}
-{% endif %}
+    {% endfor %}
+    {% endif %}
+  </div>
 
-  <form method="post" class="booking-form">
-    {% csrf_token %}
-     {% crispy appointment_form %}
-    
-  </form>
-  <form method="post" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
-    {% csrf_token %}
-    <button type="submit" name="delete" class="btn custom-btn-booking-outline danger-button">Cancel Appointment <i class="fa-solid fa-trash ms-2"></i></button>
-</form>
+  <!-- Booking form -->
+  <div>
+    <form method="post" class="booking-form">
+      {% csrf_token %}
+      {% crispy appointment_form %}
+    </form>
 
-</div>
-
-
+    <!-- Cancel booking confirmation -->
+    <form method="post" onsubmit="return confirm('Are you sure you want to cancel this appointment?');">
+      {% csrf_token %}
+      <button type="submit" name="delete" class="btn custom-btn-booking-outline danger-button mt-2">Cancel Appointment <i
+          class="fa-solid fa-trash ms-2"></i></button>
+    </form>
+    </div>
 </section>
 {% endblock %}

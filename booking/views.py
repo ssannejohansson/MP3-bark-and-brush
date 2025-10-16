@@ -142,6 +142,7 @@ def my_appointments(request):
     past_appointments = appointments.filter(day__lt=today)
     
     return render(request, 'booking/my_appointments.html', {
+        'appointments': appointments,
         'upcoming_appointments': upcoming_appointments,
         'past_appointments': past_appointments,
     })

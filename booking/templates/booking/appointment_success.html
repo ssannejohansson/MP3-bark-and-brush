@@ -2,38 +2,54 @@
 
 {% load static %}
 
-<!-- Changes title on the page (in the tab) -->
-{% block title %} Success {% endblock %}
+<!--------------------------------------------------------------
+   Appointment Success Template
+   ------------------------------------------------------------
+   - Extends the base layout (includes navbar, footer, modals
+   and scripts)
+   - Uses the 'content' block to inject main page content
+-------------------------------------------------------------->
 
+<!-- Changes title on the page (in the tab) -->
+{% block title %} Bark & Brush | Appointment Success {% endblock %}
+
+<!-- Appointment Success content starts here -->
+  <!-- If messages is triggered, they will show here -->
+  <div>
+    {% if messages %}
+    {% for message in messages %}
+    <p class="success-message">{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+  </div>
 
 {% block content %}
+<header id="header" class="container-fluid p-0 ">
+  <div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header mt-2 mb-2">
+    <h1 class="mb-0 text-center heading-pages">appointment booked!</h1>
+    <h3 class="mt-2 text-center">your appointment has been successfully scheduled</h3>
+  </div>
+</header>
 
-  <header id="header" class="container-fluid p-0 ">
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header">
-         
-                <h1 class="mb-0 text-center heading-pages">appointment booked!</h1>
-             <h3 class="mt-2">your appointment has been successfully scheduled</h3>
-          </div>
-    </header> 
-
-
+<!-- Booked appointment -->
 <section class="d-flex flex-column justify-content-center booking-index">
-
   <div>
-  {% if appointment %}
-    <h2>Your Appointment for {{ appointment.dog_name }}</h2>
+    {% if appointment %}
+    <!-- |capfirst makes first letter in dog name capitalized for clean UI -->
+    <h2>Your Appointment for {{ appointment.dog_name|capfirst }}</h2>
     <ul class="mt-3 mb-4" id="success-booking">
       <li><strong>Service:</strong> {{ appointment.service }}</li>
       <li><strong>Date:</strong> {{ appointment.day }}</li>
       <li><strong>Time:</strong> {{ appointment.time }}</li>
     </ul>
-</div>
- <div>
-      <a href="{% url 'update_appointment' appointment.pk %}" class="btn custom-btn">Update<i class="fa-solid fa-gears ms-2"></i></a>
-   
-  {% endif %}
+  </div>
+  <div>
+    <a href="{% url 'update_appointment' appointment.pk %}" class="btn custom-btn">Update<i
+        class="fa-solid fa-gears ms-2"></i></a>
+    {% endif %}
 
-  <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking-outline">Book another appointment<i class="fa-solid fa-calendar ms-2"></i></a>
-</div>
+    <a href="{% url 'book_appointment' %}" class="btn custom-btn-booking-outline">Book another appointment<i
+        class="fa-solid fa-calendar ms-2"></i></a>
+  </div>
 </section>
 {% endblock %}
