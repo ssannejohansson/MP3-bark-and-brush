@@ -1,4 +1,5 @@
 /* jshint esversion: 11 */
+/* global flatpickr */
 
 /**
  * -- ALL PAGES WITH CONTACT BUTTON IN NAV --
@@ -7,8 +8,27 @@
  * Displays success/error messages dynamically.
  */
 document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contact-form");
+  const contactForm = document.getElementById("contact-form");  
   const responseDiv = document.getElementById("contact-response");
+
+    // Helper: Get CSRF token from cookie
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) === name + "=") {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  const csrftoken = getCookie("csrftoken");
 
   // Listens for form submission and handle it asynchronously
   contactForm.addEventListener("submit", function (e) {
@@ -17,12 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData(contactForm);
 
     // Send form data via POST request using Fetch API
-    fetch(contactForm.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          "X-Requested-With": "XMLHttpRequest",
-        },
+     fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      credentials: "same-origin", // 🔑 ensures cookies are sent
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        "X-CSRFToken": csrftoken, // 🔑 Django needs this
+      },
       })
       .then((res) => res.json())
       .then((data) => {
@@ -65,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
  * Apply Bootstrap custom validation styles to forms
  */
 (() => {
-  'use strict'
+  'use strict';
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+  const forms = document.querySelectorAll('.needs-validation');
 
   // Loop over them and prevent submission if form is invalid. 
   Array.from(forms).forEach(form => {
@@ -76,14 +98,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Stops submission if form inputs are invalid
       if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+        event.preventDefault();
+        event.stopPropagation();
       }
       // Apply Bootstraps "was validated" class to show feedback styles
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
 
 /** 
  * -- BOOKING PAGES --
