@@ -14,20 +14,10 @@
 {% block title %} Bark & Brush | Appointment Success {% endblock %}
 
 <!-- Appointment Success content starts here -->
-  <!-- If messages is triggered, they will show here -->
-  <div>
-    {% if messages %}
-    {% for message in messages %}
-    <p class="success-message">{{ message }}</p>
-    {% endfor %}
-    {% endif %}
-  </div>
-
 {% block content %}
 <header id="header" class="container-fluid p-0 ">
   <div class="container-fluid d-flex flex-column justify-content-center align-items-center booking-header mt-4 mb-4 mt-lg-2 mb-lg-2">
     <h1 class="text-center heading-pages">appointment booked!</h1>
-    <h3 class="mt-2 text-center">your appointment has been successfully scheduled</h3>
   </div>
 </header>
 

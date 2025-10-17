@@ -102,7 +102,18 @@
             {% block content %}
             <!-- Content from all pages that extents this template goes here -->
             {% endblock content %}
-        </section>
+        </section>            
+        
+        <!-- If messages is triggered, they will show here -->
+        <div class="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert {% if message.tags == 'success' %}alert-custom-success{% endif %}" role="alert">
+            <p class="success-message text-center mb-0">{{ message }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
     </main>
 
     <!-- Footer -->
@@ -129,6 +140,8 @@
                 <p><strong>Sat & Sun</strong> Closed</p>
             </div>
 
+            <!-- NOTE: Since there's no actual newsletter to subscribe to, this is just for show and not a functioning
+            subscription field or button. -->
             <div class="col-12 col-lg-4 d-flex flex-column justify-content-center mt-4" id="socials">
                 <div class="d-flex flex-column align-items-center">
                     <label for="newsletter" class="form-label"><strong>Sign up for our newsletter</strong></label>

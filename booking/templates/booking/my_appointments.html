@@ -22,15 +22,6 @@
 </header>
 
 <section class="booking-index">
-  <!-- If messages is triggered, they will show here -->
-  <div>
-    {% if messages %}
-    {% for message in messages %}
-    <p class="success-message">{{ message }}</p>
-    {% endfor %}
-    {% endif %}
-  </div>
-
   <!-- If user has any booked appointments, they show here-->
   {% if appointments %}
   <ul class="ps-0">

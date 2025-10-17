@@ -164,6 +164,7 @@ In this section, you should go over the different parts of your project, and des
 
 ### Future Features
 - A review section on the Home page (skriv mer)
+- A working newsletter
 
 ## Tools & Technologies
 
