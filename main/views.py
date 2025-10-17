@@ -90,3 +90,7 @@ class ContactView(FormView):
         Defines where to redirect after successful form submission
         """
         return reverse("home")
+
+
+def form_valid(self, form):
+    print("DEBUG HEADERS:", self.request.META)
