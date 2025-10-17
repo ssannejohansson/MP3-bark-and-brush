@@ -79,11 +79,10 @@ class Appointment(models.Model):
     day = models.DateField(default=datetime.now, blank=False)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, blank=False)
     booked_on = models.DateTimeField(default=datetime.now, blank=False)
-    
+
     # Prevents double booking
     class Meta:
-        unique_together = ('day', 'time')
+        unique_together = ("day", "time")
 
     def __str__(self):
         return f"{self.name} | day: {self.day} | time: {self.time}"
- 

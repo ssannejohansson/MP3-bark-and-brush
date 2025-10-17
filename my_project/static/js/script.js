@@ -1,4 +1,5 @@
 /* jshint esversion: 11 */
+/* global flatpickr */
 
 /**
  * -- ALL PAGES WITH CONTACT BUTTON IN NAV --
@@ -7,7 +8,7 @@
  * Displays success/error messages dynamically.
  */
 document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contact-form");
+  const contactForm = document.getElementById("contact-form");  
   const responseDiv = document.getElementById("contact-response");
 
   // Listens for form submission and handle it asynchronously
@@ -65,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
  * Apply Bootstrap custom validation styles to forms
  */
 (() => {
-  'use strict'
+  'use strict';
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+  const forms = document.querySelectorAll('.needs-validation');
 
   // Loop over them and prevent submission if form is invalid. 
   Array.from(forms).forEach(form => {
@@ -76,14 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Stops submission if form inputs are invalid
       if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+        event.preventDefault();
+        event.stopPropagation();
       }
       // Apply Bootstraps "was validated" class to show feedback styles
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
 
 /** 
  * -- BOOKING PAGES --

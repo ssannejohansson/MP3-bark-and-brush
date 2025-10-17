@@ -105,7 +105,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| my_project | [styles.css](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/static/css/styles.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-my_project-styles.png) | ⚠️ Notes (if applicable) |
+| my_project | [styles.css](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/static/css/styles.css) | [URL](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| ![screenshot](documentation/validation/css-my_project-styles.png) |  |
 
 
 ### JavaScript
@@ -134,7 +134,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| my_project | [script.js](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/static/js/script.js) |  | ![screenshot](documentation/validation/js-my_project-script.png) | ⚠️ Notes (if applicable) |
+| my_project | [script.js](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/static/js/script.js) |  | ![screenshot](documentation/validation/js-my_project-script.png) | |
 
 
 ### Python
@@ -239,13 +239,25 @@ I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | Works as expected |
-| Login | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | Works as expected |
 | Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/responsiveness/mobile-add-blog.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/responsiveness/desktop-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/responsiveness/mobile-edit-blog.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/responsiveness/desktop-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/responsiveness/mobile-blog-post.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/responsiveness/desktop-blog-post.png) | Works as expected |
+| About | ![screenshot](documentation/responsiveness/mobile-about.png) | ![screenshot](documentation/responsiveness/tablet-about.png) | ![screenshot](documentation/responsiveness/desktop-about.png) | Works as expected |
+| Services | ![screenshot](documentation/responsiveness/mobile-services.png) | ![screenshot](documentation/responsiveness/tablet-services.png) | ![screenshot]gallery(documentation/responsiveness/desktop-services.png) | Works as expected |
+| Gallery | ![screenshot](documentation/responsiveness/mobile-gallery.png) | ![screenshot](documentation/responsiveness/tablet-gallery.png) | ![screenshot](documentation/responsiveness/desktop-gallery.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+| Contact Modal | ![screenshot](documentation/responsiveness/mobile-contact-modal.png) | ![screenshot](documentation/responsiveness/tablet-contact-modal.png) | ![screenshot](documentation/responsiveness/desktop-contact-modal.png) | Works as expected |
+| Sign Up | ![screenshot](documentation/responsiveness/mobile-sign-up.png) | ![screenshot](documentation/responsiveness/tablet-sign-up.png) | ![screenshot](documentation/responsiveness/desktop-sign-up.png) | Works as expected |
+| Log in | ![screenshot](documentation/responsiveness/mobile-log-in.png) | ![screenshot](documentation/responsiveness/tablet-log-in.png) | ![screenshot](documentation/responsiveness/desktop-log-in.png) | Works as expected |account
+| Account | ![screenshot](documentation/responsiveness/mobile-account.png) | ![screenshot](documentation/responsiveness/tablet-account.png) | ![screenshot](documentation/responsiveness/desktop-account.png) | Works as expected |
+| Book Appointment | ![screenshot](documentation/responsiveness/mobile-book-appointment.png) | ![screenshot](documentation/responsiveness/tablet-book-appointment.png) | ![screenshot](documentation/responsiveness/desktop-book-appointment.png) | Works as expected |
+| Appointment Success | ![screenshot](documentation/responsiveness/mobile-appointment-success.png) | ![screenshot](documentation/responsiveness/tablet-appointment-success.png) | ![screenshot](documentation/responsiveness/desktop-appointment-success.png) | Works as expected |
+| My Appointments | ![screenshot](documentation/responsiveness/mobile-my-appointments.png) | ![screenshot](documentation/responsiveness/tablet-my-appointments.png) | ![screenshot](documentation/responsiveness/desktop-my-appointments.png) | Works as expected |
+| Update Appointment | ![screenshot](documentation/responsiveness/mobile-update-appointment.png) | ![screenshot](documentation/responsiveness/tablet-update-appointment.png) | ![screenshot](documentation/responsiveness/desktop-update-appointment.png) | Works as expected |
+| Password Reset | ![screenshot](documentation/responsiveness/mobile-password-reset.png) | ![screenshot](documentation/responsiveness/tablet-40password-reset4.png) | ![screenshot](documentation/responsiveness/desktop-password-reset.png) | Works as expected |
+| Password Reset Complete| ![screenshot](documentation/responsiveness/mobile-passsword-reset-complete.png) | ![screenshot](documentation/responsiveness/tablet-passsword-reset-complete.png) | ![screenshot](documentation/responsiveness/desktop-passsword-reset-complete.png) | Works as expected |
+| Password Reset Confirm | ![screenshot](documentation/responsiveness/mobile-password-reset-confirm.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-confirm.png) | ![screenshot](documentation/responsiveness/desktop-password-reset-confirm.png) | Works as expected |
+| Password Reset Done | ![screenshot](documentation/responsiveness/mobile-password-reset-done.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-done.png) | ![screenshot](documentation/responsiveness/desktop-password-reset-done.png) | Works as expected |
+| Password Reset Form | ![screenshot](documentation/responsiveness/mobile-password-reset-form.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-form.png) | ![screenshot](documentation/responsiveness/desktop-4password-reset-form04.png) | Works as expected |
+
 
 ## Browser Compatibility
 
@@ -271,13 +283,23 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Page | Chrome | Firefox | Safari | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
-| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
 | Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/browsers/chrome-add-blog.png) | ![screenshot](documentation/browsers/firefox-add-blog.png) | ![screenshot](documentation/browsers/safari-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/browsers/chrome-edit-blog.png) | ![screenshot](documentation/browsers/firefox-edit-blog.png) | ![screenshot](documentation/browsers/safari-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/browsers/chrome-blog-post.png) | ![screenshot](documentation/browsers/firefox-blog-post.png) | ![screenshot](documentation/browsers/safari-blog-post.png) | Works as expected |
+| About | ![screenshot](documentation/browsers/chrome-about.png) | ![screenshot](documentation/browsers/firefox-about.png) | ![screenshot](documentation/browsers/safari-about.png) | Works as expected |
+| Services | ![screenshot](documentation/browsers/chrome-services.png) | ![screenshot](documentation/browsers/firefox-hservicesome.png) | ![screenshot](documentation/browsers/safari-services.png) | Works as expected |
+| Gallery | ![screenshot](documentation/browsers/chrome-gallery.png) | ![screenshot](documentation/browsers/firefox-gallery.png) | ![screenshot](documentation/browsers/safari-gallery.png) | Works as expected |
 | 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+| Contact Modal | ![screenshot](documentation/browsers/chrome-contact-modalt.png) | ![screenshot](documentation/browsers/firefox-contact-modal.png) | ![screenshot](documentation/browsers/safari-contact-modal.png) | Works as expected |
+| Sign Up | ![screenshot](documentation/browsers/chrome-sign-up.png) | ![screenshot](documentation/browsers/firefox-sign-up.png) | ![screenshot](documentation/browsers/safari-sign-up.png) | Works as expected |
+| Log In | ![screenshot](documentation/browsers/chrome-log-in.png) | ![screenshot](documentation/browsers/firefox-log-in.png) | ![screenshot](documentation/browsers/safari-log-in.png) | Works as expected |
+| Account | ![screenshot](documentation/browsers/chrome-account.png) | ![screenshot](documentation/browsers/firefox-account.png) | ![screenshot](documentation/browsers/safari-account.png) | Works as expected |
+| Book Appointment | ![screenshot](documentation/browsers/chrome-book-appointment.png) | ![screenshot](documentation/browsers/firefox-book-appointment.png) | ![screenshot](documentation/browsers/safari-book-appointment.png) | Works as expected |
+| Appointment Success | ![screenshot](documentation/browsers/chrome-appointment-success.png) | ![screenshot](documentation/browsers/firefox-appointment-success.png) | ![screenshot](documentation/browsers/safari-appointment-success.png) | Works as expected |
+| My Appointments | ![screenshot](documentation/browsers/chrome-my-appointments.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-my-appointments.png) | Works as expected |
+| Update Appointment | ![screenshot](documentation/browsers/chrome-update-appointment.png) | ![screenshot](documentation/browsers/firefox-update-appointment.png) | ![screenshot](documentation/browsers/safari-update-appointment.png) | Works as expected |
+| Password Reset Complete | ![screenshot](documentation/browsers/chrome-password-reset-complete.png) | ![screenshot](documentation/browsers/firefox-password-reset-complete.png) | ![screenshot](documentation/browsers/safari-password-reset-complete.png) | Works as expected |
+| Password Reset Confirm | ![screenshot](documentation/browsers/chrome-password-reset-confirm.png) | ![screenshot](documentation/browsers/firefox-password-reset-confirm.png) | ![screenshot](documentation/browsers/safari-password-reset-confirm.png) | Works as expected |
+| Password Reset Done | ![screenshot](documentation/browsers/chrome-password-reset-done.png) | ![screenshot](documentation/browsers/firefox-password-reset-done.png) | ![screenshot](documentation/browsers/safari-password-reset-done.png) | Works as expected |
+| Password Reset Form | ![screenshot](documentation/browsers/chrome-password-reset-form.png) | ![screenshot](documentation/browsers/firefox-password-reset-form.png) | ![screenshot](documentation/browsers/safari-password-reset-form.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -295,13 +317,23 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) |
-| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) |
 | Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
-| Add Blog | ![screenshot](documentation/lighthouse/mobile-add-blog.png) | ![screenshot](documentation/lighthouse/desktop-add-blog.png) |
-| Edit Blog | ![screenshot](documentation/lighthouse/mobile-edit-blog.png) | ![screenshot](documentation/lighthouse/desktop-edit-blog.png) |
-| Blog Post | ![screenshot](documentation/lighthouse/mobile-blog-post.png) | ![screenshot](documentation/lighthouse/desktop-blog-post.png) |
+| About | ![screenshot](documentation/lighthouse/mobile-about.png) | ![screenshot](documentation/lighthouse/desktop-about.png) |
+| Services | ![screenshot](documentation/lighthouse/mobile-services.png) | ![screenshot](documentation/lighthouse/desktop-services.png) |
+| Gallery | ![screenshot](documentation/lighthouse/mobile-gallery.png) | ![screenshot](documentation/lighthouse/desktop-gallery.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+| Contact Modal | ![screenshot](documentation/lighthouse/mobile-contact-modal.png) | ![screenshot](documentation/lighthouse/desktop-contact-modal.png) |
+| Sign Up | ![screenshot](documentation/lighthouse/mobile-sign-up.png) | ![screenshot](documentation/lighthouse/desktop-sign-up.png) |
+| Log In | ![screenshot](documentation/lighthouse/mobile-log-in.png) | ![screenshot](documentation/lighthouse/desktop-log-in.png) |
+| Account | ![screenshot](documentation/lighthouse/mobile-account.png) | ![screenshot](documentation/lighthouse/desktop-account.png) |
+| Book Appointment | ![screenshot](documentation/lighthouse/mobile-book-appointment.png) | ![screenshot](documentation/lighthouse/desktop-book-appointment.png) |
+| Appointment Success | ![screenshot](documentation/lighthouse/mobile-appointment-success.png) | ![screenshot](documentation/lighthouse/desktop-appointment-success.png) |
+| My Appointments | ![screenshot](documentation/lighthouse/mobile-my-appointments.png) | ![screenshot](documentation/lighthouse/desktop-my-appointments.png) |
+| Update Appointment | ![screenshot](documentation/lighthouse/mobile-update-appointment.png) | ![screenshot](documentation/lighthouse/desktop-update-appointment.png) |
+| Password Reset Complete | ![screenshot](documentation/lighthouse/mobile-password-reset-complete.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-complete.png) |
+| Password Reset Confirm | ![screenshot](documentation/lighthouse/mobile-password-reset-confirm.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-confirm.png) |
+| Password Reset Done | ![screenshot](documentation/lighthouse/mobile-password-reset-done.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-done.png) |
+| Password Reset Form | ![screenshot](documentation/lighthouse/mobile-password-reset-form.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-form.png) |
 
 ## Defensive Programming
 

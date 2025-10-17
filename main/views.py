@@ -10,33 +10,34 @@ from .forms import ContactForm
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    return render(request, "index.html")
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, "about.html")
 
 
 def services(request):
-    return render(request, 'services.html')
+    return render(request, "services.html")
 
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    return render(request, "gallery.html")
 
 
 def booking(request):
-    return render(request, 'book-now.html')
+    return render(request, "book-now.html")
 
 
 def book_login(request):
-    return render(request, 'registration/login.html')
+    return render(request, "registration/login.html")
 
 
 class SuccessView(TemplateView):
     """
     Redirects to base.html after successful form submission
     """
+
     template_name = "base.html"
 
 
@@ -44,12 +45,14 @@ class ContactView(FormView):
     """
     Displays and processes the contact form
     """
+
     form_class = ContactForm
     template_name = "base.html"
 
     def form_valid(self, form):
         """
-        Triggered when form is valid and sends an email with submitted form data
+        Triggered when form is valid and sends an email with submitted form
+        data
         """
         name = form.cleaned_data.get("name")
         email = form.cleaned_data.get("email")
@@ -57,7 +60,7 @@ class ContactView(FormView):
         subject = form.cleaned_data.get("subject")
         message = form.cleaned_data.get("message")
 
-        # Email layout 
+        # Email layout
         full_message = f"""
             From: {name}
             {email}
@@ -73,10 +76,16 @@ class ContactView(FormView):
         )
 
         if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
-            return JsonResponse({"success": True, "message": "Your message has been sent successfully! 🐾"})
+            return JsonResponse(
+                {
+                    "success": True,
+                    "message": "Your message has been sent successfully! 🐾",
+                }
+            )
 
         # Fallback (if user has JS disabled)
-        messages.success(self.request, "Your message has been sent successfully!")
+        messages.success(self.request,
+                         "Your message has been sent successfully!")
         return super().form_valid(form)
 
     def get_success_url(self):

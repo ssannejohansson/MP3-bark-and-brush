@@ -16,47 +16,54 @@ def book_appointment(request):
     Handle new appointment bookings
     Logged in users can submit the form to create an appointment
     """
-    if request.method == 'POST':
+    if request.method == "POST":
         # user=request.user to auto-fill logged in users information
-        form = AppointmentForm(request.POST,  user=request.user)
+        form = AppointmentForm(request.POST, user=request.user)
         if form.is_valid():
             appointment = form.save(commit=False)
             appointment.user = request.user
             appointment.booked_on = now()
 
             # Prevent double-booking
-            if Appointment.objects.filter(day=appointment.day, time=appointment.time).exists():
-                messages.error(request, "That time slot is already booked. Please choose another.")
+            if Appointment.objects.filter(
+                day=appointment.day, time=appointment.time
+            ).exists():
+                messages.error(
+                    request, "That time slot is already booked. Please choose another."     # noga
+                )
             else:
                 appointment.save()
                 messages.success(request, "Appointment booked successfully!")
-                return redirect('appointment_success')
+                return redirect("appointment_success")
     else:
         form = AppointmentForm(user=request.user)
 
-    return render(request, 'booking/book_appointment.html', {'appointment_form': form})
+    return render(request, "booking/book_appointment.html",
+                  {"appointment_form": form})
 
 
 def get_available_times(request):
     """
     Return available time slots for a selected date
     """
-    selected_date = request.GET.get('day')
+    selected_date = request.GET.get("day")
     if not selected_date:
         # Returns error if no date is passed from the client
-        return JsonResponse({'error': 'No date provided'}, status=400)
+        return JsonResponse({"error": "No date provided"}, status=400)
 
     selected_date = parse_date(selected_date)
     all_times = [t[0] for t in TIME_CHOICES]
 
     # Gets already-booked times for that day
-    booked_times = Appointment.objects.filter(day=selected_date).values_list('time', flat=True)
+    booked_times = Appointment.objects.filter(day=selected_date).values_list(
+        "time", flat=True
+    )
 
     # Excludes booked times to only get available options
     available_times = [t for t in all_times if t not in booked_times]
-    
+
     # Returns remaining time slots
-    return JsonResponse({'available_times': available_times})
+    return JsonResponse({"available_times": available_times})
 
 
 def get_fully_booked_dates(request):
@@ -69,14 +76,16 @@ def get_fully_booked_dates(request):
 
     for day in next_30_days:
         # Gets all booked time slots for this date
-        booked_times = Appointment.objects.filter(day=day).values_list('time', flat=True)
-        
-        # If all available times are booked the date is marked as full 
+        booked_times = Appointment.objects.filter(day=day).values_list(
+            "time", flat=True
+        )
+
+        # If all available times are booked the date is marked as full
         if len(booked_times) >= len(TIME_CHOICES):
             fully_booked.append(day.isoformat())
 
     # Returns list of fully booked dates
-    return JsonResponse({'fully_booked_dates': fully_booked})
+    return JsonResponse({"fully_booked_dates": fully_booked})
 
 
 @login_required
@@ -87,15 +96,14 @@ def appointment_success(request):
     """
     # Gets the latest appointment for the user
     latest_appointment = (
-        Appointment.objects.filter(user=request.user)
-        .order_by('-booked_on')
-        .first()
+        Appointment.objects.filter(user=request.user).order_by("-booked_on").first()    # noga
     )
-    
+
     # Render success page with appointment details
-    return render(request, 'booking/appointment_success.html', {
-        'appointment': latest_appointment
-    })
+    return render(
+        request, "booking/appointment_success.html",
+        {"appointment": latest_appointment}
+    )
 
 
 @login_required
@@ -106,40 +114,45 @@ def update_appointment(request, pk):
     """
     appointment = get_object_or_404(Appointment, pk=pk, user=request.user)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         # Appointment cancellation
-        if 'delete' in request.POST:
+        if "delete" in request.POST:
             appointment.delete()
             messages.success(request, "Appointment canceled.")
-            return redirect('my_appointments')
-        
+            return redirect("my_appointments")
+
         # Appointment update
         form = AppointmentForm(request.POST, instance=appointment)
         if form.is_valid():
             form.save()
             messages.success(request, "Appointment updated.")
-            return redirect('appointment_success')
+            return redirect("appointment_success")
     else:
         form = AppointmentForm(instance=appointment)
 
-    return render(request, 'booking/update_appointment.html', {
-        'appointment_form': form,
-        'appointment': appointment
-    })
+    return render(
+        request,
+        "booking/update_appointment.html",
+        {"appointment_form": form, "appointment": appointment},
+    )
 
 
 @login_required
 def my_appointments(request):
     """
     Displays all upcoming and past appointments for the logged-in user
-    Ordered by date and time 
+    Ordered by date and time
     """
-    appointments = Appointment.objects.filter(user=request.user).order_by('day', 'time')
-    
+    appointments = Appointment.objects.filter(user=request.user).order_by("day", "time")    # noga
+
     today = datetime.date.today()
     upcoming_appointments = appointments.filter(day__gte=today)
-    
-    return render(request, 'booking/my_appointments.html', {
-        'appointments': appointments,
-        'upcoming_appointments': upcoming_appointments,
-    })
+
+    return render(
+        request,
+        "booking/my_appointments.html",
+        {
+            "appointments": appointments,
+            "upcoming_appointments": upcoming_appointments,
+        },
+    )
