@@ -68,15 +68,19 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | registration | [password_reset_done.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_done.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-book_appointment.png) | ⚠️ Notes (if applicable) |
 | registration | [password_reset_form.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-my_appointments.png) | ⚠️ Notes (if applicable) |
 | my_project | [404.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/404.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-404.png) | ⚠️ Notes (if applicable) |
-| my_project | [about.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/about.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-about.png) | ⚠️ Notes (if applicable) |
+| my_project | [about.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/about.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fabout%2F)| ![screenshot](documentation/validation/html-my_project-about.png) | ⚠️ Notes: see below. |
 | my_project | [book-now-base.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/book-now-base.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-book-now-base.png) | ⚠️ Notes (if applicable) |
 | my_project | [book-now.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/book-now.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-book-now.png) | ⚠️ Notes (if applicable) |
-| my_project | [gallery.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/gallery.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-gallery.png) | ⚠️ Notes (if applicable) |
-| my_project | [index.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/index.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-index.png) | ⚠️ Notes (if applicable) |
+| my_project | [gallery.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/gallery.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fgallery%2F)| ![screenshot](documentation/validation/html-my_project-gallery.png) | ⚠️ Notes (if applicable) |
+| my_project | [index.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/index.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2F) | ![screenshot](documentation/validation/html-my_project-index.png) | ⚠️ Notes: see below.  |
 | my_project | [login.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-login.png) | ⚠️ Notes (if applicable) |
 | my_project | [signup.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/signup.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-signup.png) | ⚠️ Notes (if applicable) |
-| my_project | [services.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/services.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-services.png) | ⚠️ Notes (if applicable) |
+| my_project | [services.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/services.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fservices%2F) | ![screenshot](documentation/validation/html-my_project-services.png) | ⚠️ Notes (if applicable) |
 
+⚠️ Note about Errors with the contact form:
+
+Since the official Django documentation says to wrap forms inside of HTML form tags, I will keep this as it is.
+![screenshot](documentation/django-doc-forms.png)
 
 ### CSS
 

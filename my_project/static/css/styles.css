@@ -423,6 +423,10 @@
  }
 
  /* -- 404 PAGE -- */
+#error-page {
+    background-color: var(--pink-background-color);
+}
+
  #error-btn {
      width: -webkit-fit-content;
      width: -moz-fit-content;

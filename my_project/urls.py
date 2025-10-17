@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
+from django.conf.urls import handler404
+from django.shortcuts import render
 
 
 urlpatterns = [
@@ -26,3 +28,10 @@ urlpatterns = [
     path('', include('main.urls')),
     path('', include('booking.urls')),
 ]
+
+
+def custom_404_view(request, exception):
+    return render(request, "404.html", status=404)
+
+
+handler404 = custom_404_view
