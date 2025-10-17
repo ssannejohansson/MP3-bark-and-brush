@@ -94,3 +94,14 @@ class ContactView(FormView):
 
 def form_valid(self, form):
     print("DEBUG HEADERS:", self.request.META)
+
+
+def form_invalid(self, form):
+    import sys
+    print("DEBUG INVALID FORM:", form.errors, file=sys.stderr)
+    if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
+        return JsonResponse({
+            "success": False,
+            "errors": form.errors,
+        })
+    return super().form_invalid(form)
