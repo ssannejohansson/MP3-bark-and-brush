@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
  /* Import font */
  @font-face {
      font-family: "Marige Thin";
@@ -46,6 +53,8 @@
      background-color: var(--light-blue);
      font-weight: 600;
      color: var(--brown);
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
@@ -58,6 +67,8 @@
      font-weight: 600;
      background-color: transparent;
      border: 1px solid var(--dark-blue);
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
@@ -87,11 +98,14 @@
      background-color: #e4e8f1;
      color: var(--dark-blue);
      border-radius: 10px;
-     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+     -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
  }
 
  .fade-out {
      opacity: 0;
+     -webkit-transition: opacity 1s ease;
+     -o-transition: opacity 1s ease;
      transition: opacity 1s ease;
  }
 
@@ -101,11 +115,15 @@
  }
 
  .custom-btn-nav {
+     width: -webkit-fit-content;
+     width: -moz-fit-content;
      width: fit-content;
      font-weight: 500;
      border: 1px solid #d1c9cc;
      color: #565558;
      font-weight: 700;
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
@@ -116,6 +134,8 @@
  .nav-link {
      font-size: 20px;
      color: var(--brown);
+     -webkit-transition: 0.4s;
+     -o-transition: 0.4s;
      transition: 0.4s;
  }
 
@@ -177,7 +197,8 @@
 
  #index-info-img img {
      max-height: 350px;
-     object-fit: cover;
+     -o-object-fit: cover;
+        object-fit: cover;
  }
 
  /* Price list section */
@@ -188,6 +209,8 @@
 
  .card {
      max-width: 300px;
+     -webkit-transition: 0.7s;
+     -o-transition: 0.7s;
      transition: 0.7s;
      cursor: pointer;
  }
@@ -202,7 +225,9 @@
  }
 
  .card:hover {
-     transform: scale(1.2);
+     -webkit-transform: scale(1.2);
+         -ms-transform: scale(1.2);
+             transform: scale(1.2);
      z-index: 1;
  }
 
@@ -213,25 +238,34 @@
  }
 
  .custom-btn-booking {
+     width: -webkit-fit-content;
+     width: -moz-fit-content;
      width: fit-content;
      background-color: var(--light-blue);
      font-weight: 600;
      color: var(--brown);
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
  .custom-btn-booking:focus,
  .custom-btn-booking:active {
      outline: none !important;
-     box-shadow: none !important;
+     -webkit-box-shadow: none !important;
+             box-shadow: none !important;
  }
 
  .custom-btn-booking-outline {
+     width: -webkit-fit-content;
+     width: -moz-fit-content;
      width: fit-content;
      font-weight: 600;
      background-color: transparent;
      border: 1px solid var(--dark-blue);
      color: var(--brown);
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
@@ -242,6 +276,8 @@
      background-color: transparent;
      border: 1px solid var(--dark-blue);
      color: var(--brown);
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
@@ -296,7 +332,8 @@
  .booking-index textarea:focus {
      border: 2px solid var(--dark-blue);
      outline: none !important;
-     box-shadow: none;
+     -webkit-box-shadow: none;
+             box-shadow: none;
  }
 
  #booking-form input {
@@ -351,7 +388,8 @@
 
  /* -- ABOUT PAGE -- */
  #about-container img {
-     object-fit: cover;
+     -o-object-fit: cover;
+        object-fit: cover;
  }
 
  /* -- SERVICES PAGE -- */
@@ -370,17 +408,24 @@
  .gallery-img {
      padding: 0;
      border-radius: 10px;
-     object-fit: contain;
+     -o-object-fit: contain;
+        object-fit: contain;
+     -webkit-transition: 0.7s;
+     -o-transition: 0.7s;
      transition: 0.7s;
  }
 
  .gallery-img:hover {
-     transform: scale(1.2);
+     -webkit-transform: scale(1.2);
+         -ms-transform: scale(1.2);
+             transform: scale(1.2);
      z-index: 1;
  }
 
  /* -- 404 PAGE -- */
  #error-btn {
+     width: -webkit-fit-content;
+     width: -moz-fit-content;
      width: fit-content;
  }
 
@@ -422,11 +467,15 @@
  #social-icons i {
      font-size: 40px;
      color: var(--dark-blue);
+     -webkit-transition: 0.5s;
+     -o-transition: 0.5s;
      transition: 0.5s;
  }
 
  #social-icons i:hover {
-     transform: scale(1.1);
+     -webkit-transform: scale(1.1);
+         -ms-transform: scale(1.1);
+             transform: scale(1.1);
      color: #285a8d;
  }
 
@@ -503,7 +552,8 @@
          border-radius: 10px;
          max-height: 210px;
          max-width: 300px;
-         object-fit: cover;
+         -o-object-fit: cover;
+            object-fit: cover;
      }
 
      /* GALLERY PAGE  */
