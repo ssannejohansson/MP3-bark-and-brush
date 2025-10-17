@@ -40,10 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
      fetch(contactForm.action, {
       method: "POST",
       body: formData,
-      credentials: "same-origin", // 🔑 ensures cookies are sent
+      credentials: "same-origin", // ensures cookies are sent
       headers: {
         "X-Requested-With": "XMLHttpRequest",
-        "X-CSRFToken": csrftoken, // 🔑 Django needs this
+        "Accept": "application/json",
+        "X-CSRFToken": csrftoken, // Django needs this
       },
       })
       .then((res) => res.json())
