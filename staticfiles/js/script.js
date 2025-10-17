@@ -145,3 +145,24 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+
+
+/** 
+ * -- BOOKING PAGES --
+ * Alert messages will fade out after 2 seconds.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Selects all alert messages
+  const alerts = document.querySelectorAll('.alert');
+
+  alerts.forEach(function(alert) {
+    // Waits 2 seconds (2000 ms), then start fade out
+    setTimeout(function() {
+      alert.classList.add('fade-out');
+      // Then remove it completely after animation ends 
+      setTimeout(function() {
+        alert.remove();
+      }, 1000); // Matches CSS fade duration
+    }, 2000);
+  });
+});
