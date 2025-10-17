@@ -75,7 +75,7 @@ class ContactView(FormView):
             recipient_list=[settings.NOTIFY_EMAIL],
         )
 
-        if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
+        if self.request.headers.get("X-Requested-With") == "XMLHttpRequest":
             return JsonResponse(
                 {
                     "success": True,
