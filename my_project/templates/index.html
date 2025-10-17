@@ -34,11 +34,14 @@
     <!-- First section -->
     <section class="container-fluid d-flex flex-column justify-content-center" id="index-info">
         <div class="container d-flex flex-column flex-lg-row gap-2" id="index-info-img">
-            <img src="{% static 'images/brush.jpg' %}" class="img-fluid border-rad d-none d-lg-block col-lg-4" alt="A dog getting its ear brushed">
-            <img src="{% static 'images/paws.jpg' %}" class="img-fluid border-rad col-12 col-lg-2" alt="A dog getting its paws trimmed">
+            <img src="{% static 'images/brush.jpg' %}" class="img-fluid border-rad d-none d-lg-block col-lg-4"
+                alt="A dog getting its ear brushed">
+            <img src="{% static 'images/paws.jpg' %}" class="img-fluid border-rad col-12 col-lg-2"
+                alt="A dog getting its paws trimmed">
             <div class="flex-column mt-2 mt-lg-0 ms-lg-4 col-lg-6" id="index-info-text">
-                <h3>Welcome to Bark & Brush <h4>where your dog's happiness is our priority.</h4>
-                </h3>
+                <h3>Welcome to Bark & Brush</h3>
+                <h4>where your dog's happiness is our priority.</h4>
+
                 <p>We are Lina and Emma, two dedicated dog lovers committed to providing top-notch grooming services in
                     a caring
                     and stress-free environment. From soothing baths to stylish trims, we ensure every pup leaves our
@@ -46,7 +49,7 @@
                     looking and feeling their best. Schedule a grooming session today and let us pamper your furry best
                     friend!
                 </p>
-                <a href="{% url 'book_appointment' %}" class="btn custom-btn-outline" type="button">Book now!</a>
+                <a href="{% url 'book_appointment' %}" class="btn custom-btn-outline">Book now!</a>
             </div>
         </div>
     </section>
