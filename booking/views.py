@@ -136,13 +136,10 @@ def my_appointments(request):
     """
     appointments = Appointment.objects.filter(user=request.user).order_by('day', 'time')
     
-    # Separate upcoming vs. past appointments 
     today = datetime.date.today()
     upcoming_appointments = appointments.filter(day__gte=today)
-    past_appointments = appointments.filter(day__lt=today)
     
     return render(request, 'booking/my_appointments.html', {
         'appointments': appointments,
         'upcoming_appointments': upcoming_appointments,
-        'past_appointments': past_appointments,
     })
