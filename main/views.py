@@ -75,7 +75,7 @@ class ContactView(FormView):
             recipient_list=[settings.NOTIFY_EMAIL],
         )
 
-        if self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest":
+        if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
             return JsonResponse(
                 {"success": True, "message": "Your message has been sent successfully! 🐾"}
             )
@@ -91,17 +91,3 @@ class ContactView(FormView):
         """
         return reverse("home")
 
-
-def form_valid(self, form):
-    print("DEBUG HEADERS:", self.request.META)
-
-
-def form_invalid(self, form):
-    import sys
-    print("DEBUG INVALID FORM:", form.errors, file=sys.stderr)
-    if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
-        return JsonResponse({
-            "success": False,
-            "errors": form.errors,
-        })
-    return super().form_invalid(form)

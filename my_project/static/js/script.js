@@ -8,27 +8,8 @@
  * Displays success/error messages dynamically.
  */
 document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contact-form");  
+  const contactForm = document.getElementById("contact-form");
   const responseDiv = document.getElementById("contact-response");
-
-    // Helper: Get CSRF token from cookie
-  function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== "") {
-      const cookies = document.cookie.split(";");
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        // Does this cookie string begin with the name we want?
-        if (cookie.substring(0, name.length + 1) === name + "=") {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  }
-
-  const csrftoken = getCookie("csrftoken");
 
   // Listens for form submission and handle it asynchronously
   contactForm.addEventListener("submit", function (e) {
@@ -37,15 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData(contactForm);
 
     // Send form data via POST request using Fetch API
-     fetch(contactForm.action, {
-      method: "POST",
-      body: formData,
-      credentials: "same-origin", // ensures cookies are sent
-      headers: {
-        "X-Requested-With": "XMLHttpRequest",
-        "Accept": "application/json",
-        "X-CSRFToken": csrftoken, // Django needs this
-      },
+    fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "X-Requested-With": "XMLHttpRequest",
+        },
       })
       .then((res) => res.json())
       .then((data) => {
@@ -189,3 +167,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000);
   });
 });
+
+
