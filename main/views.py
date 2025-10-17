@@ -37,7 +37,6 @@ class SuccessView(TemplateView):
     """
     Redirects to base.html after successful form submission
     """
-
     template_name = "base.html"
 
 
@@ -75,9 +74,15 @@ class ContactView(FormView):
             recipient_list=[settings.NOTIFY_EMAIL],
         )
 
-        if self.request.headers.get("x-requested-with") == "XMLHttpRequest":
+        if (
+            self.request.headers.get("x-requested-with") == "XMLHttpRequest"
+            or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"
+        ):
             return JsonResponse(
-                {"success": True, "message": "Your message has been sent successfully! 🐾"}
+                {
+                    "success": True,
+                    "message": "Your message has been sent successfully! 🐾",
+                }
             )
 
         # Fallback (if user has JS disabled)
@@ -90,4 +95,3 @@ class ContactView(FormView):
         Defines where to redirect after successful form submission
         """
         return reverse("home")
-
