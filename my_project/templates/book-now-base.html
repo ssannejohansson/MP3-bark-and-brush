@@ -61,9 +61,10 @@
             <a href="{% url 'home' %}" class="btn custom-btn-booking"><i class="fa-solid fa-arrow-left me-2"></i>
                 Home</a>
 
-            
+            <ul>
                 {% if user.is_authenticated %}
                 <!-- If user is logged in, the account dropdown shows -->
+                
                 <li class="nav-item dropdown">
                     <button class="btn custom-btn-dropdown" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false"> <i class="fa-solid fa-user me-2"></i>
@@ -87,12 +88,13 @@
                         </li>
                     </ul>
                 </li>
-
+                
                 {% else %}
                 <!-- If user is not logged in, a Log in button shows -->
                 <a href="{% url 'login' %}" class="btn custom-btn-outline">Log in</a>
                 {% endif %}
-            </div>
+            </ul>
+        </div>
        
     </nav>
 
