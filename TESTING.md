@@ -40,17 +40,17 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| booking | [appointment_success.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/appointment_success.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fbooking%2Fappointment_success%2F) | ![screenshot](documentation/validation/html-booking-appointment_success.png) | ⚠️ Notes (if applicable) |
-| booking | [book_appointment.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/book_appointment.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fbook%2F) | ![screenshot](documentation/validation/html-booking-book_appointment.png) | ⚠️ Notes (if applicable) |
-| booking | [my_appointments.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/my_appointments.html) |  | ![screenshot](documentation/validation/html-booking-my_appointments.png) | ⚠️ Notes (if applicable) |
-| booking | [update_appointment.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/update_appointment.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-update_appointment.png) | ⚠️ Notes (if applicable) |
+| booking | [appointment_success.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/appointment_success.html) | Validated by direct input | ![screenshot](documentation/validation/html-booking-appointment_success.png) | ⚠️ Notes (if applicable) |
+| booking | [book_appointment.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/book_appointment.html) | Validated by direct input | ![screenshot](documentation/validation/html-booking-book_appointment.png) | ⚠️ Notes (if applicable) |
+| booking | [my_appointments.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/my_appointments.html) | Validated by direct input  | ![screenshot](documentation/validation/html-booking-my_appointments.png) | ⚠️ Notes (if applicable) |
+| booking | [update_appointment.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/booking/templates/booking/update_appointment.html) | Validated by direct input | ![screenshot](documentation/validation/html-booking-update_appointment.png) | ⚠️ Notes (if applicable) |
 | registration | [account.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/account.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Faccounts%2Faccount%2F) | ![screenshot](documentation/validation/html-booking-appointment_success.png) | ⚠️ Notes (if applicable) |
 | registration | [login.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/login.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/validation/html-booking-login.png) | ⚠️ Notes (if applicable) |
 | registration | [signup.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/signup.html) |[URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html-booking-signup.png) | ⚠️ Notes (if applicable) |
 | registration| [password_reset_complete.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_complete.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-update_appointment.png) | ⚠️ Notes (if applicable) |
 | registration | [password_reset_confirm.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_confirm.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-appointment_success.png) | ⚠️ Notes (if applicable) |
-| registration | [password_reset_done.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_done.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-book_appointment.png) | ⚠️ Notes (if applicable) |
-| registration | [password_reset_form.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-my_appointments.png) | ⚠️ Notes (if applicable) |
+| registration | [password_reset_done.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_done.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Faccounts%2Fpassword_reset%2Fdone%2F)| ![screenshot](documentation/validation/html-booking-password-reset-done.png) | ⚠️ Notes (if applicable) |
+| registration | [password_reset_form.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/registration/password_reset_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-booking-password-reset-form.png) | ⚠️ Notes (if applicable) |
 | my_project | [404.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/404.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-my_project-404.png) | ⚠️ Notes (if applicable) |
 | my_project | [about.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/about.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fabout%2F)| ![screenshot](documentation/validation/html-my_project-about.png) | ⚠️ Notes: see below. |
 | my_project | [gallery.html](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/templates/gallery.html) | [URL](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbark-and-brush-dba8d291cd80.herokuapp.com%2Fgallery%2F)| ![screenshot](documentation/validation/html-my_project-gallery.png) | ⚠️ Notes: see below. |
@@ -64,23 +64,6 @@ Since the official Django documentation says to wrap forms inside of HTML form t
 
 ### CSS
 
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-2. If you are copying/pasting your CSS code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-
-It's recommended to validate the live site for your primary CSS file on the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https://bark-and-brush-dba8d291cd80.herokuapp.com
-
-If you have additional/multiple CSS files, then individual "[validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)" is recommended for the extra CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using external libraries/frameworks (e.g: Bootstrap, Materialize, Font Awesome, etc.), then sometimes the tool will attempt to also validate these, even though it's not part of your own actual code that you wrote. You are not required to validate the external libraries or frameworks!
-
-⚠️ --- END --- ⚠️
-
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | Screenshot | Notes |
@@ -89,26 +72,6 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 
 ### JavaScript
-
-⚠️ INSTRUCTIONS ⚠️
-
-If using modern JavaScript (ES6) methods, then make sure to include the following line at the very top of every single JavaScript file in your project (this should remain in your files for submission as well):
-
-`/* jshint esversion: 11 */`
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-`/* jshint esversion: 11, jquery: true */`
-
-This allows the JShint validator to recognize modern ES6 methods, such as: `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as "an array of questions" from `questions.js`, which are used within the main `script.js` file elsewhere. If that's the case, the JShint validation tool doesn't know how to recognize "unused variables" that would normally be imported locally when running your own project. These warnings are acceptable, so showcase on your screenshot(s).
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc. To instantiate these components, we need to use their respective declarator. Again, the JShint validation tool would flag these as "undefined/unused variables". These warnings are acceptable, so showcase on your screenshot(s).
-
-⚠️ --- END --- ⚠️
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
@@ -221,7 +184,7 @@ I've tested my deployed project to check for responsiveness issues.
 | --- | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
 | About | ![screenshot](documentation/responsiveness/mobile-about.png) | ![screenshot](documentation/responsiveness/tablet-about.png) | ![screenshot](documentation/responsiveness/desktop-about.png) | Works as expected |
-| Services | ![screenshot](documentation/responsiveness/mobile-services.png) | ![screenshot](documentation/responsiveness/tablet-services.png) | ![screenshot]gallery(documentation/responsiveness/desktop-services.png) | Works as expected |
+| Services | ![screenshot](documentation/responsiveness/mobile-services.png) | ![screenshot](documentation/responsiveness/tablet-services.png) | ![screenshot](documentation/responsiveness/desktop-services.png) | Works as expected |
 | Gallery | ![screenshot](documentation/responsiveness/mobile-gallery.png) | ![screenshot](documentation/responsiveness/tablet-gallery.png) | ![screenshot](documentation/responsiveness/desktop-gallery.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
 | Contact Modal | ![screenshot](documentation/responsiveness/mobile-contact-modal.png) | ![screenshot](documentation/responsiveness/tablet-contact-modal.png) | ![screenshot](documentation/responsiveness/desktop-contact-modal.png) | Works as expected |
@@ -232,9 +195,8 @@ I've tested my deployed project to check for responsiveness issues.
 | Appointment Success | ![screenshot](documentation/responsiveness/mobile-appointment-success.png) | ![screenshot](documentation/responsiveness/tablet-appointment-success.png) | ![screenshot](documentation/responsiveness/desktop-appointment-success.png) | Works as expected |
 | My Appointments | ![screenshot](documentation/responsiveness/mobile-my-appointments.png) | ![screenshot](documentation/responsiveness/tablet-my-appointments.png) | ![screenshot](documentation/responsiveness/desktop-my-appointments.png) | Works as expected |
 | Update Appointment | ![screenshot](documentation/responsiveness/mobile-update-appointment.png) | ![screenshot](documentation/responsiveness/tablet-update-appointment.png) | ![screenshot](documentation/responsiveness/desktop-update-appointment.png) | Works as expected |
-| Password Reset | ![screenshot](documentation/responsiveness/mobile-password-reset.png) | ![screenshot](documentation/responsiveness/tablet-40password-reset4.png) | ![screenshot](documentation/responsiveness/desktop-password-reset.png) | Works as expected |
+| Password Reset | ![screenshot](documentation/responsiveness/mobile-password-reset.png) | ![screenshot](documentation/responsiveness/tablet-password-reset.png) | ![screenshot](documentation/responsiveness/desktop-password-reset.png) | Works as expected |
 | Password Reset Complete| ![screenshot](documentation/responsiveness/mobile-passsword-reset-complete.png) | ![screenshot](documentation/responsiveness/tablet-passsword-reset-complete.png) | ![screenshot](documentation/responsiveness/desktop-passsword-reset-complete.png) | Works as expected |
-| Password Reset Confirm | ![screenshot](documentation/responsiveness/mobile-password-reset-confirm.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-confirm.png) | ![screenshot](documentation/responsiveness/desktop-password-reset-confirm.png) | Works as expected |
 | Password Reset Done | ![screenshot](documentation/responsiveness/mobile-password-reset-done.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-done.png) | ![screenshot](documentation/responsiveness/desktop-password-reset-done.png) | Works as expected |
 | Password Reset Form | ![screenshot](documentation/responsiveness/mobile-password-reset-form.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-form.png) | ![screenshot](documentation/responsiveness/desktop-4password-reset-form04.png) | Works as expected |
 
@@ -265,21 +227,21 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | --- | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
 | About | ![screenshot](documentation/browsers/chrome-about.png) | ![screenshot](documentation/browsers/firefox-about.png) | ![screenshot](documentation/browsers/safari-about.png) | Works as expected |
-| Services | ![screenshot](documentation/browsers/chrome-services.png) | ![screenshot](documentation/browsers/firefox-hservicesome.png) | ![screenshot](documentation/browsers/safari-services.png) | Works as expected |
+| Services | ![screenshot](documentation/browsers/chrome-services.png) | ![screenshot](documentation/browsers/firefox-services.png) | ![screenshot](documentation/browsers/safari-services.png) | Works as expected |
 | Gallery | ![screenshot](documentation/browsers/chrome-gallery.png) | ![screenshot](documentation/browsers/firefox-gallery.png) | ![screenshot](documentation/browsers/safari-gallery.png) | Works as expected |
 | 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
-| Contact Modal | ![screenshot](documentation/browsers/chrome-contact-modalt.png) | ![screenshot](documentation/browsers/firefox-contact-modal.png) | ![screenshot](documentation/browsers/safari-contact-modal.png) | Works as expected |
+| Contact Modal | ![screenshot](documentation/browsers/chrome-contact-modal.png) | ![screenshot](documentation/browsers/firefox-contact-modal.png) | ![screenshot](documentation/browsers/safari-contact-modal.png) | Works as expected |
 | Sign Up | ![screenshot](documentation/browsers/chrome-sign-up.png) | ![screenshot](documentation/browsers/firefox-sign-up.png) | ![screenshot](documentation/browsers/safari-sign-up.png) | Works as expected |
 | Log In | ![screenshot](documentation/browsers/chrome-log-in.png) | ![screenshot](documentation/browsers/firefox-log-in.png) | ![screenshot](documentation/browsers/safari-log-in.png) | Works as expected |
 | Account | ![screenshot](documentation/browsers/chrome-account.png) | ![screenshot](documentation/browsers/firefox-account.png) | ![screenshot](documentation/browsers/safari-account.png) | Works as expected |
 | Book Appointment | ![screenshot](documentation/browsers/chrome-book-appointment.png) | ![screenshot](documentation/browsers/firefox-book-appointment.png) | ![screenshot](documentation/browsers/safari-book-appointment.png) | Works as expected |
 | Appointment Success | ![screenshot](documentation/browsers/chrome-appointment-success.png) | ![screenshot](documentation/browsers/firefox-appointment-success.png) | ![screenshot](documentation/browsers/safari-appointment-success.png) | Works as expected |
-| My Appointments | ![screenshot](documentation/browsers/chrome-my-appointments.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-my-appointments.png) | Works as expected |
+| My Appointments | ![screenshot](documentation/browsers/chrome-my-appointments.png) | ![screenshot](documentation/browsers/firefox-my-appointments.png) | ![screenshot](documentation/browsers/safari-my-appointments.png) | Works as expected |
 | Update Appointment | ![screenshot](documentation/browsers/chrome-update-appointment.png) | ![screenshot](documentation/browsers/firefox-update-appointment.png) | ![screenshot](documentation/browsers/safari-update-appointment.png) | Works as expected |
 | Password Reset Complete | ![screenshot](documentation/browsers/chrome-password-reset-complete.png) | ![screenshot](documentation/browsers/firefox-password-reset-complete.png) | ![screenshot](documentation/browsers/safari-password-reset-complete.png) | Works as expected |
 | Password Reset Confirm | ![screenshot](documentation/browsers/chrome-password-reset-confirm.png) | ![screenshot](documentation/browsers/firefox-password-reset-confirm.png) | ![screenshot](documentation/browsers/safari-password-reset-confirm.png) | Works as expected |
 | Password Reset Done | ![screenshot](documentation/browsers/chrome-password-reset-done.png) | ![screenshot](documentation/browsers/firefox-password-reset-done.png) | ![screenshot](documentation/browsers/safari-password-reset-done.png) | Works as expected |
-| Password Reset Form | ![screenshot](documentation/browsers/chrome-password-reset-form.png) | ![screenshot](documentation/browsers/firefox-password-reset-form.png) | ![screenshot](documentation/browsers/safari-password-reset-form.png) | Works as expected |
+| Password Reset| ![screenshot](documentation/browsers/chrome-password-reset.png) | ![screenshot](documentation/browsers/firefox-password-reset.png) | ![screenshot](documentation/browsers/safari-password-reset.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -302,7 +264,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Services | ![screenshot](documentation/lighthouse/mobile-services.png) | ![screenshot](documentation/lighthouse/desktop-services.png) |
 | Gallery | ![screenshot](documentation/lighthouse/mobile-gallery.png) | ![screenshot](documentation/lighthouse/desktop-gallery.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
-| Contact Modal | ![screenshot](documentation/lighthouse/mobile-contact-modal.png) | ![screenshot](documentation/lighthouse/desktop-contact-modal.png) |
 | Sign Up | ![screenshot](documentation/lighthouse/mobile-sign-up.png) | ![screenshot](documentation/lighthouse/desktop-sign-up.png) |
 | Log In | ![screenshot](documentation/lighthouse/mobile-log-in.png) | ![screenshot](documentation/lighthouse/desktop-log-in.png) |
 | Account | ![screenshot](documentation/lighthouse/mobile-account.png) | ![screenshot](documentation/lighthouse/desktop-account.png) |
