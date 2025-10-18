@@ -11,32 +11,46 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
   const responseDiv = document.getElementById("contact-response");
 
-  // Listens for form submission and handle it asynchronously
+   function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      const cookies = document.cookie.split(";");
+      for (let cookie of cookies) {
+        cookie = cookie.trim();
+        if (cookie.startsWith(name + "=")) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  const csrftoken = getCookie("csrftoken");
+
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevents page reload
+    e.preventDefault(); // prevent page reload
 
     const formData = new FormData(contactForm);
 
-    // Send form data via POST request using Fetch API
     fetch(contactForm.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          "X-Requested-With": "XMLHttpRequest",
-        },
-      })
+      method: "POST",
+      body: formData,
+      headers: {
+       "x-requested-with": "XMLHttpRequest",
+        "X-CSRFToken": csrftoken,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
-        // Displays success or failure messages
         if (data.success) {
-          responseDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
-          contactForm.reset(); // Clear form after successful submission
+          responseDiv.innerHTML = `<div class="alert alert-custom-success">${data.message}</div>`;
+          contactForm.reset(); // clear form if desired
         } else {
           responseDiv.innerHTML = `<div class="alert alert-danger">Something went wrong. Please try again.</div>`;
         }
       })
       .catch(() => {
-        // Handles network or server errors 
         responseDiv.innerHTML = `<div class="alert alert-danger">Error sending message.</div>`;
       });
   });

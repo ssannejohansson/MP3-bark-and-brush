@@ -168,6 +168,7 @@ In this section, you should go over the different parts of your project, and des
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
 | [![badge](https://img.shields.io/badge/Gemini-grey?logo=googlegemini&logoColor=#8E75B2)](https://gemini.google.com) | Create hero image for Home page. |
+| [TinyPng](https://tinypng.com/) | To compress images |
 | [Photoshop](https://photoshop.adobe.com/) | For editing images/logos and remove backgrounds. |
 | [Namelix](https://namelix.com) | For business name. |
 | [Instagram](https://www.instagram.com/) | For color scheme inspiration. |
