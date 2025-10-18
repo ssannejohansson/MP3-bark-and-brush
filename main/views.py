@@ -76,7 +76,7 @@ class ContactView(FormView):
 
         if (
             self.request.headers.get("x-requested-with") == "XMLHttpRequest"
-            or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"
+            or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"   # noqa
         ):
             return JsonResponse(
                 {

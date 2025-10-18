@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z+j2u=b=e=y=xh$)j3-w4vy0zxsz%52!2p84lu#1p+4%9xp2-$'
+SECRET_KEY = 'django-insecure-z+j2u=b=e=y=xh$)j3-w4vy0zxsz%52!2p84lu#1p+4%9xp2-$'   # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -73,7 +73,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Custom email backend to allow users login with email instead of username
 AUTHENTICATION_BACKENDS = [
-    'accounts.backends.EmailBackend',      
+    'accounts.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
@@ -132,16 +132,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',   # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', # noqa
     },
 ]
 

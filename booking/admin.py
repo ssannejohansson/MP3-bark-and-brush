@@ -42,6 +42,6 @@ class AppointmentAdmin(admin.ModelAdmin):
                 .exists()
             ):
                 raise ValidationError(
-                    f"This time slot on {obj.day}at {obj.time} is already booked."  # noga
+                    f"This time slot on {obj.day}at {obj.time} is already booked."  # noqa
                 )
         super().save_model(request, obj, form, change)
