@@ -101,7 +101,7 @@ class AppointmentForm(forms.ModelForm):
             ),
             StrictButton(
                 'Book Appointment<i class="fa-solid fa-calendar ms-2"></i>',
-                "Book Appointment",
+                "book-appointment",
                 type="submit",
                 css_class="custom-btn-booking",
             ),

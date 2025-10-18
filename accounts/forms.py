@@ -152,7 +152,7 @@ class UserUpdateForm(forms.ModelForm):
             ),
             StrictButton(
                 "Save Changes" '<i class="fa-solid fa-floppy-disk ms-2"></i>',
-                "Save Changes",
+                "save-changes",
                 type="submit",
                 css_class="custom-btn-booking",
             ),
