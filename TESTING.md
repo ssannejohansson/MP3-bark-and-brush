@@ -160,24 +160,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 ## Responsiveness
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is to test the following 3 sizes:
-
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of your results, to "prove" that you've actually tested them.
-
-Using the [amiresponsive](http://ami.responsivedesign.is) mockup images (*or similar*) does not meet the requirements. Consider using some of the built-in device sizes from the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well. It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
@@ -198,28 +180,10 @@ I've tested my deployed project to check for responsiveness issues.
 | Password Reset | ![screenshot](documentation/responsiveness/mobile-password-reset.png) | ![screenshot](documentation/responsiveness/tablet-password-reset.png) | ![screenshot](documentation/responsiveness/desktop-password-reset.png) | Works as expected |
 | Password Reset Complete| ![screenshot](documentation/responsiveness/mobile-passsword-reset-complete.png) | ![screenshot](documentation/responsiveness/tablet-passsword-reset-complete.png) | ![screenshot](documentation/responsiveness/desktop-passsword-reset-complete.png) | Works as expected |
 | Password Reset Done | ![screenshot](documentation/responsiveness/mobile-password-reset-done.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-done.png) | ![screenshot](documentation/responsiveness/desktop-password-reset-done.png) | Works as expected |
-| Password Reset Form | ![screenshot](documentation/responsiveness/mobile-password-reset-form.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-form.png) | ![screenshot](documentation/responsiveness/desktop-4password-reset-form04.png) | Works as expected |
+| Password Reset Form | ![screenshot](documentation/responsiveness/mobile-password-reset-form.png) | ![screenshot](documentation/responsiveness/tablet-password-reset-form.png) | ![screenshot](documentation/responsiveness/desktop-password-reset-form.png) | Works as expected |
 
 
 ## Browser Compatibility
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various browsers. Consider testing at least 3 different browsers, if available on your system. You DO NOT need to use all of the browsers below, just pick any 3 (minimum).
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the browsers you've tested, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time. Some of these are paid services, but some are free. If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-⚠️ --- END --- ⚠️
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
@@ -239,7 +203,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | My Appointments | ![screenshot](documentation/browsers/chrome-my-appointments.png) | ![screenshot](documentation/browsers/firefox-my-appointments.png) | ![screenshot](documentation/browsers/safari-my-appointments.png) | Works as expected |
 | Update Appointment | ![screenshot](documentation/browsers/chrome-update-appointment.png) | ![screenshot](documentation/browsers/firefox-update-appointment.png) | ![screenshot](documentation/browsers/safari-update-appointment.png) | Works as expected |
 | Password Reset Complete | ![screenshot](documentation/browsers/chrome-password-reset-complete.png) | ![screenshot](documentation/browsers/firefox-password-reset-complete.png) | ![screenshot](documentation/browsers/safari-password-reset-complete.png) | Works as expected |
-| Password Reset Confirm | ![screenshot](documentation/browsers/chrome-password-reset-confirm.png) | ![screenshot](documentation/browsers/firefox-password-reset-confirm.png) | ![screenshot](documentation/browsers/safari-password-reset-confirm.png) | Works as expected |
+| Password Reset Form | ![screenshot](documentation/browsers/chrome-password-reset-form.png) | ![screenshot](documentation/browsers/firefox-password-reset-form.png) | ![screenshot](documentation/browsers/safari-password-reset-form.png) | Works as expected |
 | Password Reset Done | ![screenshot](documentation/browsers/chrome-password-reset-done.png) | ![screenshot](documentation/browsers/firefox-password-reset-done.png) | ![screenshot](documentation/browsers/safari-password-reset-done.png) | Works as expected |
 | Password Reset| ![screenshot](documentation/browsers/chrome-password-reset.png) | ![screenshot](documentation/browsers/firefox-password-reset.png) | ![screenshot](documentation/browsers/safari-password-reset.png) | Works as expected |
 
