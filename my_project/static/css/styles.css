@@ -424,7 +424,7 @@
 
  /* -- 404 PAGE -- */
 #error-page {
-    background-color: var(--pink-background-color);
+    background-color: var(--primary-background-color);
 }
 
  #error-btn {

@@ -1,4 +1,5 @@
-# [MP3-bark-and-brush](https://bark-and-brush-dba8d291cd80.herokuapp.com)
+# MP3 - Bark and Brush
+[Visit the live site here!](https://bark-and-brush-dba8d291cd80.herokuapp.com)
 
 Developer: Sanne Johansson ([ssannejohansson](https://www.github.com/ssannejohansson))
 
@@ -14,26 +15,10 @@ As a dog owner whose pet dislikes grooming, I understand the importance of groom
 
 The goal of this project was to design a visually appealing yet clean and intuitive website that fulfills user needs without unnecessary clutter.
 
-🛑 README NOTES 🛑
-
-
-**Site Mockups**
-*([amiresponsive](https://ui.dev/amiresponsive?url=https://bark-and-brush-dba8d291cd80.herokuapp.com), [techsini](https://techsini.com/multi-mockup), etc.)*
-Having issues generating site mockups? This is likely due to security policies with your deployed site.
-If you open up your DevTools, there may be an error referencing `X-Frame-Options`.
-
-For Chrome users, head over to http://bit.ly/3iRPn4u and install the extension within your browser. Once installed, navigate back to the mockup site of your choice. You should find your site rendering in the various devices now.
-
-Alternatively, open your project in Gitpod and run the server. Once the site is running, click the `Ports` tab from your Gitpod Terminal. Click the padlock on the appropriate port for your project (`Flask: 5000`, `Django: 8000`). This will make your local page public temporarily. Now, copy the URL of your live-preview page into the responsive tool above. You should find your site rendering in the various devices.
-
-🛑 --- END ---- 🛑
-
 ![screenshot](documentation/mockup.png)
 
-source: [MP3-bark-and-brush amiresponsive](https://ui.dev/amiresponsive?url=https://bark-and-brush-dba8d291cd80.herokuapp.com)
+source: [MP3-bark-and-brush amiresponsive](https://ui.dev/amiresponsive?url=https://bark-and-brush-dba8d291cd80.herokuapp.com/)
 
-> [!IMPORTANT]  
-> The examples in these templates are strongly influenced by the Code Institute walkthrough project called "I Think Therefore I Blog".
 
 ## UX
 
@@ -68,13 +53,13 @@ source: [MP3-bark-and-brush amiresponsive](https://ui.dev/amiresponsive?url=http
 
 **Information Architecture**
 - **Navigation Menu**:
-  - Links to Home, About, Services, Gallery and Booking. Admin (for business owners).
+  - Links to Home, About, Services, Gallery, Contact and Booking. 
 
 **User Flow**
 1. Guest users browse website → read information and decides to book an appointment.
 2. Guest users register for an account → log in to book an appointment.
 3. Registered users book an appointment → are able to see their booking and edit/delete it.
-4. Business owners can create, update, and manage appointments → moderate bookings.
+4. Business owners can create, update, and manage appointments.
 
 
 #### 4. Skeleton
@@ -96,9 +81,7 @@ I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to ge
 
 ### Typography
 
-
-
-- [Marige Thin Font](https://www.fontspace.com/marige-thin-font-f148657)was used for the primary headers and titles.
+- [Marige Thin Font](https://www.fontspace.com/marige-thin-font-f148657) was used for the primary headers and titles.
 - [Mulish](https://fonts.google.com/specimen/Mulish?query=mulisht) was used for all other secondary text.
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer and icons in buttons on booking pages.
 
@@ -150,16 +133,15 @@ In this section, you should go over the different parts of your project, and des
 | Register | Authentication is handled by authenticate, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
 | Login | Authentication is handled by authenticate, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
 | Logout | Authentication is handled by authenticate, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
-| Password Reset | Authentication is handled by authenticate and PasswordResetForm allowing users to reset their password.| ![screenshot](documentation/features/blog-list.png) |
-| Booking | Users can book an appointment | ![screenshot](documentation/features/view-post.png) |
-| Update Appointment | Users can update and cancel their appointment | ![screenshot](documentation/features/pagination.png) |
-| Account | Users can manage their account details | ![screenshot](documentation/features/add-comment.png) |
-| Contact Form | Users can contact the business using the contact form | ![screenshot](documentation/features/edit-comment.png) |
-
+| Password Reset | Authentication is handled by authenticate and PasswordResetForm allowing users to reset their password.| ![screenshot](documentation/features/pw-reset.png) |
+| Booking | Users can book an appointment | ![screenshot](documentation/features/booking.png) |
+| Manage appointments | Users can manage their appointments | ![screenshot](documentation/features/manage.png) |
+| Update Appointment | Users can update and cancel their appointment | ![screenshot](documentation/features/update.png) |
+| Account | Users can manage their account details | ![screenshot](documentation/features/account.png) |
+| Contact Form | Users can contact the business using the contact form | ![screenshot](documentation/features/contact.png) |
 | About Page | The About page displays information about the business | ![screenshot](documentation/features/about.png) |
-| Services page | The Services page displays information about the business services | ![screenshot](documentation/features/collaboration.png) |
-| Gallery Page | The Gallery page displays a gallery of images of the business customers | ![screenshot](documentation/features/messages.png) |
-| Heroku Deployment | The site is fully deployed to Heroku, making it accessible online and easy to manage. | ![screenshot](documentation/features/heroku.png) |
+| Services page | The Services page displays information about the business services | ![screenshot](documentation/features/services.png) |
+| Gallery Page | The Gallery page displays a gallery of images of the business customers | ![screenshot](documentation/features/gallery.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
 ### Future Features
@@ -198,24 +180,12 @@ In this section, you should go over the different parts of your project, and des
 |[Autoprefixer](https://autoprefixer.github.io/) | To make sure the code is working across browsers. |
 | [Am I Responsive?](https://ui.dev/amiresponsive) | To show the website on all devices. |
 
-
-⚠️ NOTE ⚠️
-
-Want to add more?
-
-- Tutorial: https://shields.io/badges/static-badge
-- Icons/Logos: https://simpleicons.org
-  - FYI: not all logos are available to use
-
-🛑 --- END --- 🛑
-
 ## Database Design
 
 ### Data Model
 
 ![screenshot](documentation/erd.png)
 ![screenshot](documentation/erd2.png)
-
 
 ## Agile Development Process
 
@@ -411,14 +381,6 @@ There are no remaining major differences between the local version when compared
 ## Credits
 
 ### Content
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links for any borrowed code snippets, elements, and resources. Ideally, you should provide an actual link to every resource used, not just a generic link to the main site. If you've used multiple components from the same source (such as Bootstrap), then you only need to list it once, but if it's multiple Codepen samples, then you should list each example individually. If you've used AI for some assistance (such as ChatGPT or Perplexity), be sure to mention that as well. A few examples have been provided below to give you some ideas.
-
-Eventually you'll want to learn how to use Git branches. Here's a helpful tutorial called [Learn Git Branching](https://learngitbranching.js.org) to bookmark for later.
-
-⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
