@@ -37,7 +37,7 @@ class SignUpForm(forms.ModelForm):
             Row(Column("email", css_class="col-md-12")),
             Row(Column("password", css_class="col-md-12")),
             StrictButton(
-                "Sign Up", "Sign Up", type="submit", css_class="custom-btn-booking"
+                "Sign Up", "sign-up", type="submit", css_class="custom-btn-booking"
             ),
         )
 

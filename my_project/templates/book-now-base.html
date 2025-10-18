@@ -61,7 +61,7 @@
             <a href="{% url 'home' %}" class="btn custom-btn-booking"><i class="fa-solid fa-arrow-left me-2"></i>
                 Home</a>
 
-            <div class="d-flex gap-2">
+            
                 {% if user.is_authenticated %}
                 <!-- If user is logged in, the account dropdown shows -->
                 <li class="nav-item dropdown">
@@ -93,7 +93,7 @@
                 <a href="{% url 'login' %}" class="btn custom-btn-outline">Log in</a>
                 {% endif %}
             </div>
-        </div>
+       
     </nav>
 
     <main>
