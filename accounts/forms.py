@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 from django.contrib.auth.models import User
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
 
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column
@@ -15,7 +17,11 @@ class SignUpForm(forms.ModelForm):
 
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
-    password = forms.CharField(widget=forms.PasswordInput)
+    password = forms.CharField(
+        widget=forms.PasswordInput,
+        label="Password",
+        help_text="Your password must be at least 8 characters long",
+    )
 
     class Meta:
         model = User
@@ -37,7 +43,8 @@ class SignUpForm(forms.ModelForm):
             Row(Column("email", css_class="col-md-12")),
             Row(Column("password", css_class="col-md-12")),
             StrictButton(
-                "Sign Up", "sign-up", type="submit", css_class="custom-btn-booking"
+                "Sign Up", "sign-up", type="submit",
+                css_class="custom-btn-booking"
             ),
         )
 
@@ -47,6 +54,17 @@ class SignUpForm(forms.ModelForm):
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("Email already exists")
         return email
+
+    def clean_password(self):
+        # Validates password strength using Django's built-in validators.
+        password = self.cleaned_data.get("password")
+
+        try:
+            validate_password(password)
+        except ValidationError as e:
+            raise forms.ValidationError(e.messages)
+
+        return password
 
     def save(self, commit=True):
         # Creates a new user
@@ -66,7 +84,8 @@ class SignUpForm(forms.ModelForm):
             counter += 1
 
         user = User(
-            username=username, email=email, first_name=first_name, last_name=last_name
+            username=username, email=email, first_name=first_name,
+            last_name=last_name
         )
         user.set_password(password)
         if commit:
