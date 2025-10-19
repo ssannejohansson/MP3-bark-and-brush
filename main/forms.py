@@ -70,4 +70,3 @@ class ContactForm(forms.Form):
             StrictButton('Send Message', type='submit',
                          css_class='custom-btn-booking')
         )
-        
