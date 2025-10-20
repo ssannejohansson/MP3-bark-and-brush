@@ -131,14 +131,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ⚠️ INSTRUCTIONS ⚠️
 
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports. Avoid testing the local version (Gitpod/VSCode/etc.), as this can have knock-on effects for performance. If you don't have "Lighthouse" in your Developer Tools, it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Unless your project is a single-page application (SPA), you should test Lighthouse Audit results for all of your pages, for both *mobile* and *desktop*.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
 
 | Page | Mobile | Desktop |
@@ -147,7 +139,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | About | ![screenshot](documentation/lighthouse/mobile-about.png) | ![screenshot](documentation/lighthouse/desktop-about.png) |
 | Services | ![screenshot](documentation/lighthouse/mobile-services.png) | ![screenshot](documentation/lighthouse/desktop-services.png) |
 | Gallery | ![screenshot](documentation/lighthouse/mobile-gallery.png) | ![screenshot](documentation/lighthouse/desktop-gallery.png) |
-| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
 | Sign Up | ![screenshot](documentation/lighthouse/mobile-sign-up.png) | ![screenshot](documentation/lighthouse/desktop-sign-up.png) |
 | Log In | ![screenshot](documentation/lighthouse/mobile-log-in.png) | ![screenshot](documentation/lighthouse/desktop-log-in.png) |
 | Account | ![screenshot](documentation/lighthouse/mobile-account.png) | ![screenshot](documentation/lighthouse/desktop-account.png) |

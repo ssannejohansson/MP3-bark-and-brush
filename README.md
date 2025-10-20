@@ -187,12 +187,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### GitHub Projects
 
-⚠️ TIP ⚠️
-
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
-
 [GitHub Projects](https://www.github.com/ssannejohansson/MP3-bark-and-brush/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
 ![screenshot](documentation/gh-projects.png)
@@ -402,7 +396,7 @@ There are no remaining major differences between the local version when compared
 | Source | Notes |
 | --- | --- |
 | [favicon.io](https://favicon.io) | Generating the favicon |
-| [Vecteezy](https://www.vecteezy.com/) | For favicon-logo. |
+| [Yevheniia Kolesnyk](https://www.vecteezy.com/vector-art/21449970-dog-grooming-logo-in-blue-color) | Logo used as favicon  |
 | [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
 | [Gemini](https://gemini.google.com/app?hl=sv) | Hero image |
 | [Pexels](https://www.pexels.com/sv-se/@goochie-poochie/) | All content images except Gallery images are from Goochie Poochie Grooming |
