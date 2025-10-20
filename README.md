@@ -145,29 +145,30 @@ In this section, you should go over the different parts of your project, and des
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
 ### Future Features
-- A review section on the Home page (skriv mer)
-- A working newsletter
+- A review section on the Home page, for registered users to add a review.
+- A working newsletter.
+- In a real-world product, the various booking packages and size options would require different processing times. To maintain a manageable project scope, I chose not to implement this functionality at this stage; however, I recognize it as an important enhancement for future development.
 
 ## Tools & Technologies
 
 | Tool / Tech | Use |
 | --- | --- |
 | [![badge](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://markdown.2bn.dev) | Generate README and TESTING templates. |
-| [![badge](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) | Version control. (`git add`, `git commit`, `git push`) |
-| [![badge](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) | Secure online code storage. |
-| [![badge](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) | Main site content and layout. |
-| [![badge](https://img.shields.io/badge/CSS-grey?logo=css&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) | Design and layout. |
-| [![badge](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) | User interaction on the site. |
-| [![badge](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) | Back-end programming language. |
-| [![badge](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) | Hosting the deployed back-end site. |
-| [![badge](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) | Front-end CSS framework for modern responsiveness and pre-built components. |
-| [![badge](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) | Python framework for the site. |
-| [![badge](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) | Relational database management. |
-| [![badge](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) | Creating wireframes. |
-| [![badge](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) | Icons. |
-| [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
-| [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
-| [![badge](https://img.shields.io/badge/Gemini-grey?logo=googlegemini&logoColor=#8E75B2)](https://gemini.google.com) | Create hero image for Home page. |
+| [Git](https://git-scm.com) | Version control. (`git add`, `git commit`, `git push`) |
+| [GitHub](https://github.com) | Secure online code storage. |
+| [HTML](https://en.wikipedia.org/wiki/HTML) | Main site content and layout. |
+| [CSS](https://en.wikipedia.org/wiki/CSS) | Design and layout. |
+| [Javascript](https://www.javascript.com) | User interaction on the site. |
+| [Python](https://www.python.org) | Back-end programming language. |
+| [Heroku](https://www.heroku.com) | Hosting the deployed back-end site. |
+| [Bootstrap](https://getbootstrap.com) | Front-end CSS framework for modern responsiveness and pre-built components. |
+| [Django](https://www.djangoproject.com) | Python framework for the site. |
+| [PostgreSQL](https://www.postgresql.org) | Relational database management. |
+| [Balsamiq](https://balsamiq.com/wireframes) | Creating wireframes. |
+| [Font Awesome](https://fontawesome.com) | Icons. |
+| [GhatGPT](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
+| [W3Schools](https://www.w3schools.com) | Tutorials/Reference Guide |
+| [Gemini](https://gemini.google.com) | Create hero image for Home page. |
 | [TinyPng](https://tinypng.com/) | To compress images |
 | [Photoshop](https://photoshop.adobe.com/) | For editing images/logos and remove backgrounds. |
 | [Namelix](https://namelix.com) | For business name. |

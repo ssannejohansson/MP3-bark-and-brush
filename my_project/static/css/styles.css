@@ -94,7 +94,8 @@
  }
 
  .alert-custom-success {
-     width: 50%;
+     width: fit-content;
+     padding: 10px 30px 10px 30px;
      background-color: #e4e8f1;
      color: var(--dark-blue);
      border-radius: 10px;
