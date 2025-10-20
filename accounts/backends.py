@@ -17,5 +17,5 @@ class EmailBackend(ModelBackend):
         if user.check_password(password):
             return user
 
-        # Return none if authentication fails 
+        # Return none if authentication fails
         return None

@@ -118,14 +118,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
-
 ### Existing Features
 
 | Feature | Notes | Screenshot |
@@ -139,10 +131,12 @@ In this section, you should go over the different parts of your project, and des
 | Update Appointment | Users can update and cancel their appointment | ![screenshot](documentation/features/update.png) |
 | Account | Users can manage their account details | ![screenshot](documentation/features/account.png) |
 | Contact Form | Users can contact the business using the contact form | ![screenshot](documentation/features/contact.png) |
+| Home Page | The Home page introduces the business | ![screenshot](documentation/features/home.png) |
 | About Page | The About page displays information about the business | ![screenshot](documentation/features/about.png) |
 | Services page | The Services page displays information about the business services | ![screenshot](documentation/features/services.png) |
 | Gallery Page | The Gallery page displays a gallery of images of the business customers | ![screenshot](documentation/features/gallery.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
+
 
 ### Future Features
 - A review section on the Home page, for registered users to add a review.
@@ -209,16 +203,16 @@ Consider adding screenshots of your Projects Board(s), Issues (open and closed),
 
 | Link | Screenshot |
 | --- | --- |
-| [![GitHub issues](https://img.shields.io/github/issues-search/ssannejohansson/MP3-bark-and-brush?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/ssannejohansson/MP3-bark-and-brush/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
-| [![GitHub closed issues](https://img.shields.io/github/issues-search/ssannejohansson/MP3-bark-and-brush?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/ssannejohansson/MP3-bark-and-brush/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
+| [GitHub issues](https://github.com/ssannejohansson/MP3-bark-and-brush/issues) | ![screenshot](documentation/gh-issues-open.png) |
+| [GitHub closed issues](https://github.com/ssannejohansson/MP3-bark-and-brush/issues?q=is%3Aissue%20state%3Aclosed) | ![screenshot](documentation/gh-issues-closed.png) |
 
 ### MoSCoW Prioritization
 
 I've decomposed my Epics into User Stories for prioritizing and implementing them. Using this approach, I was able to apply "MoSCoW" prioritization and labels to my User Stories within the Issues tab.
 
-- **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
-- **Should Have**: adds significant value, but not vital (*~20% of stories*)
-- **Could Have**: has small impact if left out (*the rest ~20% of stories*)
+- **Must Have**: guaranteed to be delivered - required to Pass the project
+- **Should Have**: adds significant value, but not vital 
+- **Could Have**: has small impact if left out 
 - **Won't Have**: not a priority for this iteration - future features
 
 ## Testing
