@@ -181,8 +181,34 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Data Model
 
-![screenshot](documentation/erd.png)
-![screenshot](documentation/erd2.png)
+I have used `Mermaid` to generate an interactive ERD of my project.
+
+```mermaid
+erDiagram
+    User {
+        int id PK
+        string username
+        string email
+        string password
+    }
+
+    Appointment {
+        int id PK
+        int user_id FK
+        string name
+        string email
+        string dog_name
+        string dog_breed
+        string service
+        string size
+        date day
+        string time
+        datetime booked_on
+    }
+
+    User ||--o{ Appointment : "has many"
+  ```
+
 
 ## Agile Development Process
 

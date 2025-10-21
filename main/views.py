@@ -77,22 +77,23 @@ class ContactView(FormView):
 
         except Exception as e:
             if (
-                self.request.headers.get("x-requested-with") == "XMLHttpRequest"
-                or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"
+                self.request.headers.get("x-requested-with") == "XMLHttpRequest"    # noqa
+                or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"   # noqa
             ):
                 return JsonResponse(
-                    {"success": False, "message": f"Failed to send email: {str(e)}"},
+                    {"success": False, "message": f"Failed to send email: {str(e)}"},   # noqa
                     status=500,
                 )
         else:
             if (
-                self.request.headers.get("x-requested-with") == "XMLHttpRequest"
-                or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"   # noqa
+                self.request.headers.get("x-requested-with") == "XMLHttpRequest"    # noqa
+                or self.request.META.get("HTTP_X_REQUESTED_WITH")
+                == "XMLHttpRequest"  # noqa
             ):
                 return JsonResponse(
                     {
                         "success": True,
-                        "message": "Your message has been sent successfully! 🐾",
+                        "message": "Your message has been sent successfully! 🐾",   # noqa
                     }
                 )
 
