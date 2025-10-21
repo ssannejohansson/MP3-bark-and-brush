@@ -49,6 +49,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
 | my_project | [script.js](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/static/js/script.js) |  | ![screenshot](documentation/validation/js-my_project-script.png) | |
+| my_project | [script-booking.js](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/static/js/script-booking.js) |  | ![screenshot](documentation/validation/js-my_project-script-booking.png) | |
 
 
 ### Python
@@ -76,8 +77,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 |  | [manage.py](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ssannejohansson/MP3-bark-and-brush/main/manage.py) | ![screenshot](documentation/validation/py--manage.png) |  |
 | my_project | [settings.py](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ssannejohansson/MP3-bark-and-brush/main/my_project/settings.py) | ![screenshot](documentation/validation/py-my_project-settings.png) | |
 | my_project | [urls.py](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ssannejohansson/MP3-bark-and-brush/main/my_project/urls.py) | ![screenshot](documentation/validation/py-my_project-urls.png) | |
-| my_project | [urls.py](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ssannejohansson/MP3-bark-and-brush/main/my_project/urls.py) | ![screenshot](documentation/validation/py-my_project-urls.png) | ⚠️ Notes (if applicable) |
-| my_project | [views.py](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ssannejohansson/MP3-bark-and-brush/main/my_project/views.py) | ![screenshot](documentation/validation/py-my_project-views.png) | ⚠️ Notes (if applicable) |
+| my_project | [views.py](https://github.com/ssannejohansson/MP3-bark-and-brush/blob/main/my_project/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ssannejohansson/MP3-bark-and-brush/main/my_project/views.py) | ![screenshot](documentation/validation/py-my_project-views.png) ||
 
 
 ## Responsiveness
@@ -153,8 +153,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Password Reset Done | ![screenshot](documentation/lighthouse/mobile-password-reset-done.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-done.png) |
 | Password Reset Form | ![screenshot](documentation/lighthouse/mobile-password-reset-form.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-form.png) |
 
-⚠️ NOTES: 
-The lower performance scores on certain pages are primarily attributed to image sizes, despite having already been compressed. Compressing them further with free compressors is making them loose quality and look bad. Given the website’s relatively small scale, I therefore chose to leave them as they are for now. However, I recognize that in a real-world or larger-scale project with more images, further optimization and compression would be necessary to enhance performance.py
 
 ## Defensive Programming
 
