@@ -147,6 +147,7 @@ def my_appointments(request):
 
     today = datetime.date.today()
     upcoming_appointments = appointments.filter(day__gte=today)
+    past_appointments = appointments.filter(day__lt=today)
 
     return render(
         request,
@@ -154,5 +155,6 @@ def my_appointments(request):
         {
             "appointments": appointments,
             "upcoming_appointments": upcoming_appointments,
+            "past_appointments": past_appointments,
         },
     )

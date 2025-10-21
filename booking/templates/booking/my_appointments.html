@@ -15,7 +15,7 @@
 
 <section class="booking-index">
   <!-- If user has any booked appointments, they show here-->
-  {% if appointments %}
+  {% if upcoming_appointments %}
   <ul class="ps-0">
     {% for appointment in upcoming_appointments %}
     <li>
@@ -55,7 +55,21 @@
         class="fa-solid fa-calendar ms-2"></i></a>
    </div>
    {% endif %}
-  
+
+   <!-- If the user has past appointments, they will show here -->
+
+   {% if past_appointments %}
+   <h3 class="mt-5"> Past Appointments </h3>
+
+   <ul>
+     {% for appointment in past_appointments %}
+     <li class="text-muted">
+       {{ appointment.dog_name|capfirst }} was here {{ appointment.day }} at {{ appointment.time }} and got the service
+       {{ appointment.service }}
+     </li>
+     {% endfor %}
+   </ul>
+   {% endif %}
 
 </section>
 {% endblock %}
