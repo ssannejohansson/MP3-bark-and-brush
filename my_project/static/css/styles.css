@@ -426,12 +426,12 @@
      z-index: 1;
  }
 
- /* -- 404 PAGE -- */
-#error-page {
+ /* -- ERROR PAGES -- */
+.error-page {
     background-color: var(--primary-background-color);
 }
 
- #error-btn {
+ .error-btn {
      width: -webkit-fit-content;
      width: -moz-fit-content;
      width: fit-content;

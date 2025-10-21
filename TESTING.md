@@ -216,7 +216,6 @@ All previously closed/fixed bugs can be tracked [here](https://www.github.com/ss
 | Issue | Screenshot |
 | --- | --- |
 | When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/validation/html-booking-password-reset-complete.png) |
-| Errors in console comes from JavaScript that runs on the booking pages. I'm aware of them. | ![screenshot](documentation/console.png) |
 
 > [!IMPORTANT]  
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.

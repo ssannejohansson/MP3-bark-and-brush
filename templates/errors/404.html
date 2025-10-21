@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Changes title on the page (in the tab) -->
+{% block title %} 404 - Page not Found {% endblock %}
+
+<!-- 404 content starts here -->
+{% block content %}
+    <!-- Main content -->
+    <section class="container-fluid d-flex flex-column justify-content-center align-items-center pt-5 pb-5 error-page">
+            <h1 class="container mb-0 text-center heading-pages mt-5">404</h1>
+            <h2 class="container mb-0 text-center heading-pages mt-5">Oops! Something went wrong</h2>
+            <a href="{% url 'home' %}" class="btn custom-btn mt-5 mb-5 error-btn">Go back to homepage</a>
+    </section>
+{% endblock %}
