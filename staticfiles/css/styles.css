@@ -30,6 +30,9 @@
      background-color: var(--primary-background-color);
      font-family: var(--primary-font);
      color: var(--brown);
+     max-width: 1920px; 
+     margin-left: auto;
+     margin-right: auto;
  }
 
  h1 {

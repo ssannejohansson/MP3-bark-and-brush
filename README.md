@@ -164,6 +164,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [W3Schools](https://www.w3schools.com) | Tutorials/Reference Guide |
 | [Gemini](https://gemini.google.com) | Create hero image for Home page. |
 | [TinyPng](https://tinypng.com/) | To compress images |
+| [I Love IMG](https://www.iloveimg.com/) | To resize images |
 | [Photoshop](https://photoshop.adobe.com/) | For editing images/logos and remove backgrounds. |
 | [Namelix](https://namelix.com) | For business name. |
 | [Instagram](https://www.instagram.com/) | For color scheme inspiration. |
