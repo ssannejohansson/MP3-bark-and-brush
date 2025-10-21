@@ -67,23 +67,34 @@ class ContactView(FormView):
             ________________________
             {message}
             """
-        send_mail(
-            subject=f"{subject}",
-            message=full_message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.NOTIFY_EMAIL],
-        )
-
-        if (
-            self.request.headers.get("x-requested-with") == "XMLHttpRequest"
-            or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"   # noqa
-        ):
-            return JsonResponse(
-                {
-                    "success": True,
-                    "message": "Your message has been sent successfully! 🐾",
-                }
+        try:
+            send_mail(
+                subject=f"{subject}",
+                message=full_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[settings.NOTIFY_EMAIL],
             )
+
+        except Exception as e:
+            if (
+                self.request.headers.get("x-requested-with") == "XMLHttpRequest"
+                or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"
+            ):
+                return JsonResponse(
+                    {"success": False, "message": f"Failed to send email: {str(e)}"},
+                    status=500,
+                )
+        else:
+            if (
+                self.request.headers.get("x-requested-with") == "XMLHttpRequest"
+                or self.request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"   # noqa
+            ):
+                return JsonResponse(
+                    {
+                        "success": True,
+                        "message": "Your message has been sent successfully! 🐾",
+                    }
+                )
 
         # Fallback (if user has JS disabled)
         messages.success(self.request,
