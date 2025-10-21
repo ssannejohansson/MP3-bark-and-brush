@@ -152,7 +152,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Password Reset Form | ![screenshot](documentation/lighthouse/mobile-password-reset-form.png) | ![screenshot](documentation/lighthouse/desktop-password-reset-form.png) |
 
 ⚠️ NOTES: 
-The lower performance scores on certain pages are primarily attributed to image sizes, despite having already been compressed. Given the website’s relatively small scale, I chose to leave them as they are for now. However, I recognize that in a real-world or larger-scale project with more images, further optimization and compression would be necessary to enhance performance.
+The lower performance scores on certain pages are primarily attributed to image sizes, despite having already been compressed. Compressing them further with free compressors is making them loose quality and look bad. Given the website’s relatively small scale, I therefore chose to leave them as they are for now. However, I recognize that in a real-world or larger-scale project with more images, further optimization and compression would be necessary to enhance performance.py
 
 ## Defensive Programming
 
