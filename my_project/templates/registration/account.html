@@ -19,9 +19,7 @@
 <section class="booking-index">
 
     <!-- User update form -->
-    <form method="post">
         {% csrf_token %}
         {% crispy user_form %}
-    </form>
 </section>
 {% endblock %}

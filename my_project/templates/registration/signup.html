@@ -28,10 +28,8 @@
 
   <!-- Sign Up Form -->
   <div>
-    <form method="post">
       {% csrf_token %}
       {% crispy signup_form %}
-    </form>
   </div>
 
   <!-- Already have an account? -->

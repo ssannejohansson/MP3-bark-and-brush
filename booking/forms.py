@@ -73,6 +73,7 @@ class AppointmentForm(forms.ModelForm):
         self.helper = FormHelper()
         self.helper.form_method = "post"
         self.helper.form_id = "booking-form"
+        self.helper.attrs = {'novalidate': ''}
 
         # Crispy layout
         self.helper.layout = Layout(

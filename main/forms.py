@@ -2,6 +2,7 @@ from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column
 from crispy_forms.bootstrap import StrictButton
+from django.urls import reverse_lazy
 
 
 class ContactForm(forms.Form):
@@ -59,6 +60,7 @@ class ContactForm(forms.Form):
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.form_id = 'contact-form'
+        self.helper.form_action = reverse_lazy('contact')
 
         # Crispy layout
         self.helper.layout = Layout(

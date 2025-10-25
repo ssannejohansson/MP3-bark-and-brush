@@ -19,10 +19,8 @@
 <!-- Main content -->
 <section class="booking-index">
   <div class="container">
-    <form method="post" novalidate>
       {% csrf_token %}
       {% crispy appointment_form %}
-    </form>
   </div>
 </section>
 {% endblock %}
