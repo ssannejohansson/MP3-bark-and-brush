@@ -91,9 +91,9 @@ class AppointmentForm(forms.ModelForm):
             ),
             HTML(
                 '<div class="text-start mb-3">'
-                '  <a href="{% url "services" %}" target="_blank" class="small text-muted">'    # noqa
-                "    Need to refresh your memory? See our services here!"
-                "  </a>"
+                '<a href="{% url "services" %}" target="_blank" class="small text-muted">'    # noqa
+                "Need to refresh your memory? See our services here!"
+                "</a>"
                 "</div>"
             ),
             Row(

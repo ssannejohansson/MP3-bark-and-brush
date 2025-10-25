@@ -127,7 +127,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Logout | Authentication is handled by authenticate, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
 | Password Reset | Authentication is handled by authenticate and PasswordResetForm allowing users to reset their password.| ![screenshot](documentation/features/pw-reset.png) |
 | Booking | Users can book an appointment | ![screenshot](documentation/features/booking.png) |
-| Manage appointments | Users can manage their appointments | ![screenshot](documentation/features/manage.png) |
+| Manage appointments | Users can manage their appointments and see their last appointments | ![screenshot](documentation/features/manage.png) |
 | Update Appointment | Users can update and cancel their appointment | ![screenshot](documentation/features/update.png) |
 | Account | Users can manage their account details | ![screenshot](documentation/features/account.png) |
 | Contact Form | Users can contact the business using the contact form | ![screenshot](documentation/features/contact.png) |

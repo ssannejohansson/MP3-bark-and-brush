@@ -29,7 +29,8 @@ def book_appointment(request):
                 day=appointment.day, time=appointment.time
             ).exists():
                 messages.error(
-                    request, "That time slot is already booked. Please choose another."     # noqa
+                    request,
+                    "That time slot is already booked. Please choose another."
                 )
             else:
                 appointment.save()
@@ -96,7 +97,8 @@ def appointment_success(request):
     """
     # Gets the latest appointment for the user
     latest_appointment = (
-        Appointment.objects.filter(user=request.user).order_by("-booked_on").first()    # noqa
+        Appointment.objects.filter(
+            user=request.user).order_by("-booked_on").first()
     )
 
     # Render success page with appointment details
@@ -143,7 +145,8 @@ def my_appointments(request):
     Displays all upcoming and past appointments for the logged-in user
     Ordered by date and time
     """
-    appointments = Appointment.objects.filter(user=request.user).order_by("day", "time")    # noqa
+    appointments = Appointment.objects.filter(
+        user=request.user).order_by("day", "time")
 
     today = datetime.date.today()
     upcoming_appointments = appointments.filter(day__gte=today)
